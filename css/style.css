@@ -60,25 +60,39 @@ nav a:hover {
 
 /* ===== HERO SECTION ===== */
 .hero {
-    background: linear-gradient(to right, #1abc9c, #16a085);
-    color: white;
-    padding: 60px 20px;
     text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #4b79a1, #283e51);
+    color: white;
 }
 
-.hero button {
-    background: #ffffff;
-    color: #16a085;
-    border: none;
-    padding: 14px 25px;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 25px;
-    margin-top: 15px;
+.hero h1 {
+    font-size: 46px;
+    margin-bottom: 10px;
+    font-weight: 700;
 }
 
-.hero button:hover {
-    background: #ecf0f1;
+.hero-sub {
+    font-size: 20px;
+    max-width: 700px;
+    margin: 0 auto 25px auto;
+    line-height: 1.6;
+}
+
+.hero-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.hero-highlights span {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 15px;
+    backdrop-filter: blur(4px);
 }
 
 /* ===== SECTIONS ===== */
