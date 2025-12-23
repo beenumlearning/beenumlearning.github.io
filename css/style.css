@@ -37,6 +37,7 @@ body {
     color: #cccccc;
 }
 
+
 /* ===== NAVIGATION ===== */
 nav {
     background: #2c2c54;
@@ -52,11 +53,18 @@ nav a {
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
+    display: inline-block;
 }
 
-nav a:hover {
-    color: #fbc531;
+/* MOBILE: stack links vertically */
+@media (max-width: 600px) {
+    nav a {
+        display: block;     /* stack vertically */
+        margin: 10px 0;     /* vertical spacing */
+        font-size: 18px;    /* easier to tap */
+    }
 }
+
 
 /* ===== SECTIONS ===== */
 section {
