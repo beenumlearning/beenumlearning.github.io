@@ -1,0 +1,68 @@
+/* ===== HERO SECTION ===== */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #4b79a1, #283e51);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 46px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hero-sub {
+    font-size: 20px;
+    max-width: 700px;
+    margin: 0 auto 25px auto;
+    line-height: 1.6;
+}
+
+.hero-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+.hero-highlights span {
+    background: rgba(255,255,255,0.08);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+    border: 1px solid rgba(255,255,255,0.12);
+    cursor: default;
+}
+
+/* ANNOUNCEMENTS SECTION */
+.announcements {
+    max-width: 1100px;     /* expanded width */
+    margin: 60px auto 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.announcements h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.announcement-box {
+    max-width: 900px;      /* previously full width; now controlled */
+    margin: 0 auto;        /* center the box */
+    background: #f8f9fa;
+    border: 1px solid #e3e6e8;
+    border-radius: 8px;
+    padding: 25px;
+}
+
+.no-announcement {
+    font-size: 18px;
+    color: #555;
+    font-weight: 500;
+    margin: 0;
+}

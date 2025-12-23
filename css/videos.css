@@ -1,43 +1,74 @@
-/* Grid layout for playlist tiles */
+/* Page background enhancement */
+body {
+    background: linear-gradient(180deg, #eef2f5 0%, #f7f9fb 100%);
+}
+
+/* Section styling */
+section {
+    max-width: 1100px;
+}
+
+section h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+section p {
+    color: #555;
+    margin-bottom: 25px;
+    font-size: 16px;
+}
+
+/* Grid layout */
 .playlist-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
 }
 
-/* Tile card */
+/* Modern card */
 .playlist-tile {
-    background: white;
-    border-radius: 12px;
+    background: #ffffff;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer;
+    border: 1px solid #e6e9ef;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    transition: 0.25s ease;
     text-decoration: none;
     color: inherit;
+    position: relative;
 }
 
+/* Accent bar */
+.playlist-tile::before {
+    content: "";
+    display: block;
+    height: 6px;
+    background: linear-gradient(90deg, #ff0000, #cc0000);
+}
+
+/* Hover effect */
 .playlist-tile:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.12);
 }
 
 /* Thumbnail */
 .playlist-thumb {
-    width: 100px;        /* your logo size */
-    height: auto;
+    width: 110px;
+    margin: 25px auto 15px auto;
     display: block;
-    margin: 0 auto;
-    padding: 5px;      /* space around the logo */
-    box-sizing: border-box;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
 }
 
 
 /* Title */
 .playlist-title {
-    padding: 15px;
-    font-size: 18px;
-    font-weight: bold;
+    padding: 15px 20px 20px 20px;
+    font-size: 17px;
+    font-weight: 600;
     color: #2c3e50;
+    text-align: center;
+    line-height: 1.4;
 }

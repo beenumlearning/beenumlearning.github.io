@@ -1,60 +1,114 @@
-/* ABOUT SECTION */
+/* ABOUT PAGE WRAPPER */
 .about-section {
-    max-width: 800px;
-    margin: 30px auto;
-    padding: 0 20px;
-    line-height: 1.5;      /* reduced from 1.7 */
-    font-size: 18px;
+    max-width: 100%;
+    margin: 50px auto;
+    padding: 0 40px;
 }
 
-.about-section h2 {
-    font-size: 30px;
-    margin-bottom: 10px;   /* reduced */
+
+/* INTRO PARAGRAPH (Fix thin font issue) */
+.about-section p {
+    font-size: 20px;          /* slightly larger */
+    line-height: 1.75;        /* more breathing room */
+    color: #2a2a2a;           /* darker, easier to read */
+    font-weight: 500;         /* thicker, more readable */
+    margin-bottom: 40px;
     text-align: center;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.about-section h3 {
-    margin-top: 20px;      /* reduced */
-    font-size: 22px;
+
+/* MAIN TITLE */
+.about-section h2 {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #2c3e50;
 }
 
-/* LISTS */
+/* INTRO PARAGRAPH */
+.about-links li {
+    font-size: 16px;
+    margin: 12px 0;
+    color: #2b2b2b;       /* darker, easier to read */
+    font-weight: 500;     /* thicker, more readable */
+}
+
+
+/* TWO-COLUMN LAYOUT */
+.about-columns {
+    display: flex;
+    justify-content: center;   /* center the whole group */
+    align-items: flex-start;
+    gap: 60px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+
+.about-col {
+    flex: 1;               /* each column grows equally */
+    max-width: 400px;      /* prevents stretching too wide */
+    text-align: left;
+}
+
+
+/* SECTION HEADERS */
+.about-col h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 12px;
+}
+
+/* CLEAN LIST (NO BULLETS) */
 .about-links {
     list-style: none;
     padding: 0;
-    margin: 10px 0 0 0;    /* reduced */
+    margin: 0;
 }
 
 .about-links li {
-    margin: 6px 0;         /* reduced from 12px */
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    gap: 8px;              /* slightly reduced */
+    font-size: 19px;
+    margin: 12px 0;
+    color: #2b2b2b;       /* darker, easier to read */
+    font-weight: 500;     /* thicker, more readable */
 }
+
 
 /* LINKS */
 .about-links a {
     color: #0073e6;
-    font-weight: bold;
+    font-weight: 600;
     text-decoration: none;
-    transition: color 0.2s ease;
 }
 
 .about-links a:hover {
-    color: #005bb5;
     text-decoration: underline;
 }
 
-/* MOBILE FRIENDLY */
-@media (max-width: 600px) {
-    .about-section {
-        font-size: 16px;
-        line-height: 1.4;  /* tighter on mobile */
+/* ANIMATION */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* MOBILE: stack vertically */
+@media (max-width: 700px) {
+    .about-columns {
+        flex-direction: column;   /* stack */
+        align-items: center;      /* center each column */
+        gap: 30px;
     }
 
-    .about-links li {
-        font-size: 16px;
-        margin: 5px 0;
+    .about-col {
+        width: 100%;
+        max-width: 350px;
+        text-align: center;       /* center text on mobile */
     }
 }
