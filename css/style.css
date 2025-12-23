@@ -38,34 +38,6 @@ body {
 }
 
 
-/* ===== NAVIGATION ===== */
-nav {
-    background: #2c2c54;
-    padding: 10px;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-}
-
-/* MOBILE: stack links vertically */
-@media (max-width: 600px) {
-    nav a {
-        display: block;     /* stack vertically */
-        margin: 10px 0;     /* vertical spacing */
-        font-size: 18px;    /* easier to tap */
-    }
-}
-
-
 /* ===== SECTIONS ===== */
 section {
     padding: 40px 20px;
