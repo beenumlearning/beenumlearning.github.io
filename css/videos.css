@@ -1,0 +1,39 @@
+/* Grid layout for playlist tiles */
+.playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+/* Tile card */
+.playlist-tile {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.playlist-tile:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* Thumbnail */
+.playlist-thumb {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Title */
+.playlist-title {
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+}

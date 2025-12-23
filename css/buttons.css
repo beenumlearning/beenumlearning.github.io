@@ -1,0 +1,15 @@
+.join-btn {
+    display: inline-block;
+    background: #ffffff;
+    color: #16a085;
+    padding: 14px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.join-btn:hover {
+    background: #ecf0f1;
+}
