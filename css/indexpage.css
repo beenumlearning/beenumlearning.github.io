@@ -37,6 +37,14 @@
 }
 
 /* Announcements Grid */
+.announcements {
+    text-align: center;
+}
+
+.announcements h2 {
+    text-align: center;
+}
+
 .announcement-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
