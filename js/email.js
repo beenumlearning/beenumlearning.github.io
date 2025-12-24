@@ -1,22 +1,41 @@
 function applyEmail() {
-    const emailLinks = document.querySelectorAll("#email-link");
+    const email = window.BEENUM ? BEENUM.EMAIL : null;
+    if (!email) {
+        setTimeout(applyEmail, 100);
+        return;
+    }
 
     let found = false;
 
+    /* Update all email-link elements */
+    const emailLinks = document.querySelectorAll("#email-link");
     emailLinks.forEach(el => {
-        if (window.BEENUM && BEENUM.EMAIL) {
-            el.href = "mailto:" + BEENUM.EMAIL;
+        if (el) {
+            el.href = "mailto:" + email;
 
-            // If text is empty, fill with the email
             if (!el.textContent.trim()) {
-                el.textContent = BEENUM.EMAIL;
+                el.textContent = email;
             }
 
             found = true;
         }
     });
 
-    // Footer loads late → retry until found
+    /* Update announcement offer tiles */
+    const offer50 = document.getElementById("offer-50");
+    const offer30 = document.getElementById("offer-30");
+
+    if (offer50) {
+        offer50.href = "mailto:" + email + "?subject=50% OFF Course Offer";
+        found = true;
+    }
+
+    if (offer30) {
+        offer30.href = "mailto:" + email + "?subject=30% OFF Course Offer";
+        found = true;
+    }
+
+    /* Retry until footer + tiles exist */
     if (!found) {
         setTimeout(applyEmail, 100);
     }
