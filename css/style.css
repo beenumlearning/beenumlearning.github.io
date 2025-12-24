@@ -89,69 +89,6 @@ nav a {
 }
 
 
-/* Announcements Grid */
-.announcement-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-    margin-top: 25px;
-}
-
-/* Announcement Tile */
-.announcement-tile {
-    background: #ffffff;
-    border-radius: 14px;
-    overflow: hidden;
-    border: 1px solid #e6e9ef;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    transition: 0.25s ease;
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-    position: relative;
-}
-
-/* Accent bar */
-.announcement-accent {
-    height: 6px;
-    background: linear-gradient(90deg, #ff0000, #cc0000);
-}
-
-/* Thumbnail — smaller + subtle */
-.announcement-thumb {
-    width: 70px;
-    margin: 20px auto 10px auto;
-    display: block;
-    opacity: 0.85;
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
-}
-
-/* Title — bigger + stronger */
-.announcement-title {
-    padding: 10px 20px 5px 20px;
-    font-size: 20px;
-    font-weight: 700;
-    color: #2c3e50;
-    text-align: center;
-    line-height: 1.4;
-}
-
-/* Subtitle — click here for more details */
-.announcement-sub {
-    text-align: center;
-    font-size: 14px;
-    color: #777;
-    margin-bottom: 18px;
-    font-weight: 500;
-}
-
-/* Hover effect */
-.announcement-tile:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 10px 22px rgba(0,0,0,0.12);
-}
-
-
 /* ===== FOOTER ===== */
 footer {
     background: #1f1f2e;
