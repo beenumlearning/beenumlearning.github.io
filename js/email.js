@@ -26,12 +26,12 @@ function applyEmail() {
     const offer30 = document.getElementById("offer-30");
 
     if (offer50) {
-        offer50.href = "mailto:" + email + "?subject=50% OFF Course Offer";
+        offer50.href = "mailto:" + email + "?subject=30% OFF on Online Courses | I want to know more";
         found = true;
     }
 
     if (offer30) {
-        offer30.href = "mailto:" + email + "?subject=30% OFF Course Offer";
+        offer30.href = "mailto:" + email + "?subject=10% OFF on Online Training | I want to know more";
         found = true;
     }
 
