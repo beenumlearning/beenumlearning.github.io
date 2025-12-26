@@ -1,3 +1,3 @@
 window.BEENUM = {
-    EMAIL: "beenum.apps@zohomail.in"
+    EMAIL: "contact@beenumlearning.com"
 };
