@@ -1,18 +1,22 @@
 /* ABOUT PAGE WRAPPER */
 .about-section {
     max-width: 100%;
-    margin: 50px auto;
+    margin: 20px auto;
     padding: 0 40px;
 }
 
 
 /* INTRO PARAGRAPH (Fix thin font issue) */
 .about-section p {
-    font-size: 20px;          /* slightly larger */
-    line-height: 1.75;        /* more breathing room */
-    color: #2a2a2a;           /* darker, easier to read */
-    font-weight: 500;         /* thicker, more readable */
-    margin-bottom: 40px;
+    font-size: 20px;
+    /* slightly larger */
+    line-height: 1.75;
+    /* more breathing room */
+    color: #2a2a2a;
+    /* darker, easier to read */
+    font-weight: 500;
+    /* thicker, more readable */
+    margin-bottom: 10px;
     text-align: center;
     max-width: 1100px;
     margin-left: auto;
@@ -29,19 +33,12 @@
     color: #2c3e50;
 }
 
-/* INTRO PARAGRAPH */
-.about-links li {
-    font-size: 16px;
-    margin: 12px 0;
-    color: #2b2b2b;       /* darker, easier to read */
-    font-weight: 500;     /* thicker, more readable */
-}
-
 
 /* TWO-COLUMN LAYOUT */
 .about-columns {
     display: flex;
-    justify-content: center;   /* center the whole group */
+    justify-content: center;
+    /* center the whole group */
     align-items: flex-start;
     gap: 60px;
 
@@ -52,8 +49,10 @@
 
 
 .about-col {
-    flex: 1;               /* each column grows equally */
-    max-width: 400px;      /* prevents stretching too wide */
+    flex: 1;
+    /* each column grows equally */
+    max-width: 400px;
+    /* prevents stretching too wide */
     text-align: left;
 }
 
@@ -63,6 +62,8 @@
     font-size: 24px;
     font-weight: 600;
     color: #2c3e50;
+    margin-top: 25px;
+    /* adds space above each section */
     margin-bottom: 12px;
 }
 
@@ -75,9 +76,11 @@
 
 .about-links li {
     font-size: 19px;
-    margin: 12px 0;
-    color: #2b2b2b;       /* darker, easier to read */
-    font-weight: 500;     /* thicker, more readable */
+    margin: 6px 0;
+    color: #2b2b2b;
+    /* darker, easier to read */
+    font-weight: 500;
+    /* thicker, more readable */
 }
 
 
@@ -94,21 +97,125 @@
 
 /* ANIMATION */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* MOBILE: stack vertically */
 @media (max-width: 700px) {
     .about-columns {
-        flex-direction: column;   /* stack */
-        align-items: center;      /* center each column */
+        flex-direction: column;
+        /* stack */
+        align-items: center;
+        /* center each column */
         gap: 30px;
     }
 
     .about-col {
         width: 100%;
         max-width: 350px;
-        text-align: center;       /* center text on mobile */
+        text-align: center;
+        /* center text on mobile */
     }
+}
+
+
+
+/* Instructors Section */
+/* Instructors Section wrapper */
+.instructors-section {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.instructors-section h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* Fixed-size tile layout (max 4 per row, centered) */
+.instructor-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 980px;
+    /* 4 tiles max per row (approx) */
+    margin: 0 auto;
+}
+
+/* Square-ish tile */
+.instructor-tile {
+    width: 210px;
+    height: 210px;
+    /* makes it visually square */
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #e6e9ef;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    padding: 18px 15px;
+    box-sizing: border-box;
+    transition: 0.25s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Accent bar at top */
+.instructor-tile::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    background: linear-gradient(90deg, #ff0000, #cc0000);
+}
+
+/* Hover */
+.instructor-tile:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* Square photo inside tile */
+.instructor-photo {
+    width: 70px;
+    height: 70px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-top: 18px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Name */
+.instructor-name {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+/* Role */
+.instructor-role {
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    text-align: center;
 }

@@ -39,6 +39,18 @@ function applyEmail() {
     if (!found) {
         setTimeout(applyEmail, 100);
     }
+
+    /* Instructor tile email trigger */
+    /* Make all instructor tiles clickable for email */
+    const emailTiles = document.querySelectorAll(".team-email-trigger");
+    emailTiles.forEach(tile => {
+        tile.style.cursor = "pointer";
+        tile.onclick = () => {
+            window.location.href = "mailto:" + email + "?subject=Contact from About Page";
+        };
+        found = true;
+    });
+
 }
 
 document.addEventListener("DOMContentLoaded", applyEmail);

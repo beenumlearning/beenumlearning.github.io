@@ -1,3 +1,3 @@
 window.BEENUM = {
-    EMAIL: "contact@beenumlearning.com"
+    EMAIL: "info@beenumlearning.com"
 };
