@@ -7,20 +7,36 @@ if (!document.querySelector("link[rel='icon']")) {
     document.head.appendChild(favicon);
 }
 
-// Load header
-const header = document.querySelector("[data-include='header']");
-if (header) {
+// Helper: hide loader
+function hideLoader() {
+    const loader = document.getElementById("page-loader");
+    if (loader) {
+        loader.classList.add("hide");
+        setTimeout(() => loader.remove(), 500); // remove from DOM after fade-out
+    }
+}
+
+// Load header + footer in parallel
+const headerPromise = new Promise(resolve => {
+    const header = document.querySelector("[data-include='header']");
+    if (!header) return resolve();
+
     fetch("/fragments/header.html")
         .then(res => res.text())
         .then(html => {
             header.innerHTML = html;
+            resolve();
         })
-        .catch(err => console.error("Header load error:", err));
-}
+        .catch(err => {
+            console.error("Header load error:", err);
+            resolve();
+        });
+});
 
-// Load footer
-const footer = document.querySelector("[data-include='footer']");
-if (footer) {
+const footerPromise = new Promise(resolve => {
+    const footer = document.querySelector("[data-include='footer']");
+    if (!footer) return resolve();
+
     fetch("/fragments/footer.html")
         .then(res => res.text())
         .then(html => {
@@ -31,6 +47,16 @@ if (footer) {
             if (yearSpan) {
                 yearSpan.textContent = new Date().getFullYear();
             }
+
+            resolve();
         })
-        .catch(err => console.error("Footer load error:", err));
-}
+        .catch(err => {
+            console.error("Footer load error:", err);
+            resolve();
+        });
+});
+
+// When both header + footer are done → hide loader
+Promise.all([headerPromise, footerPromise]).then(() => {
+    hideLoader();
+});
