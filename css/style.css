@@ -166,3 +166,46 @@ footer p {
     opacity: 0;
     pointer-events: none;
 }
+
+
+/* ===== SEO SECTION ===== */
+.seo-section {
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 40px 30px;
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #e6e9ef;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    line-height: 1.65;
+}
+
+/* Heading style matching your announcement titles */
+.seo-section h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Paragraph style matching your site’s text weight */
+.seo-section p {
+    font-size: 17px;
+    color: #444; /* darker, richer text */
+    font-weight: 500; /* matches your other sections */
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+/* Remove extra spacing on last paragraph */
+.seo-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* Subtle hover effect (same as tiles) */
+.seo-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+    transition: 0.25s ease;
+}
