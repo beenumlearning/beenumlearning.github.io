@@ -202,3 +202,12 @@
     color: #555;
     text-align: center;
 }
+
+.team-email-trigger {
+    transition: 0.2s ease;
+}
+
+.team-email-trigger:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
