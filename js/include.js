@@ -2,8 +2,8 @@
 if (!document.querySelector("link[rel='icon']")) {
     const favicon = document.createElement("link");
     favicon.rel = "icon";
-    favicon.type = "image/jpeg";
-    favicon.href = "/resources/logo/logos.jpg";
+    favicon.type = "image/png";
+    favicon.href = "/resources/logo/favicon.png";
     document.head.appendChild(favicon);
 }
 
