@@ -40,7 +40,7 @@ body {
 
 /* ===== SECTIONS ===== */
 section {
-    padding: 40px 20px;
+    padding: 10px 5px;
     max-width: 1100px;
     margin: auto;
 }
@@ -53,7 +53,7 @@ section h2 {
 /* Course List */
 ul {
     list-style-type: square;
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 /* ===== NAVIGATION BAR ===== */
@@ -208,8 +208,8 @@ footer p {
 /* ===== SEO SECTION ===== */
 .seo-section {
     max-width: 1100px;
-    margin: 50px auto;
-    padding: 40px 30px;
+    margin: 30px auto;
+    padding: 30px 20px;
     background: #ffffff;
     border-radius: 14px;
     border: 1px solid #e6e9ef;
