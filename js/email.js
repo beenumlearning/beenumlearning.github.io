@@ -23,7 +23,7 @@ function applyEmail() {
 
     /* Update announcement offer tiles */
     const trainingEmail = document.getElementById("training-email");
-    const consult10 = document.getElementById("consulting-work");
+    const consult10 = document.getElementById("consulting-email");
 
 
 
