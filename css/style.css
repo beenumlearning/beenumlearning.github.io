@@ -94,20 +94,20 @@ footer {
     background: #1f1f2e;
     color: #e6e6e6;
     text-align: center;
-    padding: 12px 20px;   /* reduced from 25px */
-    margin-top: 20px;     /* reduced from 50px */
+    padding: 12px 20px;
+    margin-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.08);
     font-size: 14px;
 }
 
 /* Footer Links Row */
 .footer-links {
-    margin-bottom: 6px;   /* reduced from 12px */
+    margin-bottom: 6px;
 }
 
 .footer-links a {
     color: #fbc531;
-    margin: 0 8px;        /* reduced from 14px */
+    margin: 0 8px;
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
@@ -120,11 +120,48 @@ footer p {
     opacity: 0.85;
 }
 
+/* ⭐ NEW: Inline Flexbox Row for Credits */
+.footer-inline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 6px;
+}
+
+.footer-inline p {
+    margin: 0;
+    font-size: 13px;
+    opacity: 0.85;
+}
+
+/* Separator Dot */
+.footer-separator {
+    opacity: 0.5;
+    font-size: 14px;
+}
+
+/* Credit Link */
+.site-credit a {
+    color: #fbc531;
+    text-decoration: underline;
+}
+
 /* Mobile */
 @media (max-width: 600px) {
     .footer-links a {
         display: block;
-        margin: 6px 0;    /* reduced from 8px */
+        margin: 6px 0;
+    }
+
+    .footer-inline {
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .footer-separator {
+        display: none;
     }
 }
 
