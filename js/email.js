@@ -22,18 +22,13 @@ function applyEmail() {
     });
 
     /* Update announcement offer tiles */
-    const offer50 = document.getElementById("offer-50");
-    const offer30 = document.getElementById("offer-30");
+    const trainingEmail = document.getElementById("training-email");
     const consult10 = document.getElementById("consulting-work");
 
 
-    if (offer50) {
-        offer50.href = "mailto:" + email + "?subject=30% OFF on Online Courses | I want to know more";
-        found = true;
-    }
 
-    if (offer30) {
-        offer30.href = "mailto:" + email + "?subject=10% OFF on Online Training | I want to know more";
+    if (trainingEmail) {
+        trainingEmail.href = "mailto:" + email + "?subject=10% OFF | Training Inquiry | I want to know more";
         found = true;
     }
 
