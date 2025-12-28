@@ -40,7 +40,9 @@ function applyEmail() {
     /* Retry until footer + tiles exist */
     if (!found) {
         setTimeout(applyEmail, 100);
+        return;
     }
+
 
     /* Instructor tile email trigger */
     /* Make all instructor tiles clickable for email */
