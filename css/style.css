@@ -248,35 +248,56 @@ footer p {
 }
 
 
-/* ===== ADESTRRA AD CSS HERE ===== */
-.adsterra-wrapper {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;          /* allows wrapping */
-    justify-content: center;  /* center align horizontally */
-    gap: 20px;                /* spacing between ads */
-    margin: 30px 0;
-}
+/* ============================
+   ADESTRRA AD SECTION (FULL CSS)
+   ============================ */
 
-.adsterra-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
+/* Advertisement label */
 .ad-label {
+    width: 100%;
+    display: block;
     text-align: center;
     font-size: 13px;
     color: #777;
     margin-top: 30px;
     margin-bottom: 10px;
     font-weight: 500;
+    letter-spacing: 0.3px;
 }
 
-/* Optional: make ads scale on very small screens */
-@media (max-width: 500px) {
+/* Wrapper for all ads */
+.adsterra-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;          /* allows wrapping on smaller screens */
+    justify-content: center;  /* center align horizontally */
+    align-items: center;
+    gap: 20px;                /* spacing between ads */
+    margin: 20px 0 40px 0;    /* top and bottom spacing */
+    padding: 10px 0;
+}
+
+/* Each ad item */
+.adsterra-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+/* Make iframe ads responsive on small screens */
+@media (max-width: 600px) {
     .adsterra-item iframe {
         width: 100% !important;
         height: auto !important;
+    }
+}
+
+/* Optional: Add subtle spacing for mobile */
+@media (max-width: 480px) {
+    .ad-label {
+        margin-top: 20px;
+        margin-bottom: 8px;
+        font-size: 12px;
     }
 }
