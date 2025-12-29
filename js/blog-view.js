@@ -10,6 +10,8 @@ async function loadBlog() {
 
     // Load PDF directly
     document.getElementById("pdf-viewer").src = `../blogs/${file}#view=FitH`;
+    document.getElementById("pdf-download-link").href = `../blogs/${file}`;
+
 }
 
 loadBlog();

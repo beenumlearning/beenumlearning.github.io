@@ -31,7 +31,14 @@
         <p id="blog-date" class="blog-date"></p>
 
         <!-- PDF Viewer -->
-        <iframe id="pdf-viewer" class="pdf-frame" frameborder="0"></iframe>
+        <div class="pdf-wrapper">
+            <iframe id="pdf-viewer" class="pdf-frame" frameborder="0"></iframe>
+            <p class="pdf-fallback">
+                If the PDF doesn't load, <a id="pdf-download-link" href="#" target="_blank">click here to open it
+                    directly</a>.
+            </p>
+        </div>
+
 
     </section>
 

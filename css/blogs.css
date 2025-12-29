@@ -7,7 +7,8 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 25px;
-    max-width: 1100px; /* Matches other pages */
+    max-width: 1100px;
+    /* Matches other pages */
     margin: 0 auto;
     padding: 20px 0;
 }
@@ -99,14 +100,15 @@
     border: 1px solid #ddd;
     border-radius: 10px;
     margin-top: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 /* ============================
    BLOG DETAIL PAGE
    ============================ */
 .blog-detail-section {
-    max-width: 1100px; /* Matches other pages */
+    max-width: 1100px;
+    /* Matches other pages */
     margin: 40px auto;
     padding: 0 20px;
 }
@@ -125,7 +127,8 @@
 
 .blog-back-btn:hover {
     color: #005bb5;
-    text-decoration: none; /* ensures no underline */
+    text-decoration: none;
+    /* ensures no underline */
 }
 
 
@@ -183,6 +186,24 @@
     color: #2a2a2a;
 }
 
+.pdf-fallback {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.pdf-fallback a {
+    color: #0073e6;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.pdf-fallback a:hover {
+    text-decoration: underline;
+}
+
+
 /* ============================
    MOBILE RESPONSIVE
    ============================ */
@@ -201,6 +222,13 @@
     }
 
     .pdf-frame {
-        height: 600px;
+        width: 100%;
+        height: 80vh;
+        /* Responsive height */
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        margin-top: 20px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
+
 }
