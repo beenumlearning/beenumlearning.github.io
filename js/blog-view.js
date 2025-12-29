@@ -9,7 +9,7 @@ async function loadBlog() {
     document.getElementById("blog-date").textContent = "Published on: " + date;
 
     // Load PDF directly
-    document.getElementById("pdf-viewer").src = `../blogs/${file}`;
+    document.getElementById("pdf-viewer").src = `../blogs/${file}#view=FitH`;
 }
 
 loadBlog();
