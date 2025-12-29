@@ -1,0 +1,206 @@
+/* ============================
+   BLOG LISTING GRID
+   ============================ */
+.blog-grid,
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1100px; /* Matches other pages */
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* ============================
+   BLOG TILE — MATCH INSTRUCTOR TILE STYLE
+   ============================ */
+.blog-tile {
+    width: 210px;
+    height: 210px;
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #e6e9ef;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    padding: 18px 15px;
+    box-sizing: border-box;
+    transition: 0.25s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* Accent bar at top */
+.blog-tile::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    background: linear-gradient(90deg, #ff0000, #cc0000);
+}
+
+/* Hover effect */
+.blog-tile:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+/* Blog Title inside tile */
+.blog-tile h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #2c3e50;
+    text-align: center;
+    margin: 0;
+    margin-top: 10px;
+}
+
+/* Subtitle */
+.blog-subtitle {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0073e6;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* ============================
+   LOAD MORE BUTTON
+   ============================ */
+.load-more-btn {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background: #0073e6;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.load-more-btn:hover {
+    background: #005bb5;
+}
+
+/* ============================
+   PDF VIEWER
+   ============================ */
+.pdf-frame {
+    width: 100%;
+    height: 900px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* ============================
+   BLOG DETAIL PAGE
+   ============================ */
+.blog-detail-section {
+    max-width: 1100px; /* Matches other pages */
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Modern Blue Back Link */
+.blog-back-btn {
+    display: inline-block;
+    margin-bottom: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0073e6;
+    text-decoration: none;
+    padding: 6px 0;
+    transition: 0.25s ease;
+}
+
+.blog-back-btn:hover {
+    color: #005bb5;
+    text-decoration: none; /* ensures no underline */
+}
+
+
+/* Blog Title */
+#blog-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Blog Date */
+.blog-date {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+/* Blog Content (if needed for future HTML blogs) */
+#blog-content p {
+    line-height: 1.75;
+    margin-bottom: 16px;
+    font-size: 18px;
+    color: #2a2a2a;
+}
+
+/* Images inside blog */
+#blog-content img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Headings inside blog */
+#blog-content h1,
+#blog-content h2,
+#blog-content h3 {
+    color: #2c3e50;
+    margin-top: 25px;
+    margin-bottom: 12px;
+}
+
+/* Lists inside blog */
+#blog-content ul,
+#blog-content ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+#blog-content li {
+    font-size: 17px;
+    margin-bottom: 8px;
+    color: #2a2a2a;
+}
+
+/* ============================
+   MOBILE RESPONSIVE
+   ============================ */
+@media (max-width: 700px) {
+    .blog-tile {
+        width: 170px;
+        height: 170px;
+    }
+
+    #blog-title {
+        font-size: 26px;
+    }
+
+    #blog-content p {
+        font-size: 16px;
+    }
+
+    .pdf-frame {
+        height: 600px;
+    }
+}

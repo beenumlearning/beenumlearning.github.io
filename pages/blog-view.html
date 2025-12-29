@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Details | BEENUM LEARNING</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/blogs.css">
+
+    <!-- Shared Includes -->
+    <script src="../js/include.js" defer></script>
+
+    <!-- Blog Viewer Script -->
+    <script src="../js/blog-view.js" defer></script>
+
+    <!-- DOCX Reader Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script>
+</head>
+
+<body>
+
+    <!-- Shared Header -->
+    <div data-include="header"></div>
+
+    <section class="blog-detail-section">
+
+        <a href="blogs.html" class="blog-back-btn">← Back to Blogs</a>
+        <h1 id="blog-title"></h1>
+        <p id="blog-date" class="blog-date"></p>
+
+        <!-- PDF Viewer -->
+        <iframe id="pdf-viewer" class="pdf-frame" frameborder="0"></iframe>
+
+    </section>
+
+
+    <!-- Shared Footer -->
+    <div data-include="footer"></div>
+
+</body>
+
+</html>
