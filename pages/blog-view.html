@@ -4,20 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog Details | BEENUM LEARNING</title>
-
-    <!-- Styles -->
+    <!-- ⭐ Dynamic Title (fallback if JS not loaded) -->
+    <title>Blog Details | BEENUM LEARNING</title> <!-- ⭐ SEO Metadata -->
+    <meta name="description"
+        content="Read detailed technical blogs from BEENUM LEARNING covering Oracle Integration Cloud (OIC), Visual Builder (VBCS), Process Automation (PCS), ORDS, OCI, AI, and Oracle Fusion. Includes PDF guides and related YouTube tutorials.">
+    <meta name="keywords"
+        content="Oracle blogs, OIC learning path, VBCS tutorials, PCS blogs, ORDS articles, OCI developer guide, Oracle Fusion blogs, BEENUM LEARNING blogs, cloud integration tutorials">
+    <!-- ⭐ Open Graph (Social Sharing) -->
+    <meta property="og:title" content="Technical Blog Details – Oracle Cloud, OIC, VBCS, PCS, ORDS & OCI">
+    <meta property="og:description"
+        content="Explore detailed Oracle Cloud learning blogs with PDF guides and related YouTube videos. Learn OIC, VBCS, PCS, ORDS, OCI, AI, and Fusion with practical examples.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://beenumlearning.com/pages/blog-view.html"> <!-- ⭐ Canonical URL -->
+    <link rel="canonical" href="https://beenumlearning.com/pages/blog-view.html"> <!-- ⭐ Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ590MJQXF"></script>
+    <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-KZ590MJQXF'); </script>
+    <!-- ⭐ Styles -->
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/blogs.css">
-
-    <!-- Shared Includes -->
-    <script src="../js/include.js" defer></script>
-
-    <!-- Blog Viewer Script -->
+    <link rel="stylesheet" href="../css/blogs.css"> <!-- ⭐ Shared Includes -->
+    <script src="../js/include.js" defer></script> <!-- ⭐ Blog Viewer Script -->
     <script src="../js/blog-view.js" defer></script>
-
-    <!-- DOCX Reader Libraries -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script>
 </head>
 
 <body>
@@ -44,9 +50,11 @@
             </p>
         </div>
 
+        <!-- YouTube Video Viewer -->
+        <h2 id="video-heading" class="video-heading" style="display:none;"></h2>
+        <div id="video-container" class="video-wrapper"></div>
 
     </section>
-
 
     <!-- Shared Footer -->
     <div data-include="footer"></div>

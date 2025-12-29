@@ -203,6 +203,28 @@
     text-decoration: underline;
 }
 
+.video-wrapper {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.youtube-frame {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.video-heading {
+    font-size: 26px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 
 /* ============================
    MOBILE RESPONSIVE

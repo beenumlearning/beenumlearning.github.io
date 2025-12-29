@@ -3,12 +3,14 @@
     {
       "title": "OCI Developer Learning Path",
       "file": "OCI_Learning_Path.pdf",
-      "date": "2025-12-28"
+      "date": "2025-12-28",
+      "video": "https://youtu.be/lUC9skWHKGs"
     },
     {
       "title": "Oracle Integration Developer Learning Path",
       "file": "OIC_Learning_Path.pdf",
-      "date": "2025-12-29"
+      "date": "2025-12-29",
+      "video": ""
     }
   ]
 }
