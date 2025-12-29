@@ -1,4 +1,5 @@
 let blogs = [];
+let filteredBlogs = [];
 let currentIndex = 0;
 const batchSize = 25;
 
@@ -6,25 +7,33 @@ async function loadBlogs() {
     const res = await fetch("/resources/data/blogs.json");
     const data = await res.json();
 
-    // Sort by date
+    // Sort by date (newest first)
     blogs = data.blogs.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-    loadMore();
+    // Initially show all blogs
+    filteredBlogs = blogs;
+
+    renderBlogs();
 }
 
-function loadMore() {
+function renderBlogs() {
     const container = document.getElementById("blogs-container");
 
-    const nextBatch = blogs.slice(currentIndex, currentIndex + batchSize);
+    // Clear only when starting fresh
+    if (currentIndex === 0) {
+        container.innerHTML = "";
+    }
+
+    const nextBatch = filteredBlogs.slice(currentIndex, currentIndex + batchSize);
 
     nextBatch.forEach(blog => {
         const tile = document.createElement("div");
         tile.className = "blog-tile";
+
         tile.onclick = () => {
             window.location.href =
                 `blog-view.html?file=${blog.file}&title=${encodeURIComponent(blog.title)}&date=${blog.date}&video=${encodeURIComponent(blog.video || "")}`;
         };
-
 
         tile.innerHTML = `
             <h3>${blog.title}</h3>
@@ -36,11 +45,31 @@ function loadMore() {
 
     currentIndex += batchSize;
 
-    if (currentIndex >= blogs.length) {
-        document.getElementById("load-more-btn").style.display = "none";
-    }
+    // Hide Load More if no more blogs
+    document.getElementById("load-more-btn").style.display =
+        currentIndex >= filteredBlogs.length ? "none" : "block";
 }
 
-document.getElementById("load-more-btn").addEventListener("click", loadMore);
+function applyFilters() {
+    const searchValue = document.getElementById("search-input").value.toLowerCase();
+    const categoryValue = document.getElementById("category-filter").value;
 
+    filteredBlogs = blogs.filter(blog => {
+        const matchesCategory = categoryValue === "all" || blog.category === categoryValue;
+        const matchesSearch = blog.title.toLowerCase().includes(searchValue);
+        return matchesCategory && matchesSearch;
+    });
+
+    // Reset pagination
+    currentIndex = 0;
+
+    renderBlogs();
+}
+
+// Event listeners
+document.getElementById("load-more-btn").addEventListener("click", renderBlogs);
+document.getElementById("search-input").addEventListener("input", applyFilters);
+document.getElementById("category-filter").addEventListener("change", applyFilters);
+
+// Load initial blogs
 loadBlogs();

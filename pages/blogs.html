@@ -52,9 +52,22 @@
     <div data-include="header"></div>
 
     <section class="blogs-section">
+
         <h1>Latest Blogs</h1>
 
-        <div id="blogs-container" class="team-grid"></div>
+        <div class="blog-filters">
+            <input type="text" id="search-input" placeholder="Search blogs..." />
+
+            <select id="category-filter">
+                <option value="all">All Categories</option>
+                <option value="OCI">OCI</option>
+                <option value="OIC">OIC</option>
+                <!-- Add more categories if needed -->
+            </select>
+        </div>
+
+
+        <div id="blogs-container" class="blog-grid"></div>
 
         <button id="load-more-btn" class="load-more-btn">Load More</button>
     </section>

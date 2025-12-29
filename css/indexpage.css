@@ -92,12 +92,17 @@
 }
 
 /* Subtitle — click here for more details */
+/* Subtitle — click here for more details */
 .announcement-sub {
     text-align: center;
     font-size: 14px;
-    color: #777;
+    color: #0073e6;        /* Premium blue */
     margin-bottom: 18px;
-    font-weight: 500;
+    font-weight: 600;      /* Slightly thicker */
+    transition: 0.25s ease;
+}
+.announcement-tile:hover .announcement-sub {
+    color: #005bb5;        /* Darker blue on hover */
 }
 
 /* Hover effect */
