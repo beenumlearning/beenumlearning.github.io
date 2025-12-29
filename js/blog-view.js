@@ -9,8 +9,14 @@ async function loadBlog() {
     document.getElementById("blog-date").textContent = "Published on: " + date;
 
     // Load PDF directly
-    document.getElementById("pdf-viewer").src = `../blogs/${file}#view=FitH`;
-    document.getElementById("pdf-download-link").href = `../blogs/${file}`;
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    if (isMobile) {
+        window.location.href = `../blogs/${file}`;
+    } else {
+        document.getElementById("pdf-viewer").src = `../blogs/${file}#view=FitH`;
+    }
+
 
 }
 
