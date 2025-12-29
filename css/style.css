@@ -246,3 +246,37 @@ footer p {
     box-shadow: 0 8px 20px rgba(0,0,0,0.10);
     transition: 0.25s ease;
 }
+
+
+/* ===== ADESTRRA AD CSS HERE ===== */
+.adsterra-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;          /* allows wrapping */
+    justify-content: center;  /* center align horizontally */
+    gap: 20px;                /* spacing between ads */
+    margin: 30px 0;
+}
+
+.adsterra-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ad-label {
+    text-align: center;
+    font-size: 13px;
+    color: #777;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* Optional: make ads scale on very small screens */
+@media (max-width: 500px) {
+    .adsterra-item iframe {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
