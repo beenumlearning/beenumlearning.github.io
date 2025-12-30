@@ -1,3 +1,12 @@
+/* ============================
+   GLOBAL RESET + OVERFLOW FIX
+   ============================ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: "Segoe UI", Arial, sans-serif;
@@ -7,10 +16,14 @@ body {
     overflow-x: hidden;
 }
 
-/* ===== TOP BANNER ===== */
+/* ============================
+   TOP BANNER
+   ============================ */
 .top-banner {
     background: #1f1f2e;
     padding: 10px 20px;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .brand {
@@ -38,8 +51,9 @@ body {
     color: #cccccc;
 }
 
-
-/* ===== SECTIONS ===== */
+/* ============================
+   SECTION WRAPPER
+   ============================ */
 section {
     padding: 10px 5px;
     max-width: 1100px;
@@ -57,22 +71,24 @@ ul {
     padding-left: 10px;
 }
 
-/* ===== NAVIGATION BAR ===== */
-/* ===== NAVIGATION BAR (DESKTOP) ===== */
+/* ============================
+   NAVIGATION BAR
+   ============================ */
 nav {
     background: #2c2c54;
-    padding: 6px 10px; /* Thin bar */
+    padding: 6px 10px;
     text-align: center;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
-/* Base link style */
 nav a {
     color: white;
     margin: 6px 10px;
     text-decoration: none;
-    font-weight: 700;   /* Thicker text */
+    font-weight: 700;
     display: inline-block;
-    font-size: 16px;    /* Restored thicker size */
+    font-size: 16px;
     position: relative;
     padding-bottom: 2px;
     transition: color 0.25s ease;
@@ -82,7 +98,6 @@ nav a:hover {
     color: #a8c7ff;
 }
 
-/* Underline animation */
 nav a::after {
     content: "";
     position: absolute;
@@ -98,48 +113,50 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* ===== HAMBURGER TOGGLE BUTTON ===== */
+/* ============================
+   HAMBURGER TOGGLE
+   ============================ */
 .nav-toggle {
     display: none;
     font-size: 26px;
     color: white;
-    padding: 8px 16px; /* Thin bar */
+    padding: 8px 16px;
     background: #2c2c54;
     cursor: pointer;
-    text-align: left; /* Hamburger on LEFT */
+    text-align: left;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
-/* ===== MOBILE NAVIGATION ===== */
+/* ============================
+   MOBILE NAVIGATION
+   ============================ */
 @media (max-width: 600px) {
-
-    /* Hamburger bar */
     .nav-toggle {
         display: block;
         width: 100%;
-        padding: 8px 16px; /* Thin top bar */
+        padding: 8px 16px;
         font-size: 26px;
         background: #2c2c54;
         text-align: left;
         border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
-    /* Hidden menu until opened */
     nav {
         display: none;
         flex-direction: column;
         background: #2c2c54;
-        padding: 6px 0; /* Thin vertical spacing */
+        padding: 6px 0;
     }
 
     body.nav-open nav {
         display: flex;
     }
 
-    /* Mobile menu items */
     nav a {
         margin: 8px 0;
-        font-size: 18px;   /* Thicker text restored */
-        font-weight: 700;  /* Stronger */
+        font-size: 18px;
+        font-weight: 700;
         padding: 6px 20px;
         text-align: left;
     }
@@ -154,8 +171,9 @@ nav a:hover::after {
     }
 }
 
-
-/* ===== FOOTER ===== */
+/* ============================
+   FOOTER
+   ============================ */
 footer {
     background: #1f1f2e;
     color: #e6e6e6;
@@ -166,7 +184,6 @@ footer {
     font-size: 14px;
 }
 
-/* Footer Links Row */
 .footer-links {
     margin-bottom: 6px;
 }
@@ -186,7 +203,6 @@ footer p {
     opacity: 0.85;
 }
 
-/* ⭐ NEW: Inline Flexbox Row for Credits */
 .footer-inline {
     display: flex;
     justify-content: center;
@@ -202,19 +218,16 @@ footer p {
     opacity: 0.85;
 }
 
-/* Separator Dot */
 .footer-separator {
     opacity: 0.5;
     font-size: 14px;
 }
 
-/* Credit Link */
 .site-credit a {
     color: #fbc531;
     text-decoration: underline;
 }
 
-/* Mobile */
 @media (max-width: 600px) {
     .footer-links a {
         display: block;
@@ -231,9 +244,9 @@ footer p {
     }
 }
 
-
-
-/* Fullscreen Loader */
+/* ============================
+   LOADER
+   ============================ */
 #page-loader {
     position: fixed;
     top: 0;
@@ -248,7 +261,6 @@ footer p {
     transition: opacity 0.4s ease;
 }
 
-/* Spinner */
 .loader-spinner {
     width: 45px;
     height: 45px;
@@ -264,14 +276,14 @@ footer p {
     }
 }
 
-/* Hide loader */
 #page-loader.hide {
     opacity: 0;
     pointer-events: none;
 }
 
-
-/* ===== SEO SECTION ===== */
+/* ============================
+   SEO SECTION
+   ============================ */
 .seo-section {
     max-width: 1100px;
     margin: 30px auto;
@@ -283,7 +295,6 @@ footer p {
     line-height: 1.65;
 }
 
-/* Heading style matching your announcement titles */
 .seo-section h2 {
     font-size: 28px;
     font-weight: 700;
@@ -292,35 +303,27 @@ footer p {
     text-align: center;
 }
 
-/* Paragraph style matching your site’s text weight */
 .seo-section p {
     font-size: 17px;
     color: #444;
-    /* darker, richer text */
     font-weight: 500;
-    /* matches your other sections */
     margin-bottom: 18px;
     text-align: left;
 }
 
-/* Remove extra spacing on last paragraph */
 .seo-section p:last-child {
     margin-bottom: 0;
 }
 
-/* Subtle hover effect (same as tiles) */
 .seo-section:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
     transition: 0.25s ease;
 }
 
-
 /* ============================
-   ADESTRRA AD SECTION (FULL CSS)
+   ADSTERA SECTION
    ============================ */
-
-/* Advertisement label */
 .ad-label {
     width: 100%;
     display: block;
@@ -333,23 +336,17 @@ footer p {
     letter-spacing: 0.3px;
 }
 
-/* Wrapper for all ads */
 .adsterra-wrapper {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    /* allows wrapping on smaller screens */
     justify-content: center;
-    /* center align horizontally */
     align-items: center;
     gap: 20px;
-    /* spacing between ads */
     margin: 20px 0 40px 0;
-    /* top and bottom spacing */
     padding: 10px 0;
 }
 
-/* Each ad item */
 .adsterra-item {
     display: flex;
     justify-content: center;
@@ -357,7 +354,6 @@ footer p {
     max-width: 100%;
 }
 
-/* Make iframe ads responsive on small screens */
 @media (max-width: 600px) {
     .adsterra-item iframe {
         width: 100% !important;
@@ -365,7 +361,6 @@ footer p {
     }
 }
 
-/* Optional: Add subtle spacing for mobile */
 @media (max-width: 480px) {
     .ad-label {
         margin-top: 20px;
