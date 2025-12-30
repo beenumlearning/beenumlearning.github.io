@@ -53,16 +53,16 @@
     text-align: left;
 }
 
-/* SECTION HEADERS (Unified + Bold) */
+/* SECTION HEADERS */
 .about-col h3 {
     font-size: 24px;
-    font-weight: 700;      /* true bold */
-    color: #1f2d3d;        /* stronger contrast */
+    font-weight: 700;
+    color: #1f2d3d;
     margin-top: 25px;
     margin-bottom: 12px;
 }
 
-/* CLEAN LIST (NO BULLETS) */
+/* CLEAN LIST */
 .about-links {
     list-style: none;
     padding: 0;
@@ -89,17 +89,11 @@
 
 /* ANIMATION */
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* MOBILE: stack vertically */
+/* MOBILE STACK */
 @media (max-width: 700px) {
     .about-columns {
         flex-direction: column;
@@ -114,7 +108,9 @@
     }
 }
 
-/* Instructors Section */
+/* ============================
+   INSTRUCTORS SECTION
+   ============================ */
 .instructors-section {
     max-width: 1100px;
     margin: 30px auto;
@@ -129,7 +125,7 @@
     margin-bottom: 30px;
 }
 
-/* Fixed-size tile layout */
+/* GRID */
 .instructor-grid {
     display: flex;
     flex-wrap: wrap;
@@ -139,7 +135,7 @@
     margin: 0 auto;
 }
 
-/* Square-ish tile */
+/* TILE */
 .instructor-tile {
     width: 210px;
     height: 210px;
@@ -156,7 +152,17 @@
     align-items: center;
 }
 
-/* Accent bar at top */
+/* FORCE UNSELECTABLE (FIX) */
+.instructor-tile,
+.instructor-tile * {
+    user-select: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Accent bar */
 .instructor-tile::before {
     content: "";
     position: absolute;
@@ -175,7 +181,7 @@
     box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
 }
 
-/* Square photo inside tile */
+/* PHOTO */
 .instructor-photo {
     width: 70px;
     height: 70px;
@@ -186,7 +192,7 @@
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* Name */
+/* NAME */
 .instructor-name {
     font-size: 16px;
     font-weight: 700;
@@ -195,7 +201,7 @@
     margin-bottom: 4px;
 }
 
-/* Role */
+/* ROLE */
 .instructor-role {
     font-size: 14px;
     font-weight: 500;
@@ -203,6 +209,7 @@
     text-align: center;
 }
 
+/* Hover animation */
 .team-email-trigger {
     transition: 0.2s ease;
 }
