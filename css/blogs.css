@@ -8,7 +8,6 @@
     justify-content: center;
     gap: 25px;
     max-width: 1100px;
-    /* Matches other pages */
     margin: 0 auto;
     padding: 20px 0;
 }
@@ -31,6 +30,16 @@
     flex-direction: column;
     justify-content: center;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Make tile + all text unselectable */
+.blog-tile,
+.blog-tile * {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 /* Accent bar at top */
@@ -108,7 +117,6 @@
    ============================ */
 .blog-detail-section {
     max-width: 1100px;
-    /* Matches other pages */
     margin: 40px auto;
     padding: 0 20px;
 }
@@ -118,7 +126,7 @@
     display: inline-block;
     margin-bottom: 25px;
     font-size: 16px;
-    font-weight: 700; /* Thicker like blog tile subtitle */
+    font-weight: 700;
     color: #0073e6;
     text-decoration: none;
     padding: 6px 0;
@@ -127,18 +135,17 @@
 
 .blog-back-btn:hover {
     color: #005bb5;
-    text-decoration: none;
 }
-
-
 
 /* Blog Title */
 #blog-title {
+    user-select: none;
     font-size: 32px;
     font-weight: 700;
     color: #2c3e50;
     margin-bottom: 10px;
     text-align: left;
+    cursor: pointer;
 }
 
 /* Blog Date */
@@ -148,7 +155,7 @@
     margin-bottom: 20px;
 }
 
-/* Blog Content (if needed for future HTML blogs) */
+/* Blog Content */
 #blog-content p {
     line-height: 1.75;
     margin-bottom: 16px;
@@ -203,9 +210,24 @@
     text-decoration: underline;
 }
 
+/* Responsive YouTube Wrapper */
 .video-wrapper {
-    margin-top: 40px;
-    text-align: center;
+    position: relative;
+    width: 100%;
+    max-width: 720px; /* Medium rectangle on desktop */
+    margin: 30px auto; /* Center horizontally */
+    aspect-ratio: 16 / 9; /* Perfect rectangle */
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Responsive iframe */
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 14px;
 }
 
 .youtube-frame {
@@ -224,7 +246,6 @@
     margin-bottom: 20px;
     text-align: center;
 }
-
 
 /* ============================
    MOBILE RESPONSIVE
@@ -246,17 +267,13 @@
     .pdf-frame {
         width: 100%;
         height: 80vh;
-        /* Responsive height */
         border: 1px solid #ddd;
         border-radius: 10px;
         margin-top: 20px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
-
 }
 
-
-/* Modern, clean filter bar */
 /* ============================
    FILTER BAR — SEARCH + CATEGORY
    ============================ */
@@ -274,7 +291,6 @@
 .blog-filters select {
     width: 100%;
     max-width: 360px;
-    height: auto;
     padding: 10px 14px;
     font-size: 15px;
     border: 1px solid #d0d4da;
@@ -285,7 +301,6 @@
     box-shadow: 0 1px 4px rgba(0,0,0,0.03);
 }
 
-/* Focus effect */
 .blog-filters input:focus,
 .blog-filters select:focus {
     border-color: #0073e6;
@@ -309,8 +324,5 @@
         max-width: 100%;
         font-size: 15px;
         padding: 9px 12px;
-        height: auto;
     }
 }
-
-
