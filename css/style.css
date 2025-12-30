@@ -57,6 +57,7 @@ ul {
 }
 
 /* ===== NAVIGATION BAR ===== */
+/* ===== NAVIGATION BAR (DESKTOP) ===== */
 nav {
     background: #2c2c54;
     padding: 6px 10px; /* Thin bar */
@@ -68,9 +69,9 @@ nav a {
     color: white;
     margin: 6px 10px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;   /* Thicker text */
     display: inline-block;
-    font-size: 15px;
+    font-size: 16px;    /* Restored thicker size */
     position: relative;
     padding-bottom: 2px;
     transition: color 0.25s ease;
@@ -80,6 +81,7 @@ nav a:hover {
     color: #a8c7ff;
 }
 
+/* Underline animation */
 nav a::after {
     content: "";
     position: absolute;
@@ -95,29 +97,32 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* ===== TOGGLE BUTTON ===== */
+/* ===== HAMBURGER TOGGLE BUTTON ===== */
 .nav-toggle {
     display: none;
     font-size: 26px;
     color: white;
-    padding: 8px 16px; /* Thinner bar */
+    padding: 8px 16px; /* Thin bar */
     background: #2c2c54;
     cursor: pointer;
-    text-align: left; /* Align hamburger to left */
+    text-align: left; /* Hamburger on LEFT */
 }
 
 /* ===== MOBILE NAVIGATION ===== */
 @media (max-width: 600px) {
+
+    /* Hamburger bar */
     .nav-toggle {
         display: block;
         width: 100%;
-        padding: 8px 16px; /* Thinner top bar */
+        padding: 8px 16px; /* Thin top bar */
         font-size: 26px;
         background: #2c2c54;
         text-align: left;
-        border-bottom: 1px solid rgba(255,255,255,0.1); /* Optional divider */
+        border-bottom: 1px solid rgba(255,255,255,0.1);
     }
 
+    /* Hidden menu until opened */
     nav {
         display: none;
         flex-direction: column;
@@ -129,10 +134,12 @@ nav a:hover::after {
         display: flex;
     }
 
+    /* Mobile menu items */
     nav a {
         margin: 8px 0;
-        font-size: 16px;
-        padding: 4px 20px;
+        font-size: 18px;   /* Thicker text restored */
+        font-weight: 700;  /* Stronger */
+        padding: 6px 20px;
         text-align: left;
     }
 
