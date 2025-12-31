@@ -1,43 +1,50 @@
 async function loadBlog() {
     const params = new URLSearchParams(window.location.search);
+    const id = parseInt(params.get("id"));
 
-    const file = params.get("file");
-    const title = params.get("title");
-    const date = params.get("date");
-    const video = params.get("video");   // ✅ THIS WAS MISSING
+    if (!id) {
+        document.getElementById("blog-title").textContent = "Invalid Blog ID";
+        return;
+    }
 
-    document.getElementById("blog-title").textContent = title;
-    document.getElementById("blog-date").textContent = "Published on: " + date;
+    // Load blogs.json
+    const res = await fetch("/resources/data/blogs.json");
+    const data = await res.json();
 
-    // Load PDF directly
-    document.getElementById("pdf-viewer").src = `../blogs/${file}#view=FitH`;
-    document.getElementById("pdf-download-link").href = `../blogs/${file}`;
+    // Find the blog by ID
+    const blog = data.blogs.find(b => b.id === id);
 
-    // YouTube embed 
-    if (video) {
-        const videoContainer = document.getElementById("video-container");
-        const videoHeading = document.getElementById("video-heading");
+    if (!blog) {
+        document.getElementById("blog-title").textContent = "Blog Not Found";
+        return;
+    }
 
-        // Convert normal YouTube link to embed format
-        const embedUrl = video
+    // Populate UI
+    document.getElementById("blog-title").textContent = blog.title;
+    document.getElementById("blog-date").textContent = "Published on: " + blog.date;
+
+    // PDF
+    document.getElementById("pdf-viewer").src = `../blogs/${blog.file}#view=FitH`;
+    document.getElementById("pdf-download-link").href = `../blogs/${blog.file}`;
+
+    // YouTube
+    if (blog.video) {
+        const embedUrl = blog.video
             .replace("youtu.be/", "www.youtube.com/embed/")
             .replace("watch?v=", "embed/");
 
-        // Show heading
-        videoHeading.textContent = "Related Video for This Blog";
-        videoHeading.style.display = "block";
+        document.getElementById("video-heading").textContent = "Related Video for This Blog";
+        document.getElementById("video-heading").style.display = "block";
 
-        // Insert video
-        videoContainer.innerHTML = `
-        <iframe class="youtube-frame"
-            src="${embedUrl}"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
-    `;
+        document.getElementById("video-container").innerHTML = `
+            <iframe class="youtube-frame"
+                src="${embedUrl}"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        `;
     }
-
 }
 
 loadBlog();

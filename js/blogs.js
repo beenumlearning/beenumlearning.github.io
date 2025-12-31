@@ -31,8 +31,7 @@ function renderBlogs() {
         tile.className = "blog-tile";
 
         tile.onclick = () => {
-            window.location.href =
-                `blog-view.html?file=${blog.file}&title=${encodeURIComponent(blog.title)}&date=${blog.date}&video=${encodeURIComponent(blog.video || "")}`;
+            window.location.href = `blog-view.html?id=${blog.id}`;
         };
 
         tile.innerHTML = `
