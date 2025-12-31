@@ -1,0 +1,76 @@
+/* ============================
+   SERVICE REQUEST PAGE
+   ============================ */
+
+/* HERO SECTION */
+.sr-hero {
+    width: 100%;
+    padding: 40px 20px 20px 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.sr-hero h2 {
+    font-size: 34px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.sr-hero p {
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+    color: #2a2a2a;
+    font-weight: 500;
+}
+
+/* FORM SECTION */
+.sr-form-section {
+    width: 100%;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/* SCROLLABLE CONTAINER */
+.sr-form-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0 auto;
+}
+
+/* IFRAME (Google default dimensions, but responsive on mobile) */
+.sr-form-container iframe {
+    display: block;
+    width: 100%;
+    height: 1600px;
+    border: none;
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 700px) {
+    .sr-hero h2 {
+        font-size: 28px;
+    }
+
+    .sr-hero p {
+        font-size: 17px;
+    }
+
+    .sr-form-container iframe {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 100% !important;
+    }
+}
