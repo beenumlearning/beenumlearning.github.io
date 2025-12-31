@@ -428,3 +428,29 @@ footer p {
     background: #e84118;
     color: #fff;
 }
+
+@media (max-width: 600px) {
+    .cookie-banner {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+        padding: 16px;
+    }
+
+    .cookie-banner span {
+        margin-bottom: 12px;
+        font-size: 15px;
+    }
+
+    .cookie-buttons {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .cookie-buttons button {
+        width: 100%;
+        padding: 10px 0;
+        font-size: 16px;
+    }
+}
