@@ -48,16 +48,6 @@
         }
     </script>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZ590MJQXF"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-KZ590MJQXF');
-    </script>
-
     <!-- Existing CSS & scripts -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/buttons.css">
@@ -177,7 +167,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Adestrra Ad section
     <div class="ad-label">Advertisement</div>
     <div class="adsterra-wrapper">
@@ -192,8 +182,18 @@
     <!-- SHARED FOOTER -->
     <div data-include="footer"></div>
 
+    <!-- COOKIE CONSENT BANNER -->
+    <div id="cookie-banner" class="cookie-banner"> <span>This site uses cookies for analytics. Do you allow Google
+            Analytics?</span>
+        <div class="cookie-buttons"> <button id="cookie-accept">Allow</button> <button
+                id="cookie-reject">Reject</button> </div>
+    </div>
+
     <script src="js/constants.js"></script>
     <script src="js/email.js"></script>
+    <!-- NEW: Cookie Consent Script -->
+    <script src="js/cookie-consent.js"></script>
+
 </body>
 
 </html>
