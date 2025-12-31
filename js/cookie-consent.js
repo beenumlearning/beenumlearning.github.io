@@ -1,14 +1,42 @@
-// ===============================
-// COOKIE CONSENT + GOOGLE ANALYTICS
-// ===============================
-
+// Wait until DOM is ready AND the fragment container exists
 document.addEventListener("DOMContentLoaded", function () {
+
+    // Wait until #cookie-banner-container is actually in the DOM
+    const checkContainer = setInterval(() => {
+        const container = document.getElementById("cookie-banner-container");
+        if (container) {
+            clearInterval(checkContainer);
+            loadCookieBanner(container);
+        }
+    }, 50);
+});
+
+
+// Load the fragment
+function loadCookieBanner(container) {
+    fetch("/fragments/cookie-banner.html")
+        .then(res => res.text())
+        .then(html => {
+            container.innerHTML = html;
+            initCookieConsent(); // Now banner exists
+        })
+        .catch(err => console.error("Cookie banner load error:", err));
+}
+
+
+// ===============================
+// COOKIE CONSENT LOGIC
+// ===============================
+function initCookieConsent() {
 
     const banner = document.getElementById("cookie-banner");
     const acceptBtn = document.getElementById("cookie-accept");
     const rejectBtn = document.getElementById("cookie-reject");
 
-    if (!banner) return;
+    if (!banner) {
+        console.error("Cookie banner not found after fragment load");
+        return;
+    }
 
     // Show banner only if no consent stored
     if (!localStorage.getItem("ga_consent")) {
@@ -24,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Reject
     rejectBtn.onclick = function () {
-        localStorage.setItem("ga_consent", "denied");
+        localStorage.removeItem("ga_consent"); // show again next visit
         banner.style.display = "none";
     };
 
@@ -32,7 +60,8 @@ document.addEventListener("DOMContentLoaded", function () {
     if (localStorage.getItem("ga_consent") === "granted") {
         loadGoogleAnalytics();
     }
-});
+}
+
 
 // ===============================
 // Load Google Analytics dynamically
