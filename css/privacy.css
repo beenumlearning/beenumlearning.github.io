@@ -4,10 +4,8 @@
 .privacy-section h2,
 .privacy-section h3 {
     font-family: inherit;
-    /* uses the same font as style.css */
     color: #2a2a2a;
 }
-
 
 /* PRIVACY PAGE WRAPPER */
 .privacy-section {
@@ -55,15 +53,16 @@
     text-align: left;
 }
 
-/* HEADERS */
+/* HEADERS (IMPROVED) */
 .privacy-col h3 {
-    font-size: 24px;
-    font-weight: 600;
-    color: #2c3e50;
-    margin-top: 25px;
-    /* space above */
-    margin-bottom: 12px;
-    /* space below */
+    font-size: 26px;
+    font-weight: 700;
+    color: #1f2d3d;
+    margin-top: 35px;
+    margin-bottom: 14px;
+    padding-bottom: 6px;
+    border-bottom: 2px solid #e0e6ed; /* subtle divider */
+    letter-spacing: 0.3px;
 }
 
 /* LISTS */
@@ -91,7 +90,6 @@
     text-decoration: underline;
 }
 
-
 /* MOBILE */
 @media (max-width: 700px) {
     .privacy-columns {
@@ -104,5 +102,11 @@
         width: 100%;
         max-width: 350px;
         text-align: center;
+    }
+
+    .privacy-col h3 {
+        text-align: center;
+        border-bottom: none;
+        margin-top: 25px;
     }
 }
