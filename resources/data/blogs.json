@@ -1,28 +1,36 @@
 {
-  "blogs": [
-    {
-      "id": 1,
-      "title": "OCI Developer Learning Path",
-      "file": "OCI_Learning_Path.pdf",
-      "date": "2025-12-28",
-      "video": "https://youtu.be/f1Ip6h63sGs",
-      "category": "OCI"
-    },
-    {
-      "id": 2,
-      "title": "Oracle Integration Developer Learning Path",
-      "file": "OIC_Learning_Path.pdf",
-      "date": "2025-12-29",
-      "video": "https://youtu.be/klLUfRkJ8Zk",
-      "category": "OIC"
-    },
-    {
-      "id": 3,
-      "title": "Oracle Visual Builder Developer Learning Path",
-      "file": "VBCS_Learning_Path.pdf",
-      "date": "2025-12-30",
-      "video": "https://youtu.be/nKFECPAikVY",
-      "category": "VBCS"
-    }
-  ]
+    "blogs": [
+        {
+            "id": 1,
+            "title": "OCI Developer Learning Path",
+            "file": "OCI_Learning_Path.pdf",
+            "date": "2025-12-28",
+            "video": "https://youtu.be/f1Ip6h63sGs",
+            "category": "OCI"
+        },
+        {
+            "id": 2,
+            "title": "Oracle Integration Developer Learning Path",
+            "file": "OIC_Learning_Path.pdf",
+            "date": "2025-12-29",
+            "video": "https://youtu.be/klLUfRkJ8Zk",
+            "category": "OIC"
+        },
+        {
+            "id": 3,
+            "title": "Oracle Visual Builder Developer Learning Path",
+            "file": "VBCS_Learning_Path.pdf",
+            "date": "2025-12-30",
+            "video": "https://youtu.be/nKFECPAikVY",
+            "category": "VBCS"
+        },
+        {
+            "id": 4,
+            "title": "Oracle APEX Developer Learning Path",
+            "file": "APEX_Learning_Path.pdf",
+            "date": "2025-12-31",
+            "video": "https://youtu.be/qjDOW0wqvFY",
+            "category": "APEX"
+        }
+    ]
 }
