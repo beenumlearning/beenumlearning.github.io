@@ -23,28 +23,101 @@
 
     <link rel="canonical" href="https://beenumlearning.com/">
 
-    <!-- ✅ Structured Data for Site Name -->
-    <script type="application/ld+json">
-        { "@context": "https://schema.org", 
-        "@type": "WebSite", 
-        "name": "BEENUM LEARNING", 
-        "url": "https://beenumlearning.com/"
-        }
-    </script>
 
-    <!-- ✅ Structured Data for Organization -->
+    <!-- ✅ MASTER SCHEMA GRAPH (Yoast-style) -->
     <script type="application/ld+json">
         {
         "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "BEENUM LEARNING",
-        "url": "https://beenumlearning.com/",
-        "logo": "https://beenumlearning.com/resources/logo/logos.jpg",
-        "description": "BEENUM LEARNING provides high-quality online training, tutorials, and consulting for Oracle Integration Cloud (OIC), VBCS, PCS, OPA, ORDS, Oracle Fusion, and Oracle Cloud OCI.",
-        "sameAs": [
+        "@graph": [
+        {
+            "@type": "WebSite",
+            "@id": "https://beenumlearning.com/#website",
+            "url": "https://beenumlearning.com/",
+            "name": "BEENUM LEARNING",
+            "publisher": { "@id": "https://beenumlearning.com/#organization" },
+            "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://beenumlearning.com/?s={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+            }
+        },
+        {
+            "@type": "Organization",
+            "@id": "https://beenumlearning.com/#organization",
+            "name": "BEENUM LEARNING",
+            "url": "https://beenumlearning.com/",
+            "logo": {
+            "@type": "ImageObject",
+            "url": "https://beenumlearning.com/resources/logo/favicon.png"
+            },
+            "sameAs": [
             "https://www.youtube.com/@BEENUMLEARNING",
             "https://www.linkedin.com/company/beenum-learning"
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://beenumlearning.com/#homepage",
+            "url": "https://beenumlearning.com/",
+            "name": "BEENUM LEARNING | Simplifying Imaginations",
+            "isPartOf": { "@id": "https://beenumlearning.com/#website" },
+            "about": { "@id": "https://beenumlearning.com/#organization" },
+            "inLanguage": "en-US"
+        },
+        {
+            "@type": "BreadcrumbList",
+            "@id": "https://beenumlearning.com/#breadcrumb",
+            "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://beenumlearning.com/"
+            }
+            ]
+        }
         ]
+        }
+    </script>
+
+    <!-- ================= COURSE SCHEMA ================= -->
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Oracle Integration (OIC), Visual Builder (VBCS), OPA, Oracle Cloud Training,
+        "description": "Hands-on Oracle Cloud training with real-time project support.",
+        "provider": {
+        "@type": "Organization",
+        "name": "BEENUM LEARNING",
+        "url": "https://beenumlearning.com/pages/courses.html"
+        },
+        "courseMode": "Online",
+        "educationalLevel": "Beginner to Advanced",
+        "inLanguage": "en"
+        }
+    </script>
+
+    <!-- ================= CONTACT / REQUEST SCHEMA ================= -->
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Submit New Training Request",
+        "url": "https://beenumlearning.com/pages/contact.html",
+        "mainEntity": {
+        "@type": "Organization",
+        "name": "BEENUM LEARNING",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Support",
+            "availableLanguage": "English",
+            "url": "https://beenumlearning.com/pages/contact.html"
+        }
+        }
         }
     </script>
 
