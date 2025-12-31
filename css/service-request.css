@@ -2,6 +2,21 @@
    SERVICE REQUEST PAGE
    ============================ */
 
+/* OVERRIDE GLOBAL SECTION RULE */
+.sr-form-section {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+
+    /* ❌ REMOVE 100vh here */
+    /* ❌ REMOVE overflow:hidden */
+
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
 /* HERO SECTION */
 .sr-hero {
     width: 100%;
@@ -26,35 +41,32 @@
     font-weight: 500;
 }
 
-/* FORM SECTION */
-.sr-form-section {
-    width: 100%;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    box-sizing: border-box;
-}
-
 /* SCROLLABLE CONTAINER */
 .sr-form-container {
-    position: relative;
     width: 100%;
     max-width: 900px;
+
+    /* ⭐ THIS is the real viewport */
     height: 100vh;
-    overflow-y: auto;
+
+    overflow-y: auto; /* vertical scroll */
     overflow-x: hidden;
+
     box-sizing: border-box;
-    padding: 0;
     margin: 0 auto;
+    padding: 0;
 }
 
-/* IFRAME (Google default dimensions, but responsive on mobile) */
+/* IFRAME — FORCE OVERFLOW */
 .sr-form-container iframe {
     display: block;
-    width: 100%;
-    height: 1600px;
+    width: 100% !important;
+    max-width: 900px;
+    min-width: 100%;
+
+    /* ⭐ Must be taller than container */
+    height: 1600px !important;
+
     border: none;
 }
 
@@ -72,5 +84,7 @@
         width: 100% !important;
         max-width: 100% !important;
         min-width: 100% !important;
+
+        height: 1800px !important;
     }
 }
