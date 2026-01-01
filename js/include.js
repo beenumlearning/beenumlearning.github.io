@@ -1,11 +1,28 @@
 // Inject favicon if missing
+// Inject favicons if missing
 if (!document.querySelector("link[rel='icon']")) {
-    const favicon = document.createElement("link");
-    favicon.rel = "icon";
-    favicon.type = "image/png";
-    favicon.href = "/resources/logo/favicon.png";
-    document.head.appendChild(favicon);
+
+    const icons = [
+        {
+            size: "32x32",
+            href: "/resources/logo/favicon-32.png"
+        },
+        {
+            size: "16x16",
+            href: "/resources/logo/favicon-16.png"
+        }
+    ];
+
+    icons.forEach(icon => {
+        const link = document.createElement("link");
+        link.rel = "icon";
+        link.type = "image/png";
+        link.sizes = icon.size;
+        link.href = icon.href;
+        document.head.appendChild(link);
+    });
 }
+
 
 // Helper: hide loader
 function hideLoader() {
