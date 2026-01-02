@@ -1,5 +1,7 @@
 function applyEmail() {
     const email = window.BEENUM ? BEENUM.EMAIL : null;
+    const telegram = window.BEENUM ? BEENUM.TELEGRAM : null;
+    
     if (!email) {
         setTimeout(applyEmail, 100);
         return;
@@ -11,6 +13,15 @@ function applyEmail() {
         el.href = "mailto:" + email;
         if (!el.textContent.trim()) {
             el.textContent = email;
+        }
+    });
+
+    /* Update Telegram link */
+    const telegramLinks = document.querySelectorAll("#telegram-link");
+    telegramLinks.forEach(el => {
+        el.href = telegram;
+        if (!el.textContent.trim()) {
+            el.textContent = "Join us on Telegram";
         }
     });
 
