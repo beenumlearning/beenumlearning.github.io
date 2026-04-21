@@ -1,79 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- ⭐ Dynamic Title (fallback if JS not loaded) -->
-    <title>Blog Details | BEENUM LEARNING</title> <!-- ⭐ SEO Metadata -->
-    <meta name="description"
-        content="Read detailed technical blogs from BEENUM LEARNING covering Oracle Integration Cloud (OIC), Visual Builder (VBCS), Process Automation (PCS), ORDS, OCI, AI, and Oracle Fusion. Includes PDF guides and related YouTube tutorials.">
-    <meta name="keywords"
-        content="Oracle blogs, OIC learning path, VBCS tutorials, PCS blogs, ORDS articles, OCI developer guide, Oracle Fusion blogs, BEENUM LEARNING blogs, cloud integration tutorials">
-    <!-- ⭐ Open Graph (Social Sharing) -->
-    <meta property="og:title" content="Technical Blog Details – Oracle Cloud, OIC, VBCS, PCS, ORDS & OCI">
-    <meta property="og:description"
-        content="Explore detailed Oracle Cloud learning blogs with PDF guides and related YouTube videos. Learn OIC, VBCS, PCS, ORDS, OCI, AI, and Fusion with practical examples.">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://beenumlearning.com/pages/blog-view.html"> <!-- ⭐ Canonical URL -->
-    <link rel="canonical" href="https://beenumlearning.com/pages/blog-view.html"> <!-- ⭐ Google Analytics -->
-
-    <!-- ⭐ Styles -->
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/blogs.css"> <!-- ⭐ Shared Includes -->
-    <script src="../js/include.js" defer></script> <!-- ⭐ Blog Viewer Script -->
-    <script src="../js/blog-view.js" defer></script>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Details | BEENUM LEARNING</title>
+  <meta name="description" content="Read detailed technical blogs from BEENUM LEARNING covering OIC, VBCS, PCS, ORDS, OCI, AI, and Oracle Fusion. Includes PDF guides and related YouTube tutorials.">
+  <meta property="og:url" content="https://beenumlearning.com/pages/blog-view.html"><meta property="og:type" content="article">
+  <link rel="canonical" href="https://beenumlearning.com/pages/blog-view.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/blogs.css">
+  <script src="../js/include.js" defer></script>
+  <script src="../js/blog-view.js" defer></script>
 </head>
-
 <body>
-
-    <div id="page-loader">
-        <div class="loader-spinner"></div>
+  <div id="page-loader"><div class="loader-spinner"></div></div>
+  <div data-include="header"></div>
+  <section class="blog-detail-section">
+    <a href="javascript:history.back()" class="blog-back-btn">← Go Back</a>
+    <h1 id="blog-title"></h1>
+    <p id="blog-date" class="blog-date"></p>
+    <div class="pdf-wrapper">
+      <iframe id="pdf-viewer" class="pdf-frame" frameborder="0"></iframe>
+      <p class="pdf-fallback">If the PDF doesn't load, <a id="pdf-download-link" href="#" target="_blank">click here to open it directly</a>.</p>
     </div>
-
-    <!-- Shared Header -->
-    <div data-include="header"></div>
-
-    <section class="blog-detail-section">
-
-        <!-- <a href="blogs.html" class="blog-back-btn">← Back to Blogs</a>-->
-        <a href="javascript:history.back()" class="blog-back-btn">← Go Back</a>
-
-
-        <h1 id="blog-title"></h1>
-        <p id="blog-date" class="blog-date"></p>
-
-        <!-- PDF Viewer -->
-        <div class="pdf-wrapper">
-            <iframe id="pdf-viewer" class="pdf-frame" frameborder="0"></iframe>
-            <p class="pdf-fallback">
-                If the PDF doesn't load, <a id="pdf-download-link" href="#" target="_blank">click here to open it
-                    directly</a>.
-            </p>
-        </div>
-
-        <!-- YouTube Video Viewer -->
-        <h2 id="video-heading" class="video-heading" style="display:none;"></h2>
-        <div id="video-container" class="video-wrapper"></div>
-
-        <p>
-            If you have any questions, feel free to contact us at
-            <a id="email-link"></a>
-        </p>
-
-    </section>
-
-    <!-- COOKIE CONSENT BANNER -->
-    <div id="cookie-banner-container"></div>
-
-    <!-- Shared Footer -->
-    <div data-include="footer"></div>
-
-    <script src="../js/constants.js"></script>
-    <script src="../js/email.js"></script>
-    <!-- NEW: Cookie Consent Script -->
-    <script src="../js/cookie-consent.js"></script>
-
+    <h2 id="video-heading" class="video-heading" style="display:none;"></h2>
+    <div id="video-container" class="video-wrapper"></div>
+    <p style="margin-top:28px;font-size:14px;color:var(--ink-3);">
+      If you have any questions, feel free to contact us at <a id="email-link" style="color:var(--blue);font-weight:500;"></a>
+    </p>
+  </section>
+  <div id="cookie-banner-container"></div>
+  <div data-include="footer"></div>
+  <script src="../js/constants.js"></script>
+  <script src="../js/email.js"></script>
+  <script src="../js/cookie-consent.js"></script>
 </body>
-
 </html>

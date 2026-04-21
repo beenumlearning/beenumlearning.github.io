@@ -1,263 +1,417 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://beenumlearning.com/resources/logo/favicon-32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="https://beenumlearning.com/resources/logo/favicon-16.png">
-    <!-- ⭐ ADD YOUR SEO METADATA HERE ⭐ -->
-    <title>BEENUM LEARNING | Simplifying Imaginations – Online Training & Project consulting support for OIC, VBCS, PCS,
-        OPA, ORDS, Fusion & Oracle Cloud OCI</title>
-    <meta name="description"
-        content="Learn Oracle Integration Cloud (OIC), Visual Builder (VBCS), Process Automation (OPA), ORDS, Fusion & OCI with hands-on training and consulting.">
-    <meta name="keywords"
-        content="BEENUM LEARNING, OIC training, VBCS training, Oracle Integration Cloud, Oracle Visual Builder, online courses, consulting, Oracle PaaS, ORDS, PCS, OIC, BIP, VBCS, Oracle Fusion">
-
-    <!-- Optional but recommended -->
-    <meta property="og:title" content="BEENUM LEARNING – Online Training for OIC, VBCS, PCS, ORDS & Oracle Cloud OCI">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="BEENUM LEARNING">
-    <meta property="og:description"
-        content="Learn Oracle Integration Cloud (OIC), Visual Builder (VBCS), Process Automation (OPA), ORDS, Fusion & OCI with hands-on training and consulting.">
-    <meta property="og:url" content="https://beenumlearning.com/">
-    <meta property="og:image" content="https://beenumlearning.com/resources/logo/favicon.png">
-    <meta property="og:image:width" content="500">
-    <meta property="og:image:height" content="500">
-    <meta property="og:image:alt" content="">
-    <meta property="og:locale" content="en_US">
-
-    <link rel="canonical" href="https://beenumlearning.com/">
-
-
-    <!-- ✅ MASTER SCHEMA GRAPH (Yoast-style) -->
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@graph": [
-                {
-                "@type": "WebSite",
-                "@id": "https://beenumlearning.com/#website",
-                "url": "https://beenumlearning.com/",
-                "name": "BEENUM LEARNING",
-                "publisher": {
-                    "@id": "https://beenumlearning.com/#organization"
-                }
-                },
-                {
-                "@type": "Organization",
-                "@id": "https://beenumlearning.com/#organization",
-                "name": "BEENUM LEARNING",
-                "url": "https://beenumlearning.com/",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://beenumlearning.com/resources/logo/favicon.png"
-                },
-                "sameAs": [
-                    "https://www.youtube.com/@BEENUMLEARNING",
-                    "https://www.linkedin.com/company/beenum-learning"
-                ]
-                },
-                {
-                "@type": "WebPage",
-                "@id": "https://beenumlearning.com/#homepage",
-                "url": "https://beenumlearning.com/",
-                "name": "BEENUM LEARNING | Simplifying Imaginations",
-                "isPartOf": {
-                    "@id": "https://beenumlearning.com/#website"
-                },
-                "about": {
-                    "@id": "https://beenumlearning.com/#organization"
-                },
-                "inLanguage": "en-US"
-                },
-                {
-                "@type": "BreadcrumbList",
-                "@id": "https://beenumlearning.com/#breadcrumb",
-                "itemListElement": [
-                    {
-                    "@type": "ListItem",
-                    "position": 1,
-                    "name": "Home",
-                    "item": "https://beenumlearning.com/"
-                    }
-                ]
-                }
-            ]
-        }
-    </script>
-
-    <!-- ================= COURSE SCHEMA ================= -->
-    <script type="application/ld+json">
-        {
-        "@context": "https://schema.org",
-        "@type": "Course",
-        "name": "Oracle Integration (OIC), Visual Builder (VBCS), OPA, Oracle Cloud Training",
-        "description": "Hands-on Oracle Cloud training with real-time project support.",
-        "provider": {
-        "@type": "Organization",
-        "name": "BEENUM LEARNING",
-        "url": "https://beenumlearning.com/pages/courses.html"
-        },
-        "courseMode": "Online",
-        "educationalLevel": "Beginner to Advanced",
-        "inLanguage": "en"
-        }
-    </script>
-
-    <!-- ================= CONTACT / REQUEST SCHEMA ================= -->
-    <script type="application/ld+json">
-        {
-        "@context": "https://schema.org",
-        "@type": "ContactPage",
-        "name": "Submit New Training Request",
-        "url": "https://beenumlearning.com/pages/contact.html",
-        "mainEntity": {
-        "@type": "Organization",
-        "name": "BEENUM LEARNING",
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "Customer Support",
-            "availableLanguage": "English",
-            "url": "https://beenumlearning.com/pages/contact.html"
-        }
-        }
-        }
-    </script>
-
-    <!-- Existing CSS & scripts -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/buttons.css">
-    <link rel="stylesheet" href="css/indexpage.css">
-    <script src="js/include.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BEENUM LEARNING | Oracle Cloud Training, YouTube Courses, Consulting – OIC, VBCS, OPA, ORDS, Fusion</title>
+  <meta name="description" content="Master Oracle Cloud — OIC, VBCS, OPA, ORDS, Fusion & OCI — with hands-on Udemy courses, free YouTube playlists, expert consulting, and technical blogs by BEENUM LEARNING.">
+  <meta name="keywords" content="BEENUM LEARNING, OIC training, VBCS training, Oracle Integration Cloud, Oracle Visual Builder, online courses, consulting, Oracle PaaS, ORDS, Oracle Fusion, OCI, YouTube Oracle">
+  <meta property="og:title" content="BEENUM LEARNING – Oracle Cloud Training, YouTube & Consulting">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Hands-on Oracle Cloud training — OIC, VBCS, OPA, ORDS & Fusion. Free YouTube playlists. Expert consulting. Built for working professionals.">
+  <meta property="og:url" content="https://beenumlearning.com/">
+  <meta property="og:image" content="https://beenumlearning.com/resources/logo/favicon.png">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://beenumlearning.com/">
+  <link rel="icon" type="image/png" sizes="32x32" href="/resources/logo/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/resources/logo/favicon-16.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://beenumlearning.com/#website","url":"https://beenumlearning.com/","name":"BEENUM LEARNING"},{"@type":"Organization","@id":"https://beenumlearning.com/#org","name":"BEENUM LEARNING","url":"https://beenumlearning.com/","logo":{"@type":"ImageObject","url":"https://beenumlearning.com/resources/logo/favicon.png"},"sameAs":["https://www.youtube.com/@BEENUMLEARNING","https://www.linkedin.com/company/beenum-learning"]},{"@type":"Course","name":"Oracle Cloud Training – OIC, VBCS, OPA, ORDS, Fusion","description":"Hands-on Oracle Cloud training covering OIC, VBCS, OPA, ORDS, Oracle Fusion and OCI.","provider":{"@id":"https://beenumlearning.com/#org"},"courseMode":"Online","educationalLevel":"Beginner to Advanced","inLanguage":"en"}]}</script>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/indexpage.css">
+  <script src="js/include.js" defer></script>
 </head>
-
 <body>
 
-    <div id="page-loader">
-        <div class="loader-spinner"></div>
+  <div id="page-loader"><div class="loader-spinner"></div></div>
+  <div data-include="header"></div>
+
+  <!-- ══════════════════════════════════════
+       HERO
+  ══════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-badge">
+      <span class="pulse"></span>
+      Cloud & AI · Educator · Mentorship · Consulting
     </div>
+    <h1>Simplify <span class="accent">Oracle Cloud & AI</span><br>Build Real-World Skills</h1>
+    <p class="hero-sub">
+      The go-to platform for Oracle Cloud professionals — learn OIC, VBCS, OPA, ORDS, Fusion &amp; OCI
+      through hands-on courses, free YouTube content, and expert consulting.
+    </p>
+    <div class="hero-pills">
+      <span>🚀 Interactive Workshops</span>
+      <span>🎓 Udemy &amp; YouTube Courses</span>
+      <span>💼 Consulting</span>
+      <span>🔐 Members-Only Content</span>
+      <span>📝 Technical Blogs &amp; Guides</span>
+    </div>
+    <div class="hero-ctas">
+      <a href="https://www.youtube.com/@BEENUMLEARNING/join" class="cta-primary" target="_blank" rel="noopener">
+        ✦ Become a Member
+      </a>
+      <a href="pages/courses.html" class="cta-ghost">
+        ▶ Browse All Courses
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><div class="stat-num">10+</div><div class="stat-label">Udemy courses</div></div>
+      <div class="stat"><div class="stat-num">20+</div><div class="stat-label">YouTube playlists</div></div>
+      <div class="stat"><div class="stat-num">5★</div><div class="stat-label">Rated courses</div></div>
+      <div class="stat"><div class="stat-num">Live</div><div class="stat-label">Consulting</div></div>
+      <div class="stat"><div class="stat-num">10+</div><div class="stat-label">Technologies</div></div>
+    </div>
+  </section>
 
-    <!-- SHARED HEADER -->
-    <div data-include="header"></div>
+  <!-- ══════════════════════════════════════
+       TRUST BAR
+  ══════════════════════════════════════ -->
+  <div class="trust-bar">
+    <div class="trust-inner">
+      <div class="trust-item">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        Self-paced learning
+      </div>
+      <div class="trust-sep"></div>
+      <div class="trust-item">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        Curated Expertise
+      </div>
+      <div class="trust-sep"></div>
+      <div class="trust-item">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18s-3.332.477-4.5 1.253"/></svg>
+        Career Roadmaps
+      </div>
+      <div class="trust-sep"></div>
+      <div class="trust-item">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        End-to-End Skill Up
+      </div>
+      <div class="trust-sep"></div>
+      <div class="trust-item">
+        <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        Consulting & support
+      </div>
+    </div>
+  </div>
 
-    <section class="hero">
-        <h1>Simplifying Imaginations</h1>
-
-        <p class="hero-sub">
-            Learn Oracle, Microsoft, Cloud & AI Technologies, and Technical Skills with clear,
-            practical, real‑world explanations.
-        </p>
-
-        <div class="hero-highlights">
-            <span>🚀 Hands‑on Learning</span>
-            <span>🎓 Online Self‑Paced Courses</span>
-            <span>💼 Consulting & Guidance</span>
-            <span>🔐 Member‑Only Premium Content</span>
+  <!-- ══════════════════════════════════════
+       EXCLUSIVE OFFERS
+  ══════════════════════════════════════ -->
+  <div class="offers-section">
+    <div class="s-header">
+      <span class="section-eyebrow">Limited-time deals</span>
+      <h2>Exclusive Offers for You</h2>
+      <p>Special discounts on Udemy courses, live training, and consulting engagements. Don't miss out.</p>
+    </div>
+    <div class="offer-grid">
+      <a class="offer-tile" href="pages/offers30.html">
+        <div class="offer-accent"></div>
+        <div class="offer-body">
+          <div class="offer-pct">30% <span class="offer-pct-unit">OFF</span></div>
+          <h3>All Udemy Courses</h3>
+          <p>Get lifetime access to all our OIC, VBCS, OPA, ORDS, APEX, ODA and Fusion courses at 30% off.</p>
+          <span class="offer-cta">View offer details →</span>
         </div>
+      </a>
+      <a class="offer-tile" href="pages/onlinetraining.html">
+        <div class="offer-accent"></div>
+        <div class="offer-body">
+          <div class="offer-pct">10% <span class="offer-pct-unit">OFF</span></div>
+          <h3>Live Training Programs</h3>
+          <p>Instructor-led sessions with live Q&amp;A, project review, and direct mentor access.</p>
+          <span class="offer-cta">View training details →</span>
+        </div>
+      </a>
+      <a class="offer-tile" href="pages/consulting.html">
+        <div class="offer-accent"></div>
+        <div class="offer-body">
+          <div class="offer-pct">10% <span class="offer-pct-unit">OFF</span></div>
+          <h3>Consulting &amp; Project Support</h3>
+          <p>Architecture guidance, code reviews, troubleshooting, and hands-on implementation help.</p>
+          <span class="offer-cta">View consulting details →</span>
+        </div>
+      </a>
+    </div>
+  </div>
 
-        <a href="https://www.youtube.com/@BEENUMLEARNING/join" class="join-btn" target="_blank">
-            Become a Member Now
+  <hr class="divider">
+
+  <!-- ══════════════════════════════════════
+       COURSES PREVIEW
+  ══════════════════════════════════════ -->
+  <div class="courses-section">
+    <div class="s-header">
+      <span class="section-eyebrow">What we teach</span>
+      <h2>Courses &amp; Learning Paths</h2>
+      <p>Step-by-step, project-driven training in Oracle's most in-demand cloud technologies.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="pages/courses.html">
+        <div class="course-icon">OIC</div>
+        <h3>Oracle Integration Cloud</h3>
+        <p>REST, SOAP, FTP &amp; ERP adapters. Orchestrations, mappings, error handling and monitoring.</p>
+        <div class="course-meta"><span class="tag tag-green">Beginner friendly</span><span>24+ lessons</span></div>
+      </a>
+      <a class="course-card" href="pages/courses.html">
+        <div class="course-icon">VBCS</div>
+        <h3>Visual Builder (VBCS)</h3>
+        <p>Build responsive web apps, consume REST APIs, use business objects and deploy to Oracle Cloud.</p>
+        <div class="course-meta"><span class="tag tag-blue">Most popular</span><span>18+ lessons</span></div>
+      </a>
+      <a class="course-card" href="pages/courses.html">
+        <div class="course-icon">OPA</div>
+        <h3>Process Automation</h3>
+        <p>BPMN modeling, human tasks, forms, approvals and end-to-end workflow automation in OPA.</p>
+        <div class="course-meta"><span class="tag tag-amber">Intermediate</span><span>16+ lessons</span></div>
+      </a>
+      <a class="course-card" href="pages/courses.html">
+        <div class="course-icon">ORDS</div>
+        <h3>Oracle REST Data Services</h3>
+        <p>Build secure REST APIs on Oracle Database — modules, roles, pagination and Fusion integration.</p>
+        <div class="course-meta"><span>14+ lessons</span></div>
+      </a>
+      <a class="course-card" href="pages/courses.html">
+        <div class="course-icon">OCI</div>
+        <h3>Oracle Fusion &amp; OCI</h3>
+        <p>Fusion architecture, REST APIs, OCI compute, storage, networking and monitoring basics.</p>
+        <div class="course-meta"><span class="tag tag-blue">Cloud</span><span>20+ lessons</span></div>
+      </a>
+      <a class="course-card" href="pages/courses.html">
+        <div class="course-icon" style="background:#f0fdf4;color:#15803d;">AI</div>
+        <h3>Gen AI &amp; AI Agent Studio</h3>
+        <p>GenAI integration in Oracle Cloud — AI Agent Studio services, automation patterns and use-case walkthroughs.</p>
+        <div class="course-meta"><span class="tag tag-green">New</span><span>12+ lessons</span></div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:32px;">
+      <a href="pages/courses.html" class="btn btn-outline">View all Udemy courses →</a>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ══════════════════════════════════════
+       CONSULTING STRIP — attract clients
+  ══════════════════════════════════════ -->
+  <div style="max-width:1140px;margin:16px auto;padding:0 0 8px">
+    <div class="consult-strip">
+      <div style="flex:1;min-width:260px">
+        <div class="section-eyebrow" style="color:#93c5fd;margin-bottom:10px">Enterprise consulting</div>
+        <h2>Need Help on Your Oracle Cloud Project?</h2>
+        <p>We provide hands-on consulting, architecture guidance, and real-time troubleshooting for OIC, VBCS, ORDS, OPA, Fusion and OCI. Whether you're stuck, scaling, or starting from scratch — we deliver results.</p>
+        <div class="consult-btns">
+          <a href="pages/consulting.html" class="consult-btn-primary">💼 Get Consulting Support</a>
+          <a href="pages/service-request.html" class="consult-btn-ghost">Submit a Request →</a>
+        </div>
+      </div>
+      <div style="min-width:240px">
+        <div class="consult-services">
+          <div class="consult-service">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            OIC integration design &amp; troubleshooting
+          </div>
+          <div class="consult-service">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            VBCS application development &amp; debugging
+          </div>
+          <div class="consult-service">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            ORDS REST API design &amp; security
+          </div>
+          <div class="consult-service">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            Oracle Fusion &amp; AI Agent Studio implementation
+          </div>
+          <div class="consult-service">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            Architecture reviews &amp; code audits
+          </div>
+          <div class="consult-service">
+            <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            10% OFF — limited-time discount
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ══════════════════════════════════════
+       STUDENT & CLIENT REVIEWS
+  ══════════════════════════════════════ -->
+  <div class="reviews-section">
+    <div class="s-header">
+      <span class="section-eyebrow">Social proof</span>
+      <h2>What Students &amp; Clients Say</h2>
+      <p>Real feedback from professionals around the world who have learned, built, and shipped with BEENUM LEARNING.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <blockquote>The OIC course was the clearest explanation I've found anywhere. Within two weeks I was building real integrations at work — no fluff, just what actually matters on real projects.</blockquote>
+        <div class="review-author">
+          <div class="review-avatar av-b">RA</div>
+          <div><div class="review-name">Ravi</div><div class="review-role">Oracle Integration Developer</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <blockquote>Every module has a real project example. That's what sets it apart — you learn exactly what transfers to an actual Oracle Cloud engagement. I got my first OIC project because of this.</blockquote>
+        <div class="review-author">
+          <div class="review-avatar av-g">SN</div>
+          <div><div class="review-name">Sneha</div><div class="review-role">OIC Consultant</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <blockquote>The consulting support helped me unblock a critical OIC issue in one session. Extremely knowledgeable, fast, and practical advice. Saved our project timeline. Worth every penny.</blockquote>
+        <div class="review-author">
+          <div class="review-avatar av-a">RA</div>
+          <div><div class="review-name">Ramesh</div><div class="review-role">Solutions Architect</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <blockquote>The VBCS course helped me deliver a client project on time. Step-by-step with real examples — complex concepts became very easy to follow. Best Oracle course I've taken on Udemy.</blockquote>
+        <div class="review-author">
+          <div class="review-avatar av-r">HA</div>
+          <div><div class="review-name">Hari</div><div class="review-role">Oracle PaaS Developer</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <blockquote>I switched from scattered docs to BEENUM LEARNING and the improvement was immediate. The structured OIC and VBCS paths gave me the confidence to take on enterprise-grade projects.</blockquote>
+        <div class="review-author">
+          <div class="review-avatar av-p">FA</div>
+          <div><div class="review-name">Fatima</div><div class="review-role">Oracle PaaS Consultant</div></div>
+        </div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <blockquote>As someone new to Oracle Cloud, I found BEENUM LEARNING's explanations approachable and practical. The free YouTube playlists alone are better than most paid courses out there.</blockquote>
+        <div class="review-author">
+          <div class="review-avatar av-g">SH</div>
+          <div><div class="review-name">Shashidhar</div><div class="review-role">Principal Consultant</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ══════════════════════════════════════
+       INSTRUCTOR
+  ══════════════════════════════════════ -->
+  <div class="instructor-section">
+    <div class="s-header">
+      <span class="section-eyebrow">Your instructor</span>
+      <h2>Learn from a Practitioner, Not a Textbook</h2>
+      <p>Real Oracle Cloud delivery experience brought into every course, video, and consulting session.</p>
+    </div>
+    <div class="instructor-card">
+      <div class="instructor-avatar">
+        <img src="resources/logo/logos.jpg" alt="BEENUM LEARNING">
+      </div>
+      <div class="instructor-body">
+        <h3>BEENUM LEARNING</h3>
+        <span class="instructor-role">Simplifying Imaginations</span>
+        <p>
+          With deep hands-on experience delivering enterprise Oracle Cloud projects across OIC, VBCS, ORDS, OPA and Fusion,
+          BEENUM LEARNING brings consulting-grade depth to every course and YouTube video. Content is built entirely from
+          real production scenarios — not just documentation — so you learn exactly what gets used when it counts.
+          Whether you're a beginner or a senior developer, the goal is always the same: make complex things simple and practical.
+        </p>
+        <div class="instructor-badges">
+          <span class="i-badge">OIC</span>
+          <span class="i-badge">VBCS</span>
+          <span class="i-badge">OPA</span>
+          <span class="i-badge">ORDS</span>
+          <span class="i-badge">Oracle Fusion</span>
+          <span class="i-badge">OCI</span>
+          <span class="i-badge">AI</span>
+          <span class="i-badge">AI Agents &amp; GenAI</span>
+          <span class="i-badge">YouTube</span>
+          <span class="i-badge">Udemy</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ══════════════════════════════════════
+       SUPPORT
+  ══════════════════════════════════════ -->
+  <div class="support-section">
+    <h2>Support BEENUM LEARNING</h2>
+    <div class="support-grid">
+      <div class="support-tile">
+        <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
+          data-name="bmc-button" data-slug="beenumlearning" data-color="#FFDD00" data-emoji="☕"
+          data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000"
+          data-font-color="#000000" data-coffee-color="#ffffff"></script>
+      </div>
+      <div class="support-tile">
+        <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+        <script type='text/javascript'>kofiwidget2.init('Support us on Ko-fi','#1B5FCC','A0A41QXJ49');kofiwidget2.draw();</script>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════
+       LEAD CAPTURE
+  ══════════════════════════════════════ -->
+  <div style="max-width:1140px;margin:16px auto;padding:0 0 8px">
+    <div class="consult-strip">
+      <div class="consult-info">
+        <h2>Strategic Cloud & AI Advisory</h2>
+        <p>Empowering your business with enterprise-grade architecture, seamless integrations, and modern AI roadmaps.</p>
+      </div>
+
+      <div class="lead-form">
+        <a href="mailto:info@beenumlearning.com" class="consult-btn-primary" style="text-decoration: none;">
+          <span>Write to us</span>
+          <span style="margin: 0 8px;">✉️</span>
+          <span style="font-weight: 500; opacity: 0.9;">info@beenumlearning.com</span>
         </a>
-    </section>
-
-    <section class="announcements">
-        <h2>Exclusive Offers for You</h2>
-        <div class="announcement-grid">
-            <!-- 30% OFF Tile -->
-            <a class="announcement-tile" href="pages/offers30.html">
-                <div class="announcement-accent"></div>
-                <img src="https://img.icons8.com/color/96/gift.png" class="announcement-thumb" />
-                <div class="announcement-title">🎁 30% OFF on Online Courses</div>
-                <div class="announcement-sub">View complete offer details →</div>
-            </a>
-
-            <!-- 10% OFF Online Training Tile -->
-            <a class="announcement-tile" href="pages/onlinetraining.html">
-                <div class="announcement-accent"></div>
-                <img src="https://img.icons8.com/color/96/training.png" class="announcement-thumb" />
-                <div class="announcement-title">🎉 10% OFF on Online Training</div>
-                <div class="announcement-sub">View complete training details →</div>
-            </a>
-
-            <!-- Consulting Work Tile -->
-            <a class="announcement-tile" href="pages/consulting.html">
-                <div class="announcement-accent"></div>
-                <img src="https://img.icons8.com/color/96/consultation.png" class="announcement-thumb" />
-                <div class="announcement-title">💼 10% OFF on Consulting & Project Support</div>
-                <div class="announcement-sub">View complete details →</div>
-            </a>
-
-            <!-- 10% OFF Online Training Tile -->
-            <!-- <a class="announcement-tile" id="offer-30">
-                <div class="announcement-accent"></div>
-                <img src="https://img.icons8.com/color/96/discount.png" class="announcement-thumb" />
-                <div class="announcement-title">🎉 10% OFF on Online Training</div>
-                <div class="announcement-sub">Reach out to us by email…</div>
-            </a>
-
-            <a class="announcement-tile" id="offer-50">
-                <div class="announcement-accent"></div>
-                <img src="https://img.icons8.com/color/96/sale--v1.png" class="announcement-thumb" />
-                <div class="announcement-title">🔥 30% OFF on Online Courses</div>
-                <div class="announcement-sub">Click here for more details…</div>
-            </a>-->
-
-        </div>
-    </section>
-
-    <section class="support-toolbar">
-        <h2>Support Us</h2>
-        <div class="toolbar-grid">
-
-            <!-- Buy Me a Coffee Tile -->
-            <div class="toolbar-item">
-                <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
-                    data-name="bmc-button" data-slug="beenumlearning" data-color="#FFDD00" data-emoji="☕"
-                    data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000"
-                    data-font-color="#000000" data-coffee-color="#ffffff">
-                    </script>
-            </div>
-            <!-- Buy Me a Coffee Tile -->
-            <div class="toolbar-item">
-                <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
-                <script
-                    type='text/javascript'>kofiwidget2.init('Support us on Ko-fi', '#f57373', 'A0A41QXJ49'); kofiwidget2.draw();</script>
-                <!--<a href="https://www.buymeacoffee.com/beenumlearning" target="_blank" rel="noopener"><img
-                        src="https://img.buymeacoffee.com/button-api/?text=Buy me a pizza&emoji=🍕&slug=beenumlearning&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>-->
-            </div>
-        </div>
-    </section>
+      </div>
+  </div>
+  </div>
 
 
-    <section class="seo-section">
-        <h2>Why Learn OIC, VBCS & Oracle Cloud with BEENUM LEARNING ?</h2>
-        <p>
-            BEENUM LEARNING specializes in simplifying complex Oracle Cloud technologies such as
-            Oracle Integration Cloud (OIC), Visual Builder (VBCS), Process Automation (PCS / OPA), ORDS,
-            Oracle Fusion, and Oracle Cloud OCI. Our training is designed for beginners, working
-            professionals, and teams who want clear, practical, real‑world explanations.
-        </p>
-        <p>
-            With hands‑on examples, structured learning paths, and consulting‑grade guidance,
-            BEENUM LEARNING helps you build strong technical skills that are directly applicable
-            in real projects. Whether you're preparing for interviews, upgrading your skills, or
-            starting your cloud journey, we make learning simple and effective.
-        </p>
-    </section>
 
-    <!-- COOKIE CONSENT BANNER -->
-    <div id="cookie-banner-container"></div>
+  <!-- ══════════════════════════════════════
+       SEO TEXT
+  ══════════════════════════════════════ -->
+  <section class="seo-section">
+    <h2>Why Learn Oracle Cloud with BEENUM LEARNING?</h2>
+    <p>BEENUM LEARNING is the most comprehensive Oracle Cloud learning platform available — combining free YouTube courses, structured Udemy courses, technical blogs, and expert consulting into one destination. We specialize in Oracle Integration Cloud (OIC), Visual Builder (VBCS), Process Automation (OPA/PCS), Oracle REST Data Services (ORDS), Oracle Fusion, and Oracle Cloud OCI.</p>
+    <p>Whether you're a developer building your first integration, a consultant preparing for a client project, or a business looking for Oracle Cloud implementation support — BEENUM LEARNING delivers clarity, depth, and results. Every lesson is drawn from real enterprise experience, so you're never learning theory disconnected from practice.</p>
+  </section>
 
-    <!-- SHARED FOOTER -->
-    <div data-include="footer"></div>
+  <div id="cookie-banner-container"></div>
+  <div data-include="footer"></div>
 
-    <script src="js/constants.js"></script>
-    <!-- NEW: Cookie Consent Script -->
-    <script src="js/cookie-consent.js"></script>
-    <script src="js/email.js"></script>
-
-
+  <script src="js/constants.js"></script>
+  <script src="js/cookie-consent.js"></script>
+  <script src="js/email.js"></script>
+  <script>
+    function handleLeadSubmit(btn) {
+      const input = document.getElementById('lead-email');
+      const email = input ? input.value.trim() : '';
+      if (!email || !email.includes('@')) {
+        if (input) { input.style.background = 'rgba(220,38,38,0.25)'; input.placeholder = 'Please enter a valid email'; }
+        setTimeout(() => { if (input) { input.style.background = ''; input.placeholder = 'your@email.com'; } }, 2200);
+        return;
+      }
+      btn.textContent = '✓ On its way!';
+      btn.style.background = '#dcfce7';
+      btn.style.color = '#166534';
+      if (input) input.value = '';
+      setTimeout(() => { btn.textContent = 'Send it to me'; btn.style.background = ''; btn.style.color = ''; }, 3500);
+    }
+  </script>
 </body>
-
 </html>
