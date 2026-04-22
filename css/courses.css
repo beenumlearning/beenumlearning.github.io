@@ -5,3 +5,8 @@
 .playlist-thumb-course,.playlist-thumb{width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--surface-3)}
 .playlist-title{padding:13px 15px 16px;font-size:14px;font-weight:600;color:var(--ink);line-height:1.45}
 section p{font-size:16px;color:var(--ink-3)}
+
+/* DARK MODE */
+[data-theme="dark"] .playlist-tile{background:var(--surface);border-color:var(--border)}
+[data-theme="dark"] .playlist-tile:hover{border-color:var(--blue-mid)}
+[data-theme="dark"] .playlist-title{color:var(--ink)}

@@ -148,3 +148,67 @@
   .trust-sep{display:none}
   .s-header h2{font-size:26px}
 }
+
+/* ══════════════════════════════════════════
+   DARK MODE — indexpage overrides
+══════════════════════════════════════════ */
+[data-theme="dark"] .trust-bar{background:var(--surface);border-bottom-color:var(--border)}
+[data-theme="dark"] .trust-item{color:var(--ink-3)}
+[data-theme="dark"] .trust-item svg{color:var(--blue-mid)}
+[data-theme="dark"] .offer-tile{background:var(--surface);border-color:var(--border)}
+[data-theme="dark"] .offer-tile:hover{border-color:var(--blue-mid)}
+[data-theme="dark"] .offer-tile h3{color:var(--ink)}
+[data-theme="dark"] .offer-tile p{color:var(--ink-3)}
+[data-theme="dark"] .course-card{background:var(--surface);border-color:var(--border)}
+[data-theme="dark"] .course-card:hover{border-color:var(--blue-mid)}
+[data-theme="dark"] .course-card h3{color:var(--ink)}
+[data-theme="dark"] .course-card p{color:var(--ink-3)}
+[data-theme="dark"] .course-icon{background:rgba(27,95,204,0.18);color:var(--blue-mid)}
+[data-theme="dark"] .review-card{background:var(--surface);border-color:var(--border)}
+[data-theme="dark"] .review-card::before{color:rgba(27,95,204,0.15)}
+[data-theme="dark"] .review-card blockquote{color:var(--ink-2)}
+[data-theme="dark"] .review-name{color:var(--ink)}
+[data-theme="dark"] .instructor-card{background:var(--surface);border-color:var(--border)}
+[data-theme="dark"] .instructor-body h3{color:var(--ink)}
+[data-theme="dark"] .i-badge{background:var(--surface-2);border-color:var(--border);color:var(--ink-3)}
+[data-theme="dark"] .support-tile{background:var(--surface);border-color:var(--border)}
+[data-theme="dark"] .s-header h2{color:var(--ink)}
+[data-theme="dark"] .s-header p{color:var(--ink-3)}
+[data-theme="dark"] .divider{border-top-color:var(--border)}
+
+/* Fixed consulting email button — clean pill style */
+.consult-email-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:rgba(255,255,255,0.12);
+  border:1.5px solid rgba(255,255,255,0.25);
+  color:#fff;
+  font-family:'Inter',sans-serif;
+  font-size:14px;
+  font-weight:600;
+  padding:12px 22px;
+  border-radius:30px;
+  text-decoration:none;
+  transition:background .2s,border-color .2s,transform .18s;
+  white-space:nowrap;
+  letter-spacing:-.1px;
+}
+.consult-email-btn:hover{
+  background:rgba(255,255,255,0.2);
+  border-color:rgba(255,255,255,0.45);
+  transform:translateY(-1px);
+}
+.consult-email-btn .email-icon{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:28px;height:28px;
+  background:var(--blue);
+  border-radius:50%;
+  flex-shrink:0;
+}
+.consult-email-btn .email-icon svg{display:block}
+.consult-email-btn .email-text{display:flex;flex-direction:column;text-align:left}
+.consult-email-btn .email-label{font-size:11px;font-weight:500;opacity:.7;line-height:1}
+.consult-email-btn .email-addr{font-size:14px;font-weight:700;line-height:1.4}

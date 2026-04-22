@@ -108,3 +108,46 @@ details>ul li{font-size:15px;color:var(--ink-3);line-height:1.55}
   .blog-filters input,.blog-filters select{max-width:100%;width:100%}
   .playlist-grid,.yt-grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr))}
 }
+
+/* ══════════════════════════════════════════
+   DARK MODE — about / inner pages
+══════════════════════════════════════════ */
+[data-theme="dark"] .page-card{background:var(--surface);border-color:var(--border)}
+[data-theme="dark"] .page-card h2{color:var(--ink)}
+[data-theme="dark"] .page-card>p{color:var(--ink-3)}
+[data-theme="dark"] .col h3{color:var(--ink)}
+[data-theme="dark"] .col-list li{color:var(--ink-3)}
+[data-theme="dark"] .instructors-card{background:var(--surface-2);border-color:var(--border)}
+[data-theme="dark"] .instructors-card h2{color:var(--ink)}
+[data-theme="dark"] .instructor-tile{background:var(--surface);border-color:var(--border)}
+[data-theme="dark"] .instructor-tile:hover{border-color:var(--blue-mid)}
+[data-theme="dark"] .instructor-name{color:var(--ink)}
+[data-theme="dark"] .instructor-photo{border-color:var(--border)}
+[data-theme="dark"] .training-card{background:var(--surface);border-color:var(--border)}
+[data-theme="dark"] .training-card h2,[data-theme="dark"] .training-header h2{color:var(--ink)}
+[data-theme="dark"] .training-section{background:var(--surface);border-color:var(--border)}
+[data-theme="dark"] .training-header h2{color:var(--ink)}
+[data-theme="dark"] .training-section>p,.training-card>p{color:var(--ink-3)}
+[data-theme="dark"] details{background:var(--surface-2);border-color:var(--border)}
+[data-theme="dark"] details[open]{border-color:var(--blue)}
+[data-theme="dark"] summary{color:var(--ink)}
+[data-theme="dark"] details>p,[data-theme="dark"] details>ul li{color:var(--ink-3)}
+[data-theme="dark"] .offer30-card{background:var(--surface);border-color:var(--border)}
+[data-theme="dark"] .offer30-card h2{color:var(--ink)}
+[data-theme="dark"] .content-section{background:var(--surface);border-color:var(--border)}
+[data-theme="dark"] .content-section h2{color:var(--ink)}
+[data-theme="dark"] .raw-content{background:var(--surface-3);border-color:var(--border);color:var(--ink-2)}
+[data-theme="dark"] .sr-hero-card{background:var(--surface);border-color:var(--border)}
+[data-theme="dark"] .sr-hero-card h2{color:var(--ink)}
+[data-theme="dark"] .sr-form-card{background:var(--surface);border-color:var(--border)}
+[data-theme="dark"] .playlist-tile{background:var(--surface);border-color:var(--border)}
+[data-theme="dark"] .playlist-tile:hover{border-color:var(--blue-mid)}
+[data-theme="dark"] .playlist-title,.yt-label{color:var(--ink)}
+[data-theme="dark"] .yt-tile{background:var(--surface);border-color:var(--border)}
+[data-theme="dark"] .blog-tile{background:var(--surface);border-color:var(--border)}
+[data-theme="dark"] .blog-tile:hover{border-color:var(--blue-mid)}
+[data-theme="dark"] .blog-tile h3{color:var(--ink)}
+[data-theme="dark"] .blog-filters input,[data-theme="dark"] .blog-filters select{background:var(--surface);border-color:var(--border);color:var(--ink)}
+[data-theme="dark"] #blog-title{color:var(--ink)}
+[data-theme="dark"] .pdf-frame{border-color:var(--border)}
+[data-theme="dark"] .video-wrapper{border-color:var(--border)}

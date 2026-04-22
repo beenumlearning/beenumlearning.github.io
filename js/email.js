@@ -36,6 +36,16 @@ function applyEmail() {
         consult10.href = "mailto:" + email + "?subject=10% OFF on Consulting & Project Support | I want to know more";
     }
 
+    /* Strategic advisory email button */
+    const consultLink = document.getElementById("consult-email-link");
+    if (consultLink) {
+        consultLink.href = "mailto:" + email + "?subject=Strategic Cloud & AI Advisory Inquiry";
+    }
+    const consultAddr = document.getElementById("consult-email-addr");
+    if (consultAddr) {
+        consultAddr.textContent = email;
+    }
+
     /* Instructor tile email trigger */
     const emailTiles = document.querySelectorAll(".team-email-trigger");
     emailTiles.forEach(tile => {

@@ -42,6 +42,8 @@ const headerPromise = new Promise(resolve => {
         .then(res => res.text())
         .then(html => {
             header.innerHTML = html;
+            // Inject theme icon now that button exists in DOM
+            if (window.applyThemeToButton) window.applyThemeToButton();
             resolve();
         })
         .catch(err => {
