@@ -31,6 +31,14 @@
             "date": "2025-12-31",
             "video": "https://youtu.be/qjDOW0wqvFY",
             "category": "APEX"
+        },
+        {
+            "id": 5,
+            "title": "Oracle Fusion AI Agent Studio Learning Path",
+            "file": "Oracle_AI_Agent_Studio_Learning_Path.pdf",
+            "date": "2026-04-28",
+            "video": "https://youtu.be/oj27GGdm2FE",
+            "category": "Fusion"
         }
     ]
 }
