@@ -6,7 +6,9 @@
             "file": "OCI_Learning_Path.pdf",
             "date": "2025-12-28",
             "video": "https://youtu.be/f1Ip6h63sGs",
-            "category": "OCI"
+            "category": "OCI",
+            "excerpt": "A structured, stage-by-stage roadmap for becoming a job-ready Oracle Cloud Infrastructure developer — from core compute and networking to automation and monitoring.",
+            "summary": "Oracle Cloud Infrastructure (OCI) is one of the fastest-growing enterprise cloud platforms, and demand for developers who can design, deploy, and secure workloads on it keeps rising. This learning path breaks the journey into clear stages: starting with core OCI fundamentals (compute, storage, virtual cloud networks, and identity & access management), moving into hands-on skills like provisioning instances, configuring load balancers, and working with OCI's CLI and SDKs, and finishing with production-level topics such as monitoring, cost governance, and automation using Terraform and Resource Manager. Instead of jumping between scattered documentation, this guide sequences topics the way they're actually used on real projects, so each concept builds on the last. Whether you're an infrastructure engineer moving into the cloud or a developer adding OCI to your skill set, this path highlights exactly what to learn first, what to practice, and how the pieces fit together before you touch a production environment."
         },
         {
             "id": 2,
@@ -14,7 +16,9 @@
             "file": "OIC_Learning_Path.pdf",
             "date": "2025-12-29",
             "video": "https://youtu.be/klLUfRkJ8Zk",
-            "category": "OIC"
+            "category": "OIC",
+            "excerpt": "Everything an aspiring Oracle Integration Cloud developer needs, mapped from adapters and orchestrations to error handling and monitoring in production.",
+            "summary": "Oracle Integration Cloud (OIC) sits at the center of most Oracle Fusion and hybrid-cloud implementations, connecting ERP, HCM, CRM, and custom applications through REST, SOAP, and FTP adapters. This learning path is designed for developers who want to move beyond tutorials and actually build production-grade integrations. It starts with integration fundamentals — connections, mappings, and lookups — before progressing into orchestration patterns, scheduled and app-driven integrations, and the error-handling and fault-management techniques that separate a demo integration from one that survives real traffic. Later stages cover performance tuning, monitoring dashboards, and best practices for versioning and deployment across environments. The path also flags common pitfalls seen in enterprise projects, such as payload size limits, retry strategies, and adapter-specific quirks, so learners can avoid mistakes that typically only surface after go-live. It's written from the perspective of someone who has delivered OIC projects end-to-end, not just documented the platform's features."
         },
         {
             "id": 3,
@@ -22,7 +26,9 @@
             "file": "VBCS_Learning_Path.pdf",
             "date": "2025-12-30",
             "video": "https://youtu.be/nKFECPAikVY",
-            "category": "VBCS"
+            "category": "VBCS",
+            "excerpt": "A practical roadmap for building responsive, data-driven web and mobile apps in Oracle Visual Builder (VBCS), from first page to production deployment.",
+            "summary": "Oracle Visual Builder Cloud Service (VBCS) lets developers build responsive web and mobile front ends that plug directly into Oracle Fusion, OIC, and custom REST APIs — but getting from a blank canvas to a maintainable, production-ready application takes more than dragging components onto a page. This learning path walks through VBCS fundamentals first: pages, layouts, and variables, then business objects and REST service connections, and finally the patterns experienced developers rely on, including reusable components, action chains, event handling, and role-based visibility. It also covers deployment to Oracle Cloud, versioning strategies, and integrating VBCS apps with OIC-based back-end processes. Real project examples are used throughout so the concepts map to actual client requirements — building approval screens, dashboards, and self-service portals — rather than isolated sample apps. By the end of the path, developers should be comfortable taking a VBCS application from initial design through to a stable, deployed release."
         },
         {
             "id": 4,
@@ -30,7 +36,9 @@
             "file": "APEX_Learning_Path.pdf",
             "date": "2025-12-31",
             "video": "https://youtu.be/qjDOW0wqvFY",
-            "category": "APEX"
+            "category": "APEX",
+            "excerpt": "A step-by-step guide to Oracle APEX — from data modeling and page design to scripting and securing low-code applications for real business use.",
+            "summary": "Oracle APEX remains one of the fastest ways to turn a database schema into a fully functional business application, but many learners stall out after building their first interactive report. This learning path is structured to take that next step: starting with data modeling and workspace setup, moving through page design, forms, and interactive grids, and then into the areas that make APEX apps genuinely production-ready — PL/SQL processes, dynamic actions, JavaScript customization, and authentication/authorization schemes. Later sections cover performance considerations for larger data sets, RESTful data sources, and packaging applications for deployment across environments. Throughout, the focus stays on practical outcomes: building approval workflows, dashboards, and admin tools that a business team would actually use day to day, rather than isolated feature demos. It's aimed at developers who already know some SQL and PL/SQL and want a clear sequence for becoming proficient in APEX application development."
         },
         {
             "id": 5,
@@ -38,7 +46,9 @@
             "file": "Oracle_AI_Agent_Studio_Learning_Path.pdf",
             "date": "2026-04-28",
             "video": "https://youtu.be/oj27GGdm2FE",
-            "category": "Fusion"
+            "category": "Fusion",
+            "excerpt": "An introduction to Oracle's AI Agent Studio within Fusion Applications — how generative AI agents are configured, extended, and applied to real business processes.",
+            "summary": "Generative AI is being embedded directly into Oracle Fusion Applications through AI Agent Studio, and this learning path is aimed at developers and consultants who want a working understanding of how it fits into existing Fusion implementations. It starts with the underlying concepts — what an AI agent is in this context, how it differs from a traditional automation flow, and where Oracle's pre-built agents sit within HCM, SCM, and ERP processes. From there, the path covers configuring and extending agents, connecting them to Fusion data and business rules, and the guardrails available for controlling what an agent can and cannot do in a production environment. It closes with practical use-case walkthroughs — things like automating routine approvals or surfacing insights from Fusion data — so the concepts are grounded in scenarios consultants are likely to encounter on live projects rather than treated as an abstract AI feature tour."
         }
     ]
 }

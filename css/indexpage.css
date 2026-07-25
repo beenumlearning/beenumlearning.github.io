@@ -12,7 +12,7 @@
 .hero-badge .pulse{width:7px;height:7px;background:#60a5fa;border-radius:50%;animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.3;transform:scale(.6)}}
 
-.hero h1{font-size:clamp(32px,5.5vw,58px);font-weight:700;letter-spacing:-1.5px;line-height:1.1;margin-bottom:20px}
+.hero h1{font-size:clamp(32px,5.5vw,58px);font-weight:700;letter-spacing:-1.5px;line-height:1.1;margin-bottom:20px;color:#fff}
 .hero h1 .accent{background:linear-gradient(135deg,#60a5fa,#a78bfa);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero-sub{font-size:18px;line-height:1.72;color:rgba(255,255,255,.65);max-width:600px;margin:0 auto 32px;font-weight:400}
 

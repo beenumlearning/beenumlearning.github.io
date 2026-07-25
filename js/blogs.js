@@ -3,6 +3,12 @@ let filteredBlogs = [];
 let currentIndex = 0;
 const batchSize = 25;
 
+function formatBlogDate(dateStr) {
+    const d = new Date(dateStr);
+    if (isNaN(d)) return "";
+    return d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
+}
+
 async function loadBlogs() {
     const res = await fetch("/resources/data/blogs.json");
     const data = await res.json();
@@ -36,6 +42,8 @@ function renderBlogs() {
 
         tile.innerHTML = `
             <h3>${blog.title}</h3>
+            <p class="blog-tile-date">${formatBlogDate(blog.date)}</p>
+            <p class="blog-excerpt">${blog.excerpt ? blog.excerpt : ""}</p>
             <p class="blog-subtitle">View full details →</p>
         `;
 
