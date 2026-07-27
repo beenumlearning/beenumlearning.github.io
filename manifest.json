@@ -1,7 +1,7 @@
 {
-  "name": "BEENUM LEARNING - Oracle Cloud Training",
-  "short_name": "BEENUM",
-  "description": "Master Oracle Cloud — OIC, VBCS, OPA, ORDS, Fusion & OCI — hands-on Udemy courses, free YouTube playlists, expert consulting, and technical blogs.",
+  "name": "BEENUM LEARNING",
+  "short_name": "BEENUM LEARNING",
+  "description": "Master Oracle Cloud — AI, OIC, VBCS, OPA, ORDS, Fusion & OCI — hands-on Udemy courses, YouTube playlists, expert consulting, and technical blogs.",
   "start_url": "/?source=pwa",
   "id": "/?source=pwa",
   "scope": "/",
