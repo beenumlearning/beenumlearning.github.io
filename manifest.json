@@ -1,0 +1,57 @@
+{
+  "name": "BEENUM LEARNING - Oracle Cloud Training",
+  "short_name": "BEENUM",
+  "description": "Master Oracle Cloud — OIC, VBCS, OPA, ORDS, Fusion & OCI — hands-on Udemy courses, free YouTube playlists, expert consulting, and technical blogs.",
+  "start_url": "/?source=pwa",
+  "id": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#FAFAF8",
+  "theme_color": "#1B5FCC",
+  "lang": "en",
+  "categories": ["education", "productivity"],
+  "icons": [
+    {
+      "src": "/resources/logo/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/resources/logo/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/resources/logo/icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/resources/logo/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Courses",
+      "url": "/pages/courses.html",
+      "description": "Browse Udemy courses"
+    },
+    {
+      "name": "Blogs",
+      "url": "/pages/blogs.html",
+      "description": "Latest learning guides"
+    },
+    {
+      "name": "Consulting",
+      "url": "/pages/consulting.html",
+      "description": "Get Oracle Cloud consulting help"
+    }
+  ]
+}

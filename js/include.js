@@ -44,6 +44,8 @@ const headerPromise = new Promise(resolve => {
             header.innerHTML = html;
             // Inject theme icon now that button exists in DOM
             if (window.applyThemeToButton) window.applyThemeToButton();
+            // Wire up + show/hide the install icon now that it exists in DOM
+            if (window.initPwaInstallButton) window.initPwaInstallButton();
             resolve();
         })
         .catch(err => {
