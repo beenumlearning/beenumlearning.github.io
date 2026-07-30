@@ -1,6 +1,6 @@
 function applyEmail() {
     const email = window.BEENUM ? BEENUM.EMAIL : null;
-    const telegram = window.BEENUM ? BEENUM.TELEGRAM : null;
+    const whatsapp = window.BEENUM ? BEENUM.WHATSAPP : null;
     
     if (!email) {
         setTimeout(applyEmail, 100);
@@ -16,12 +16,12 @@ function applyEmail() {
         }
     });
 
-    /* Update Telegram link */
-    const telegramLinks = document.querySelectorAll("#telegram-link");
-    telegramLinks.forEach(el => {
-        el.href = telegram;
+    /* Update WhatsApp channel link */
+    const whatsappLinks = document.querySelectorAll("#whatsapp-link");
+    whatsappLinks.forEach(el => {
+        el.href = whatsapp;
         if (!el.textContent.trim()) {
-            el.textContent = "Join us on Telegram";
+            el.textContent = "Join our WhatsApp Channel";
         }
     });
 

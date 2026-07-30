@@ -1,5 +1,5 @@
 window.BEENUM = {
     EMAIL: "info@beenumlearning.com",
     AD_LABEL: "Advertisement",
-    TELEGRAM: "https://t.me/Bl23666"
+    WHATSAPP: "https://whatsapp.com/channel/0029VbCvoOb1XquSVCQdGc3n"
 };
