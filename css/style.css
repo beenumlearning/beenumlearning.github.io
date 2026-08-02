@@ -105,6 +105,21 @@ ul{list-style:none}
 p{font-size:16px;line-height:1.75;color:var(--ink-3)}
 
 /* ══════════════════════════════════════════
+   ACCESSIBILITY: keyboard focus + reduced motion
+══════════════════════════════════════════ */
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.theme-toggle:focus-visible,.pwa-install-icon:focus-visible{outline:2px solid #fff;outline-offset:2px}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    transition-duration:.01ms!important;
+    scroll-behavior:auto!important;
+  }
+}
+
+/* ══════════════════════════════════════════
    TOP BANNER
 ══════════════════════════════════════════ */
 .top-banner{
@@ -154,13 +169,18 @@ p{font-size:16px;line-height:1.75;color:var(--ink-3)}
 ══════════════════════════════════════════ */
 .nav-toggle{
   display:none;
+  width:100%;
+  font:inherit;
   font-size:20px;
   color:var(--ink-2);
   padding:12px 20px;
   background:var(--nav-toggle-bg);
   cursor:pointer;
   text-align:left;
+  appearance:none;
+  border:none;
   border-bottom:1px solid var(--nav-border);
+  border-radius:0;
   font-weight:600;
   user-select:none;
   -webkit-tap-highlight-color:transparent;

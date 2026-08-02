@@ -1,0 +1,72 @@
+{
+  "discount": "30% OFF",
+  "validUntil": "August 31, 2026, 11:00 AM PDT",
+  "note": "Coupon codes are applied automatically when you follow the links below. If a code shows as expired on Udemy, it means the offer window has closed — check back on our offers page for the latest one.",
+  "courses": [
+    {
+      "title": "Learn Introduction to Integration in Oracle Integration 3 (OIC 3)",
+      "url": "https://www.udemy.com/course/learn-integration-in-oracleintegration3/?couponCode=C2A9684131EB29572A98",
+      "tag": "OIC"
+    },
+    {
+      "title": "Learn Introduction to Oracle Visual Builder for Developers: Gen 3",
+      "url": "https://www.udemy.com/course/oracle-vbcs-2024/?couponCode=0A56FB60DD022A5F0491",
+      "tag": "VBCS"
+    },
+    {
+      "title": "Learn Oracle Visual Builder Studio (VB Studio) for VBCS, CI/CD",
+      "url": "https://www.udemy.com/course/oraclevisualbuilderstudio/?couponCode=4A9E39F575C4B19E2D7C",
+      "tag": "VBCS"
+    },
+    {
+      "title": "Learn Introduction to Oracle Process Automation (Gen 3) OPA basics",
+      "url": "https://www.udemy.com/course/intro-to-opa-gen-3/?couponCode=0EB7029A103F6E56ACFF",
+      "tag": "OPA"
+    },
+    {
+      "title": "Oracle Cloud Functions (Python) - Hands-On Learning, OCI",
+      "url": "https://www.udemy.com/course/oci-functions-python/?couponCode=7F858C59755F9CA61C9E",
+      "tag": "OCI"
+    },
+    {
+      "title": "Learn basics of Oracle Fusion AppUI and extending Fusion Redwood page",
+      "url": "https://www.udemy.com/course/appui-extend-redwood/?couponCode=C64488244FAE655DF64A",
+      "tag": "Fusion"
+    },
+    {
+      "title": "Learn basics of Oracle Digital Assistant: Get started",
+      "url": "https://www.udemy.com/course/oda-getting-started/?couponCode=0BAA8A1760B4C8C7B38D",
+      "tag": "ODA"
+    },
+    {
+      "title": "Tips & Tricks for Oracle Integration 3 (OIC 3)",
+      "url": "https://www.udemy.com/course/tipstricks-oracleintegration3/?couponCode=FEFF0908A0C51ADBFC7D",
+      "tag": "OIC"
+    },
+    {
+      "title": "Tips & Tricks for Oracle Visual Builder (VBCS) application",
+      "url": "https://www.udemy.com/course/tips-tricks-for-oracle-visual-builder-vbcs/?couponCode=E972BF1DA112EE21362B",
+      "tag": "VBCS"
+    },
+    {
+      "title": "Learn Basics of ORDS (Oracle REST Data Services) for VBCS",
+      "url": "https://www.udemy.com/course/learn-ords-for-paas/?couponCode=A58C14A1935C2C2994BF",
+      "tag": "ORDS"
+    },
+    {
+      "title": "Learn Introduction to Oracle Fusion (SaaS) for PaaS Developers",
+      "url": "https://www.udemy.com/course/introduction-to-oracle-saas-for-paas/?couponCode=7FB177C5A37B6A7D4E93",
+      "tag": "Fusion"
+    },
+    {
+      "title": "Learn basics of Oracle APEX for developers",
+      "url": "https://www.udemy.com/course/oracle-apex-intro/?couponCode=D796A4402EF0552FE081",
+      "tag": "APEX"
+    },
+    {
+      "title": "Learn Introduction to Oracle Fusion AI Agent Studio for Developers",
+      "url": "https://www.udemy.com/course/fusion-ai-agent-studio/?couponCode=265842788ADD2AABC7F7",
+      "tag": "AI"
+    }
+  ]
+}

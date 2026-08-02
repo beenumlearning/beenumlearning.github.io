@@ -50,9 +50,16 @@ function applyEmail() {
     const emailTiles = document.querySelectorAll(".team-email-trigger");
     emailTiles.forEach(tile => {
         tile.style.cursor = "pointer";
-        tile.onclick = () => {
+        const openMail = () => {
             window.location.href = "mailto:" + email + "?subject=Contact from About Page";
         };
+        tile.onclick = openMail;
+        tile.addEventListener("keydown", (e) => {
+            if (e.key === "Enter" || e.key === " ") {
+                e.preventDefault();
+                openMail();
+            }
+        });
     });
 }
 

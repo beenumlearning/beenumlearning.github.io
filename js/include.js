@@ -1,3 +1,10 @@
+// Toggle the mobile nav and keep aria-expanded in sync for screen readers
+window.toggleMobileNav = function () {
+    const isOpen = document.body.classList.toggle("nav-open");
+    const btn = document.getElementById("nav-toggle-btn");
+    if (btn) btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+};
+
 // Inject favicon if missing
 // Inject favicons if missing
 if (!document.querySelector("link[rel='icon']")) {

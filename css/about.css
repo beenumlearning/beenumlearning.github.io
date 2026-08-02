@@ -36,6 +36,7 @@ details{background:var(--surface-2);border:1.5px solid var(--border);border-radi
 details[open]{border-color:var(--blue);box-shadow:0 4px 14px rgba(27,95,204,.08)}
 summary{padding:18px 24px;font-size:16px;font-weight:600;color:var(--ink);cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;outline:none;user-select:none;-webkit-tap-highlight-color:transparent}
 summary::-webkit-details-marker{display:none}
+summary:focus-visible{outline:2px solid var(--blue);outline-offset:-2px;border-radius:var(--r)}
 summary::after{content:'+';font-size:22px;color:var(--blue);font-weight:400;flex-shrink:0;width:26px;text-align:center}
 details[open] summary::after{content:'−'}
 details>p{padding:4px 24px 8px;font-size:15px;color:var(--ink-3);line-height:1.7;margin:0}
@@ -43,11 +44,6 @@ details>ul{padding:4px 24px 20px;display:flex;flex-direction:column;gap:9px}
 details>ul li{font-size:15px;color:var(--ink-3);line-height:1.55}
 
 /* ── OFFERS30 ── */
-.offer30-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-xl);padding:40px 36px}
-.offer30-card h1,.offer30-card h2{font-size:28px;font-weight:700;letter-spacing:-.4px;margin-bottom:14px;color:var(--ink)}
-.offer30-card>p{font-size:16px;color:var(--ink-3);margin-bottom:14px;line-height:1.7}
-.expiry-badge{display:inline-flex;align-items:center;gap:8px;background:var(--amber-light);color:var(--amber);padding:10px 18px;border-radius:var(--r);font-size:14px;font-weight:600;margin-bottom:26px}
-.raw-content{background:var(--surface-3);border:1.5px solid var(--border);border-radius:var(--r-lg);padding:24px 28px;font-family:'JetBrains Mono','DM Mono',monospace;font-size:14px;color:var(--ink-2);white-space:pre-wrap;line-height:1.8;overflow-x:auto}
 
 /* ── SERVICE REQUEST ── */
 .sr-hero-card{text-align:center;background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-xl);padding:48px 28px 32px;margin-bottom:18px}
@@ -100,7 +96,7 @@ details>ul li{font-size:15px;color:var(--ink-3);line-height:1.55}
 
 /* ── MOBILE ── */
 @media(max-width:640px){
-  .page-card,.instructors-card,.training-card,.offer30-card{padding:26px 20px}
+  .page-card,.instructors-card,.training-card{padding:26px 20px}
   .blog-grid{grid-template-columns:repeat(auto-fill,minmax(155px,1fr))}
   #blog-title{font-size:26px}
   .pdf-frame{height:80vh}
@@ -132,11 +128,8 @@ details>ul li{font-size:15px;color:var(--ink-3);line-height:1.55}
 [data-theme="dark"] details[open]{border-color:var(--blue)}
 [data-theme="dark"] summary{color:var(--ink)}
 [data-theme="dark"] details>p,[data-theme="dark"] details>ul li{color:var(--ink-3)}
-[data-theme="dark"] .offer30-card{background:var(--surface);border-color:var(--border)}
-[data-theme="dark"] .offer30-card h1,[data-theme="dark"] .offer30-card h2{color:var(--ink)}
 [data-theme="dark"] .content-section{background:var(--surface);border-color:var(--border)}
 [data-theme="dark"] .content-section h2{color:var(--ink)}
-[data-theme="dark"] .raw-content{background:var(--surface-3);border-color:var(--border);color:var(--ink-2)}
 [data-theme="dark"] .sr-hero-card{background:var(--surface);border-color:var(--border)}
 [data-theme="dark"] .sr-hero-card h1,[data-theme="dark"] .sr-hero-card h2{color:var(--ink)}
 [data-theme="dark"] .sr-form-card{background:var(--surface);border-color:var(--border)}

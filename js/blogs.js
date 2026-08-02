@@ -9,6 +9,12 @@ function formatBlogDate(dateStr) {
     return d.toLocaleDateString("en-US", { year: "numeric", month: "short", day: "numeric" });
 }
 
+function escapeHtml(str) {
+    return String(str == null ? "" : str).replace(/[&<>"']/g, s => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+    }[s]));
+}
+
 async function loadBlogs() {
     const res = await fetch("/resources/data/blogs.json");
     const data = await res.json();
@@ -33,17 +39,14 @@ function renderBlogs() {
     const nextBatch = filteredBlogs.slice(currentIndex, currentIndex + batchSize);
 
     nextBatch.forEach(blog => {
-        const tile = document.createElement("div");
+        const tile = document.createElement("a");
         tile.className = "blog-tile";
-
-        tile.onclick = () => {
-            window.location.href = `blog-view.html?id=${blog.id}`;
-        };
+        tile.href = `blog-view.html?id=${blog.id}`;
 
         tile.innerHTML = `
-            <h3>${blog.title}</h3>
+            <h3>${escapeHtml(blog.title)}</h3>
             <p class="blog-tile-date">${formatBlogDate(blog.date)}</p>
-            <p class="blog-excerpt">${blog.excerpt ? blog.excerpt : ""}</p>
+            <p class="blog-excerpt">${blog.excerpt ? escapeHtml(blog.excerpt) : ""}</p>
             <p class="blog-subtitle">View full details →</p>
         `;
 

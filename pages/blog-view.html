@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#1B5FCC">
   <link rel="apple-touch-icon" href="/resources/logo/apple-touch-icon.png">
@@ -14,12 +16,12 @@
   <meta name="description"
     content="Read detailed technical blogs from BEENUM LEARNING covering OIC, VBCS, PCS, ORDS, OCI, AI, and Oracle Fusion. Includes PDF guides and related YouTube tutorials.">
   <meta property="og:url" content="https://beenumlearning.com/pages/blog-view.html">
-  <meta property="og:type" content="article">
+  <meta property="og:type" content="article"><meta property="og:title" content="Blog Details | BEENUM LEARNING"><meta property="og:description" content="Read detailed technical blogs from BEENUM LEARNING covering OIC, VBCS, PCS, ORDS, OCI, AI, and Oracle Fusion. Includes PDF guides and related YouTube tutorials."><meta property="og:image" content="https://beenumlearning.com/resources/logo/favicon.png"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Blog Details | BEENUM LEARNING"><meta name="twitter:description" content="Read detailed technical blogs from BEENUM LEARNING covering OIC, VBCS, PCS, ORDS, OCI, AI, and Oracle Fusion. Includes PDF guides and related YouTube tutorials.">
   <link rel="canonical" href="https://beenumlearning.com/pages/blog-view.html">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/blogs.css">
   <script src="../js/darkmode.js"></script>
-  <script src="/js/pwa.js"></script>
+  <script src="/js/pwa.js" defer></script>
   <script src="../js/include.js" defer></script>
   <script src="../js/blog-view.js" defer></script>
 </head>
@@ -35,26 +37,6 @@
     <p id="blog-date" class="blog-date"></p>
     <div id="blog-summary" class="blog-summary"></div>
 
-    <div class="support-section">
-      <div class="support-card">
-        <div class="support-left">
-          <div class="support-icon">☕</div>
-          <div class="support-text">
-            <h2>Enjoying the Free Content?</h2>
-          </div>
-        </div>
-        <div class="support-grid">
-          <div class="support-btn-wrap">
-            <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
-              data-name="bmc-button" data-slug="beenumlearning" data-color="#FFDD00" data-emoji="☕" data-font="Cookie"
-              data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000"
-              data-coffee-color="#ffffff"></script>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
     <div class="pdf-wrapper">
       <iframe id="pdf-viewer" class="pdf-frame" frameborder="0"></iframe>
       <p class="pdf-fallback">If the PDF doesn't load, <a id="pdf-download-link" href="#" target="_blank"
@@ -63,7 +45,7 @@
     <h2 id="video-heading" class="video-heading" style="display:none;"></h2>
     <div id="video-container" class="video-wrapper"></div>
     <p style="margin-top:28px;font-size:14px;color:var(--ink-3);">
-      If you have any questions, feel free to contact us at <a id="email-link"
+      If you have any questions, feel free to contact us at <a id="email-link" href="mailto:info@beenumlearning.com"
         style="color:var(--blue);font-weight:500;"></a>
     </p>
   </section>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="theme-color" content="#1B5FCC">
+  <link rel="apple-touch-icon" href="/resources/logo/apple-touch-icon.png">
+  <title>Page Not Found | BEENUM LEARNING</title>
+  <meta name="description" content="This page doesn't exist. Find courses, blogs, and consulting from BEENUM LEARNING from the homepage.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" type="image/png" sizes="32x32" href="/resources/logo/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/resources/logo/favicon-16.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/darkmode.js"></script>
+  <script src="/js/pwa.js" defer></script>
+  <script src="/js/include.js" defer></script>
+  <style>
+    .not-found{max-width:640px;margin:60px auto;padding:0 28px;text-align:center}
+    .not-found .code{font-size:15px;font-weight:700;letter-spacing:1.4px;color:var(--blue);text-transform:uppercase;margin-bottom:14px}
+    .not-found h1{font-size:34px;font-weight:700;color:var(--ink);letter-spacing:-.6px;margin-bottom:14px}
+    .not-found p{font-size:16px;color:var(--ink-3);line-height:1.7;margin-bottom:28px}
+    .not-found .links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+    @media(max-width:480px){.not-found h1{font-size:26px}}
+  </style>
+</head>
+
+<body>
+  <div id="page-loader">
+    <div class="loader-spinner"></div>
+  </div>
+  <div data-include="header"></div>
+
+  <section class="not-found">
+    <div class="code">404 — Page not found</div>
+    <h1>That page took a wrong turn somewhere</h1>
+    <p>The link might be old, mistyped, or the page may have moved. Here's how to get back on track.</p>
+    <div class="links">
+      <a href="/index.html" class="btn btn-primary">← Back to homepage</a>
+      <a href="/pages/courses.html" class="btn btn-outline">Browse courses</a>
+      <a href="/pages/blogs.html" class="btn btn-outline">Read the blog</a>
+    </div>
+  </section>
+
+  <div id="cookie-banner-container"></div>
+  <div data-include="footer"></div>
+  <script src="/js/constants.js"></script>
+  <script src="/js/cookie-consent.js"></script>
+  <script src="/js/email.js"></script>
+</body>
+
+</html>

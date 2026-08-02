@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#1B5FCC">
   <link rel="apple-touch-icon" href="/resources/logo/apple-touch-icon.png">
@@ -13,12 +15,12 @@
   <title>About Us | BEENUM LEARNING – Oracle Cloud Training & Consulting</title>
   <meta name="description"
     content="Learn about BEENUM LEARNING's mission, team, and commitment to delivering high-quality Oracle Cloud training in OIC, VBCS, OPA, ORDS and Fusion.">
-  <meta property="og:url" content="https://beenumlearning.com/pages/about.html">
+  <meta property="og:url" content="https://beenumlearning.com/pages/about.html"><meta property="og:type" content="website"><meta property="og:title" content="About Us | BEENUM LEARNING – Oracle Cloud Training & Consulting"><meta property="og:description" content="Learn about BEENUM LEARNING's mission, team, and commitment to delivering high-quality Oracle Cloud training in OIC, VBCS, OPA, ORDS and Fusion."><meta property="og:image" content="https://beenumlearning.com/resources/logo/favicon.png"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="About Us | BEENUM LEARNING – Oracle Cloud Training & Consulting"><meta name="twitter:description" content="Learn about BEENUM LEARNING's mission, team, and commitment to delivering high-quality Oracle Cloud training in OIC, VBCS, OPA, ORDS and Fusion.">
   <link rel="canonical" href="https://beenumlearning.com/pages/about.html">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/about.css">
   <script src="../js/darkmode.js"></script>
-  <script src="/js/pwa.js"></script>
+  <script src="/js/pwa.js" defer></script>
   <script src="../js/include.js" defer></script>
 </head>
 
@@ -39,13 +41,15 @@
     <section class="instructors-card">
       <h2>Our Platforms</h2>
       <div class="instructor-grid">
-        <div class="instructor-tile team-email-trigger">
+        <div class="instructor-tile team-email-trigger" role="button" tabindex="0"
+          aria-label="Email us about BEENUM LEARNING">
           <img src="../resources/logo/logos.jpg" class="instructor-photo" alt="BEENUM LEARNING" width="300" height="300"
             loading="lazy">
           <div class="instructor-name">BEENUM LEARNING</div>
           <div class="instructor-role">Learning &amp; Education</div>
         </div>
-        <div class="instructor-tile team-email-trigger">
+        <div class="instructor-tile team-email-trigger" role="button" tabindex="0"
+          aria-label="Email us about Skill Manor">
           <img src="../resources/logo/skillmanor_logo.jpg" class="instructor-photo" alt="Skill Manor" width="300"
             height="300" loading="lazy">
           <div class="instructor-name">Skill Manor</div>
