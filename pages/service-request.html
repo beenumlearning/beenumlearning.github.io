@@ -26,11 +26,12 @@
 </head>
 
 <body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
   <div id="page-loader">
     <div class="loader-spinner"></div>
   </div>
   <div data-include="header"></div>
-  <section>
+  <section id="main-content" tabindex="-1">
     <section class="sr-hero-card">
       <span class="section-eyebrow">Request support</span>
       <h1>Service Request Form</h1>
@@ -39,9 +40,20 @@
     </section>
     <section class="sr-form-card">
       <div class="form-container">
-        <div class="iframe-wrapper"> <iframe
+        <div class="iframe-wrapper">
+          <div class="iframe-skeleton" id="form-skeleton" aria-hidden="true">
+            <div class="skeleton-bar" style="height:22px;width:60%;margin-bottom:22px"></div>
+            <div class="skeleton-bar" style="height:14px;width:35%;margin-bottom:10px"></div>
+            <div class="skeleton-bar" style="height:42px;width:100%;margin-bottom:22px"></div>
+            <div class="skeleton-bar" style="height:14px;width:35%;margin-bottom:10px"></div>
+            <div class="skeleton-bar" style="height:42px;width:100%;margin-bottom:22px"></div>
+            <div class="skeleton-bar" style="height:14px;width:35%;margin-bottom:10px"></div>
+            <div class="skeleton-bar" style="height:100px;width:100%"></div>
+          </div>
+          <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSfTmobR-8-9vZrhyn6qFHHpXxOEmSYEeqN83uySKBulmzOmfg/viewform?embedded=true"
-            width="100%" height="1600" style="border:0;" frameborder="0" marginheight="0" marginwidth="0">
+            width="100%" height="1600" style="border:0;" frameborder="0" marginheight="0" marginwidth="0"
+            onload="document.getElementById('form-skeleton')?.remove()">
             Loading…
           </iframe>
         </div>

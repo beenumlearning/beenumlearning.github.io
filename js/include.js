@@ -5,6 +5,46 @@ window.toggleMobileNav = function () {
     if (btn) btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
 };
 
+window.closeMobileNav = function () {
+    document.body.classList.remove("nav-open");
+    const btn = document.getElementById("nav-toggle-btn");
+    if (btn) btn.setAttribute("aria-expanded", "false");
+};
+
+// Close the mobile nav on: Escape key, backdrop tap, or tapping a nav link
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && document.body.classList.contains("nav-open")) {
+        window.closeMobileNav();
+        const btn = document.getElementById("nav-toggle-btn");
+        if (btn) btn.focus();
+    }
+});
+
+document.addEventListener("click", (e) => {
+    if (e.target && e.target.id === "nav-backdrop") window.closeMobileNav();
+});
+
+document.addEventListener("click", (e) => {
+    const nav = document.getElementById("site-nav");
+    if (nav && e.target.closest && nav.contains(e.target) && e.target.closest("a")) {
+        window.closeMobileNav();
+    }
+});
+
+// Highlight the current page in the nav for sighted + screen-reader users
+function markActiveNavLink() {
+    const nav = document.getElementById("site-nav");
+    if (!nav) return;
+    const currentPath = window.location.pathname.replace(/\/index\.html$/, "/") || "/";
+    nav.querySelectorAll("a").forEach(link => {
+        const linkPath = new URL(link.href).pathname.replace(/\/index\.html$/, "/") || "/";
+        if (linkPath === currentPath || (currentPath === "/" && linkPath === "/")) {
+            link.classList.add("nav-active");
+            link.setAttribute("aria-current", "page");
+        }
+    });
+}
+
 // Inject favicon if missing
 // Inject favicons if missing
 if (!document.querySelector("link[rel='icon']")) {
@@ -53,6 +93,7 @@ const headerPromise = new Promise(resolve => {
             if (window.applyThemeToButton) window.applyThemeToButton();
             // Wire up + show/hide the install icon now that it exists in DOM
             if (window.initPwaInstallButton) window.initPwaInstallButton();
+            markActiveNavLink();
             resolve();
         })
         .catch(err => {

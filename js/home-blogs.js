@@ -30,9 +30,10 @@
       const card = document.createElement('a');
       card.className = 'blog-belt-card belt-item';
       card.href = `pages/blog-view.html?id=${encodeURIComponent(blog.id)}`;
+      const pill = window.categoryPillHtml ? window.categoryPillHtml(blog.category) : '';
       card.innerHTML = `
         <div class="blog-belt-top">
-          ${blog.category ? `<span class="tag tag-blue">${escapeHtml(blog.category)}</span>` : '<span></span>'}
+          ${pill || '<span></span>'}
           <span class="blog-belt-date">${formatDate(blog.date)}</span>
         </div>
         <h3>${escapeHtml(blog.title)}</h3>

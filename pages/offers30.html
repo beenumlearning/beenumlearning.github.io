@@ -22,17 +22,37 @@
   <script src="../js/include.js" defer></script>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
   <div id="page-loader"><div class="loader-spinner"></div></div>
   <div data-include="header"></div>
-  <section>
+  <section id="main-content" tabindex="-1">
     <section class="offer30-card">
       <span class="section-eyebrow">Limited-time offer</span>
       <h1>🎁 30% OFF on Online Courses</h1>
       <p>Enjoy an exclusive 30% discount on selected Udemy courses. Tap any course below — the coupon is already
         applied in the link.</p>
-      <p class="expiry-badge" id="offer-expiry"><strong>⚠️ Loading offer details…</strong></p>
+      <p class="expiry-badge" id="offer-expiry"><span class="skeleton-bar" style="display:inline-block;width:230px;height:16px;vertical-align:middle"></span></p>
       <ul class="offer-course-list" id="offer-course-list" aria-label="Discounted Udemy courses">
-        <li class="offer-course-item is-loading">Loading courses…</li>
+        <li class="offer-course-item skeleton-item" aria-hidden="true">
+          <span class="skeleton-bar" style="width:52px;height:20px;border-radius:20px;flex-shrink:0"></span>
+          <span class="skeleton-bar" style="flex:1;height:15px;min-width:140px"></span>
+          <span class="skeleton-bar" style="width:110px;height:15px;flex-shrink:0"></span>
+        </li>
+        <li class="offer-course-item skeleton-item" aria-hidden="true">
+          <span class="skeleton-bar" style="width:52px;height:20px;border-radius:20px;flex-shrink:0"></span>
+          <span class="skeleton-bar" style="flex:1;height:15px;min-width:140px"></span>
+          <span class="skeleton-bar" style="width:110px;height:15px;flex-shrink:0"></span>
+        </li>
+        <li class="offer-course-item skeleton-item" aria-hidden="true">
+          <span class="skeleton-bar" style="width:52px;height:20px;border-radius:20px;flex-shrink:0"></span>
+          <span class="skeleton-bar" style="flex:1;height:15px;min-width:140px"></span>
+          <span class="skeleton-bar" style="width:110px;height:15px;flex-shrink:0"></span>
+        </li>
+        <li class="offer-course-item skeleton-item" aria-hidden="true">
+          <span class="skeleton-bar" style="width:52px;height:20px;border-radius:20px;flex-shrink:0"></span>
+          <span class="skeleton-bar" style="flex:1;height:15px;min-width:140px"></span>
+          <span class="skeleton-bar" style="width:110px;height:15px;flex-shrink:0"></span>
+        </li>
       </ul>
     </section>
   </section>

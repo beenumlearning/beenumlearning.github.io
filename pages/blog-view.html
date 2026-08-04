@@ -23,16 +23,20 @@
   <script src="../js/darkmode.js"></script>
   <script src="/js/pwa.js" defer></script>
   <script src="../js/include.js" defer></script>
+  <script src="../js/blog-cover.js" defer></script>
   <script src="../js/blog-view.js" defer></script>
+  <script src="../js/giscus-init.js" defer></script>
 </head>
 
 <body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
   <div id="page-loader">
     <div class="loader-spinner"></div>
   </div>
   <div data-include="header"></div>
-  <section class="blog-detail-section">
+  <section id="main-content" tabindex="-1" class="blog-detail-section">
     <a href="javascript:history.back()" class="blog-back-btn">← Go Back</a>
+    <div id="blog-cover-slot"></div>
     <h1 id="blog-title"></h1>
     <p id="blog-date" class="blog-date"></p>
     <div id="blog-summary" class="blog-summary"></div>
@@ -48,6 +52,8 @@
       If you have any questions, feel free to contact us at <a id="email-link" href="mailto:info@beenumlearning.com"
         style="color:var(--blue);font-weight:500;"></a>
     </p>
+    <div id="related-posts" class="related-posts"></div>
+    <div id="giscus-comments" class="giscus-comments"></div>
   </section>
 
   <br>

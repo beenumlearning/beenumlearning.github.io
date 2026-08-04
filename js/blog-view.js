@@ -24,6 +24,39 @@ async function loadBlog() {
     document.getElementById("blog-title").textContent = blog.title;
     document.getElementById("blog-date").textContent = "Published on: " + blog.date;
 
+    // Small category pill above the title
+    const coverSlot = document.getElementById("blog-cover-slot");
+    if (coverSlot) {
+        coverSlot.innerHTML = window.categoryPillHtml ? window.categoryPillHtml(blog.category) : "";
+    }
+
+    // Related posts: same category, excluding this post, up to 3
+    const relatedContainer = document.getElementById("related-posts");
+    if (relatedContainer) {
+        const related = data.blogs
+            .filter(b => b.id !== blog.id && b.category === blog.category)
+            .sort((a, b) => new Date(b.date) - new Date(a.date))
+            .slice(0, 3);
+
+        if (related.length) {
+            const escapeHtml = (str) => String(str == null ? "" : str).replace(/[&<>"']/g, s => ({
+                "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+            }[s]));
+
+            relatedContainer.innerHTML = `
+                <h2>Related Posts</h2>
+                <div class="related-posts-grid">
+                    ${related.map(b => `
+                        <a class="related-post-card" href="blog-view.html?id=${b.id}">
+                            ${window.categoryPillHtml ? window.categoryPillHtml(b.category) : ""}
+                            <h3>${escapeHtml(b.title)}</h3>
+                        </a>
+                    `).join("")}
+                </div>
+            `;
+        }
+    }
+
     const blogUrl = `https://beenumlearning.com/pages/blog-view.html?id=${blog.id}`;
 
     const canonical = document.querySelector('link[rel="canonical"]');

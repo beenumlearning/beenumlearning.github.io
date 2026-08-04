@@ -51,6 +51,8 @@ details>ul li{font-size:15px;color:var(--ink-3);line-height:1.55}
 .sr-hero-card p{font-size:16px;color:var(--ink-3)}
 .sr-form-card{background:var(--surface);border:1.5px solid var(--border);border-radius:var(--r-xl);padding:32px;overflow:hidden}
 .sr-form-card iframe{width:100%;max-width:900px;border-radius:var(--r)}
+.iframe-wrapper{position:relative}
+.iframe-skeleton{position:absolute;top:0;left:0;right:0;max-width:900px;background:var(--surface);padding:8px 4px;z-index:2}
 
 /* ── COURSE PLAYLIST GRID ── */
 .playlist-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:18px;margin-top:22px}

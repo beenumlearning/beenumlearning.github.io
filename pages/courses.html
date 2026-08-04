@@ -23,74 +23,89 @@
   <script src="../js/darkmode.js"></script>
   <script src="/js/pwa.js" defer></script>
   <script src="../js/include.js" defer></script>
+  <script src="../js/courses-filter.js" defer></script>
 </head>
 
-<body>
+<body class="has-sticky-cta">
+  <a href="#main-content" class="skip-link">Skip to content</a>
   <div id="page-loader">
     <div class="loader-spinner"></div>
   </div>
   <div data-include="header"></div>
-  <section>
+  <section id="main-content" tabindex="-1">
     <span class="section-eyebrow">Paid courses</span>
     <h1>Our Udemy Courses</h1>
     <p>Click any course below to view it directly on Udemy.</p>
+    <div class="filter-bar" id="course-filter-bar" role="group" aria-label="Filter courses by technology">
+      <button type="button" class="filter-pill is-active" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" class="filter-pill" data-filter="VBCS" aria-pressed="false">VBCS</button>
+      <button type="button" class="filter-pill" data-filter="OIC" aria-pressed="false">OIC</button>
+      <button type="button" class="filter-pill" data-filter="OPA" aria-pressed="false">OPA</button>
+      <button type="button" class="filter-pill" data-filter="Fusion" aria-pressed="false">Fusion</button>
+      <button type="button" class="filter-pill" data-filter="ORDS" aria-pressed="false">ORDS</button>
+      <button type="button" class="filter-pill" data-filter="OCI" aria-pressed="false">OCI</button>
+      <button type="button" class="filter-pill" data-filter="ODA" aria-pressed="false">ODA</button>
+      <button type="button" class="filter-pill" data-filter="APEX" aria-pressed="false">APEX</button>
+      <button type="button" class="filter-pill" data-filter="AI" aria-pressed="false">AI</button>
+    </div>
     <div class="playlist-grid">
-      <a class="playlist-tile" href="https://bit.ly/4dAelg7" target="_blank" rel="noopener">
+      <a class="playlist-tile" data-category="VBCS" href="https://bit.ly/4dAelg7" target="_blank" rel="noopener">
         <img class="playlist-thumb-course" src="https://img-c.udemycdn.com/course/480x270/6107619_9a01_8.jpg"
           alt="Oracle Visual Builder (VBCS)" loading="lazy">
         <div class="playlist-title">Oracle Visual Builder (VBCS) Introduction</div>
       </a>
-      <a class="playlist-tile" href="https://bit.ly/3pyKFvL" target="_blank" rel="noopener">
+      <a class="playlist-tile" data-category="OIC" href="https://bit.ly/3pyKFvL" target="_blank" rel="noopener">
         <img class="playlist-thumb-course" src="https://img-c.udemycdn.com/course/240x135/5257476_36ac_2.jpg"
           alt="Oracle Integration 3 (OIC 3)" loading="lazy">
         <div class="playlist-title">Oracle Integration Gen 3 (OIC 3) Introduction</div>
       </a>
-      <a class="playlist-tile" href="https://bit.ly/40SUMfw" target="_blank" rel="noopener">
+      <a class="playlist-tile" data-category="OPA" href="https://bit.ly/40SUMfw" target="_blank" rel="noopener">
         <img class="playlist-thumb-course" src="https://img-c.udemycdn.com/course/240x135/6243645_2c7d_4.jpg"
           alt="Oracle Process Automation (OPA)" loading="lazy">
         <div class="playlist-title">Oracle Process Automation (OPA) Introduction</div>
       </a>
-      <a class="playlist-tile" href="https://bit.ly/41I4von" target="_blank" rel="noopener">
+      <a class="playlist-tile" data-category="AI" href="https://bit.ly/41I4von" target="_blank" rel="noopener">
         <img class="playlist-thumb-course" src="https://img-c.udemycdn.com/course/240x135/6926377_c088_2.jpg"
           alt="Oracle Fusion AI Agent Studio" loading="lazy">
         <div class="playlist-title">Oracle Fusion AI Agent Studio</div>
       </a>
-      <a class="playlist-tile" href="https://bit.ly/4aa2zaU" target="_blank" rel="noopener">
+      <a class="playlist-tile" data-category="ORDS" href="https://bit.ly/4aa2zaU" target="_blank" rel="noopener">
         <img class="playlist-thumb-course" src="https://img-c.udemycdn.com/course/240x135/5692878_dc9e_2.jpg"
           alt="Oracle REST Data Services (ORDS)" loading="lazy">
         <div class="playlist-title">Oracle REST Data Services (ORDS) Introduction</div>
       </a>
-      <a class="playlist-tile" href="https://bit.ly/3DYWkIp" target="_blank" rel="noopener">
+      <a class="playlist-tile" data-category="OCI" href="https://bit.ly/3DYWkIp" target="_blank" rel="noopener">
         <img class="playlist-thumb-course" src="https://img-c.udemycdn.com/course/240x135/5508176_b63b_4.jpg"
           alt="Oracle Cloud Functions (Python)" loading="lazy">
         <div class="playlist-title">Oracle Cloud Functions (Python) Introduction</div>
       </a>
-      <a class="playlist-tile" href="https://bit.ly/4l8MlmI" target="_blank" rel="noopener">
+      <a class="playlist-tile" data-category="ODA" href="https://bit.ly/4l8MlmI" target="_blank" rel="noopener">
         <img class="playlist-thumb-course" src="https://img-c.udemycdn.com/course/240x135/6753001_9801_2.jpg"
           alt="Oracle Digital Assistant" loading="lazy">
         <div class="playlist-title">Oracle Digital Assistant (ODA) Introduction</div>
       </a>
-      <a class="playlist-tile" href="https://bit.ly/4dYfSxJ" target="_blank" rel="noopener">
+      <a class="playlist-tile" data-category="APEX" href="https://bit.ly/4dYfSxJ" target="_blank" rel="noopener">
         <img class="playlist-thumb-course" src="https://img-c.udemycdn.com/course/240x135/6592599_ac36.jpg"
           alt="Oracle APEX for developers" loading="lazy">
         <div class="playlist-title">Oracle APEX for Developers: Introduction</div>
       </a>
-      <a class="playlist-tile" href="https://bit.ly/3WeJE6E" target="_blank" rel="noopener">
+      <a class="playlist-tile" data-category="VBCS" href="https://bit.ly/3WeJE6E" target="_blank" rel="noopener">
         <img class="playlist-thumb-course" src="https://img-c.udemycdn.com/course/240x135/5058568_1068_2.jpg"
           alt="Tips &amp; Tricks VBCS" loading="lazy">
         <div class="playlist-title">Tips &amp; Tricks for Oracle Visual Builder (VBCS)</div>
       </a>
-      <a class="playlist-tile" href="https://bit.ly/46bN2ox" target="_blank" rel="noopener">
+      <a class="playlist-tile" data-category="OIC" href="https://bit.ly/46bN2ox" target="_blank" rel="noopener">
         <img class="playlist-thumb-course" src="https://img-c.udemycdn.com/course/240x135/5521066_fef5_2.jpg"
           alt="Tips &amp; Tricks OIC 3" loading="lazy">
         <div class="playlist-title">Tips &amp; Tricks for Oracle Integration 3</div>
       </a>
-      <a class="playlist-tile" href="https://bit.ly/3GuMzpB" target="_blank" rel="noopener">
+      <a class="playlist-tile" data-category="Fusion" href="https://bit.ly/3GuMzpB" target="_blank" rel="noopener">
         <img class="playlist-thumb-course" src="https://img-c.udemycdn.com/course/240x135/6550731_e869_2.jpg"
           alt="Oracle Fusion AppUI" loading="lazy">
         <div class="playlist-title">Basics of Oracle Fusion AppUI and Extending Redwood Page</div>
       </a>
     </div>
+    <p class="filter-empty" id="course-filter-empty">No courses match this filter yet — try "All" to see everything.</p>
   </section>
 
   <br>
@@ -126,6 +141,9 @@
   </section>
   <div id="cookie-banner-container"></div>
   <div data-include="footer"></div>
+  <div class="sticky-cta-bar">
+    <a href="/pages/offers30.html" class="sticky-cta-btn">🎁 Get 30% OFF Courses →</a>
+  </div>
   <script src="../js/constants.js"></script>
   <script src="../js/email.js"></script>
   <script src="../js/cookie-consent.js"></script>

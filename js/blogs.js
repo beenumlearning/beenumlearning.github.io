@@ -30,10 +30,15 @@ async function loadBlogs() {
 
 function renderBlogs() {
     const container = document.getElementById("blogs-container");
+    const emptyState = document.getElementById("blogs-filter-empty");
 
     // Clear only when starting fresh
     if (currentIndex === 0) {
         container.innerHTML = "";
+    }
+
+    if (emptyState) {
+        emptyState.classList.toggle("is-visible", filteredBlogs.length === 0);
     }
 
     const nextBatch = filteredBlogs.slice(currentIndex, currentIndex + batchSize);
@@ -43,7 +48,10 @@ function renderBlogs() {
         tile.className = "blog-tile";
         tile.href = `blog-view.html?id=${blog.id}`;
 
+        const pill = window.categoryPillHtml ? window.categoryPillHtml(blog.category) : "";
+
         tile.innerHTML = `
+            ${pill}
             <h3>${escapeHtml(blog.title)}</h3>
             <p class="blog-tile-date">${formatBlogDate(blog.date)}</p>
             <p class="blog-excerpt">${blog.excerpt ? escapeHtml(blog.excerpt) : ""}</p>

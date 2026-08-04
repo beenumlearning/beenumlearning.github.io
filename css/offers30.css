@@ -7,7 +7,11 @@
 /* Clickable course list */
 .offer-course-list{display:flex;flex-direction:column;gap:10px;margin:0}
 .offer-course-item{list-style:none}
-.offer-course-item.is-loading{color:var(--ink-3);font-size:14px;padding:14px 0}
+.offer-course-item.skeleton-item{
+  display:flex;align-items:center;gap:12px;
+  background:var(--surface-3);border:1.5px solid var(--border);border-radius:var(--r-lg);
+  padding:16px 20px;
+}
 .offer-course-item a{
   display:flex;align-items:center;gap:12px;flex-wrap:wrap;
   background:var(--surface-3);border:1.5px solid var(--border);border-radius:var(--r-lg);

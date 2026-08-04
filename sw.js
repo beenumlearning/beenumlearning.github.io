@@ -21,7 +21,7 @@
    cache reset for everyone instead of relying on that second load.
    ============================================================ */
 
-const CACHE_VERSION = 'v2';
+const CACHE_VERSION = 'v3';
 const CACHE_NAME = `beenum-cache-${CACHE_VERSION}`;
 const OFFLINE_URL = '/index.html';
 
