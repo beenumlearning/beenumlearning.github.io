@@ -1,71 +1,71 @@
 {
   "discount": "30% OFF",
-  "validUntil": "September 30, 2026 12:05 AM PDT",
+  "validUntil": "October 31, 2026 7:38 PM PDT",
   "note": "Coupon codes are applied automatically when you follow the links below. If a code shows as expired on Udemy, it means the offer window has closed — check back on our offers page for the latest one.",
   "courses": [
     {
       "title": "Introduction to Integration in Oracle Integration 3 (OIC 3)",
-      "url": "https://www.udemy.com/course/learn-integration-in-oracleintegration3/?couponCode=4E8A3120D1A8C73518B1",
+      "url": "https://www.udemy.com/course/learn-integration-in-oracleintegration3/?couponCode=A72EC7AB7E28B4FD8CCF",
       "tag": "OIC"
     },
     {
       "title": "Introduction to Oracle Visual Builder for Developers: Gen 3",
-      "url": "https://www.udemy.com/course/oracle-vbcs-2024/?couponCode=DBD4CB5B0F625C68FC59",
+      "url": "https://www.udemy.com/course/oracle-vbcs-2024/?couponCode=F7291868FF9F25FC7F2B",
       "tag": "VBCS"
     },
     {
       "title": "Oracle Visual Builder Studio (VB Studio) for VBCS, CI/CD",
-      "url": "https://www.udemy.com/course/oraclevisualbuilderstudio/?couponCode=3BAAF137C0D7369B0610",
+      "url": "https://www.udemy.com/course/oraclevisualbuilderstudio/?couponCode=A20B270B4FB60A25248E",
       "tag": "VBCS"
     },
     {
       "title": "Introduction to Oracle Process Automation (Gen 3) OPA basics",
-      "url": "https://www.udemy.com/course/intro-to-opa-gen-3/?couponCode=5D0F5D7D4014B81A3BB5",
+      "url": "https://www.udemy.com/course/intro-to-opa-gen-3/?couponCode=0687286857A37FD7B06D",
       "tag": "OPA"
     },
     {
       "title": "Oracle Cloud Functions (Python) - Hands-On Learning, OCI",
-      "url": "https://www.udemy.com/course/oci-functions-python/?couponCode=073AA3393264CDBD6FBC",
+      "url": "https://www.udemy.com/course/oci-functions-python/?couponCode=C357C88AC6285CAB9377",
       "tag": "OCI"
     },
     {
       "title": "Basics of Oracle Fusion AppUI and extending Fusion Redwood page",
-      "url": "https://www.udemy.com/course/appui-extend-redwood/?couponCode=A0CF9FCDB421E4784F39",
+      "url": "https://www.udemy.com/course/appui-extend-redwood/?couponCode=443A292174924B60A7B4",
       "tag": "Fusion"
     },
     {
       "title": "Basics of Oracle Digital Assistant: Get started",
-      "url": "https://www.udemy.com/course/oda-getting-started/?couponCode=05874C7416FA9F0BEF4E",
+      "url": "https://www.udemy.com/course/oda-getting-started/?couponCode=E1E98F11D4D60C6E4FE4",
       "tag": "ODA"
     },
     {
       "title": "Tips & Tricks for Oracle Integration 3 (OIC 3)",
-      "url": "https://www.udemy.com/course/tipstricks-oracleintegration3/?couponCode=E80C64BDEA02DF44E607",
+      "url": "https://www.udemy.com/course/tipstricks-oracleintegration3/?couponCode=BCE032DE33DB15A4DC9B",
       "tag": "OIC"
     },
     {
       "title": "Tips & Tricks for Oracle Visual Builder (VBCS) application",
-      "url": "https://www.udemy.com/course/tips-tricks-for-oracle-visual-builder-vbcs/?couponCode=7226C4EB5A5F8459B358",
+      "url": "https://www.udemy.com/course/tips-tricks-for-oracle-visual-builder-vbcs/?couponCode=380FE86B2989E3FBFCAC",
       "tag": "VBCS"
     },
     {
       "title": "Basics of ORDS (Oracle REST Data Services) for VBCS",
-      "url": "https://www.udemy.com/course/learn-ords-for-paas/?couponCode=E5113B37CEB8DAECDD32",
+      "url": "https://www.udemy.com/course/learn-ords-for-paas/?couponCode=4758EEE27BC42C7F99F9",
       "tag": "ORDS"
     },
     {
       "title": "Introduction to Oracle Fusion (SaaS) for PaaS Developers",
-      "url": "https://www.udemy.com/course/introduction-to-oracle-saas-for-paas/?couponCode=D4893E5231967D048BDE",
+      "url": "https://www.udemy.com/course/introduction-to-oracle-saas-for-paas/?couponCode=BDFD2F1216FEC785C693",
       "tag": "Fusion"
     },
     {
       "title": "Basics of Oracle APEX for developers",
-      "url": "https://www.udemy.com/course/oracle-apex-intro/?couponCode=FAF91B008B2F5B2C99FD",
+      "url": "https://www.udemy.com/course/oracle-apex-intro/?couponCode=393832D756AF7F3A8997",
       "tag": "APEX"
     },
     {
       "title": "Introduction to Oracle Fusion AI Agent Studio for Developers",
-      "url": "https://www.udemy.com/course/fusion-ai-agent-studio/?couponCode=16BA849F05157F07B58F",
+      "url": "https://www.udemy.com/course/fusion-ai-agent-studio/?couponCode=9600AC4518960362CC2B",
       "tag": "AI"
     }
   ]
