@@ -1,88 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Blog Details | BEENUM LEARNING</title>
+  <meta name="description" content="Read detailed technical blogs from BEENUM LEARNING covering OIC, VBCS, PCS, ORDS, OCI, AI, and Oracle Fusion. Includes PDF guides and related YouTube tutorials.">
+  <link rel="canonical" href="https://beenumlearning.com/pages/blog-view.html">
+  <meta name="theme-color" content="#faf8f3">
+  <script src="/js/theme.js"></script>
+
+  <!-- Social sharing -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="BEENUM LEARNING">
+  <meta property="og:url" content="https://beenumlearning.com/pages/blog-view.html">
+  <meta property="og:title" content="Blog Details | BEENUM LEARNING">
+  <meta property="og:description" content="Read detailed technical blogs from BEENUM LEARNING covering OIC, VBCS, PCS, ORDS, OCI, AI, and Oracle Fusion. Includes PDF guides and related YouTube tutorials.">
+  <meta property="og:image" content="https://beenumlearning.com/og/default.jpg">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- App & icons -->
   <link rel="manifest" href="/manifest.json">
-  <meta name="theme-color" content="#1B5FCC">
+  <link rel="icon" type="image/png" sizes="32x32" href="/resources/logo/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/resources/logo/favicon-16.png">
   <link rel="apple-touch-icon" href="/resources/logo/apple-touch-icon.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="BEENUM">
-  <title>Blog Details | BEENUM LEARNING</title>
-  <meta name="description"
-    content="Read detailed technical blogs from BEENUM LEARNING covering OIC, VBCS, PCS, ORDS, OCI, AI, and Oracle Fusion. Includes PDF guides and related YouTube tutorials.">
-  <meta property="og:url" content="https://beenumlearning.com/pages/blog-view.html">
-  <meta property="og:type" content="article"><meta property="og:title" content="Blog Details | BEENUM LEARNING"><meta property="og:description" content="Read detailed technical blogs from BEENUM LEARNING covering OIC, VBCS, PCS, ORDS, OCI, AI, and Oracle Fusion. Includes PDF guides and related YouTube tutorials."><meta property="og:image" content="https://beenumlearning.com/resources/logo/favicon.png"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Blog Details | BEENUM LEARNING"><meta name="twitter:description" content="Read detailed technical blogs from BEENUM LEARNING covering OIC, VBCS, PCS, ORDS, OCI, AI, and Oracle Fusion. Includes PDF guides and related YouTube tutorials.">
-  <link rel="canonical" href="https://beenumlearning.com/pages/blog-view.html">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/blogs.css">
-  <script src="../js/darkmode.js"></script>
-  <script src="/js/pwa.js" defer></script>
-  <script src="../js/include.js" defer></script>
-  <script src="../js/blog-cover.js" defer></script>
-  <script src="../js/blog-view.js" defer></script>
-  <script src="../js/giscus-init.js" defer></script>
+
+  <!-- Styles & scripts -->
+  <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/sora.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/site.js" defer></script>
+  <script src="/js/blogs.js" defer></script>
 </head>
-
 <body>
-  <a href="#main-content" class="skip-link">Skip to content</a>
-  <div id="page-loader">
-    <div class="loader-spinner"></div>
-  </div>
+  <!-- Loading spinner: hidden by js/site.js as soon as the page is ready -->
+  <div id="page-loader" aria-hidden="true"><div class="loader-coin"><img src="/resources/logo/logos.jpg" alt=""></div></div>
+  <a href="#main" class="skip-link">Skip to content</a>
   <div data-include="header"></div>
-  <section id="main-content" tabindex="-1" class="blog-detail-section">
-    <a href="javascript:history.back()" class="blog-back-btn">← Go Back</a>
-    <div id="blog-cover-slot"></div>
-    <h1 id="blog-title"></h1>
-    <p id="blog-date" class="blog-date"></p>
-    <div id="blog-summary" class="blog-summary"></div>
 
-    <div class="pdf-wrapper">
-      <iframe id="pdf-viewer" class="pdf-frame" frameborder="0"></iframe>
-      <p class="pdf-fallback">If the PDF doesn't load, <a id="pdf-download-link" href="#" target="_blank"
-          rel="noopener">click here to open it directly</a>.</p>
+  <main id="main" tabindex="-1">
+
+    <!-- The article is drawn inside this box by js/blogs.js, using /resources/data/blogs.json (?id=N) -->
+    <div data-blog-view>
+      <section class="container section">
+        <div class="skeleton" style="height:22px;width:30%"></div>
+        <div class="skeleton" style="height:48px;width:80%;margin-top:18px"></div>
+        <div class="skeleton" style="height:18px;width:65%;margin-top:18px"></div>
+        <div class="skeleton" style="height:320px;width:100%;margin-top:36px"></div>
+      </section>
     </div>
-    <h2 id="video-heading" class="video-heading" style="display:none;"></h2>
-    <div id="video-container" class="video-wrapper"></div>
-    <p style="margin-top:28px;font-size:14px;color:var(--ink-3);">
-      If you have any questions, feel free to contact us at <a id="email-link" href="mailto:info@beenumlearning.com"
-        style="color:var(--blue);font-weight:500;"></a>
-    </p>
-    <div id="related-posts" class="related-posts"></div>
-    <div id="giscus-comments" class="giscus-comments"></div>
-  </section>
 
-  <br>
-
-  <div class="support-section">
-    <div class="support-card">
-      <div class="support-left">
-        <div class="support-icon">☕</div>
+    <!-- ═══ SUPPORT (Buy me a coffee) ═══ -->
+    <section class="container support reveal" aria-labelledby="support-title">
+      <div class="support-card card">
+        <div class="support-icon"><svg class="i i-lg" aria-hidden="true"><use href="#coffee"></use></svg></div>
         <div class="support-text">
-          <h2>Enjoying the Free Content?</h2>
+          <h2 id="support-title">Enjoying the free content?</h2>
           <p>If our YouTube videos, courses, or blogs have saved you time, you can help fuel the next one.</p>
         </div>
+        <a class="btn btn-gold" href="https://www.buymeacoffee.com/beenumlearning" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#coffee"></use></svg> Buy me a coffee</a>
       </div>
-      <div class="support-grid">
-        <div class="support-btn-wrap">
-          <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
-            data-name="bmc-button" data-slug="beenumlearning" data-color="#FFDD00" data-emoji="☕" data-font="Cookie"
-            data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000"
-            data-coffee-color="#ffffff"></script>
-        </div>
-      </div>
-    </div>
-  </div>
+    </section>
+  </main>
 
-  <div id="cookie-banner-container"></div>
   <div data-include="footer"></div>
-  <script src="../js/constants.js"></script>
-  <script src="../js/email.js"></script>
-  <script src="../js/cookie-consent.js"></script>
 </body>
-
 </html>

@@ -1,16 +1,25 @@
 {
-  "name": "BEENUM LEARNING",
-  "short_name": "BEENUM LEARNING",
-  "description": "Master Oracle Cloud — AI, OIC, VBCS, OPA, ORDS, Fusion & OCI — hands-on Udemy courses, YouTube playlists, expert consulting, and technical blogs.",
-  "start_url": "/?source=pwa",
   "id": "/?source=pwa",
+  "name": "BEENUM LEARNING",
+  "short_name": "BEENUM",
+  "description": "Master Oracle Cloud — AI, OIC, VBCS, OPA, ORDS, Fusion & OCI — hands-on Udemy courses, YouTube playlists, expert consulting, and technical blogs.",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "/?source=pwa",
   "scope": "/",
   "display": "standalone",
-  "orientation": "portrait-primary",
-  "background_color": "#FAFAF8",
-  "theme_color": "#1B5FCC",
-  "lang": "en",
-  "categories": ["education", "productivity"],
+  "display_override": [
+    "standalone",
+    "minimal-ui"
+  ],
+  "orientation": "any",
+  "background_color": "#0d0f12",
+  "theme_color": "#0d0f12",
+  "categories": [
+    "education",
+    "productivity"
+  ],
+  "prefer_related_applications": false,
   "icons": [
     {
       "src": "/resources/logo/icon-192.png",
@@ -37,21 +46,84 @@
       "purpose": "maskable"
     }
   ],
+  "screenshots": [
+    {
+      "src": "/resources/screenshots/home-wide.webp",
+      "sizes": "1280x800",
+      "type": "image/webp",
+      "form_factor": "wide",
+      "label": "BEENUM LEARNING home — Oracle Cloud & AI courses, offers and consulting"
+    },
+    {
+      "src": "/resources/screenshots/courses-wide.webp",
+      "sizes": "1280x800",
+      "type": "image/webp",
+      "form_factor": "wide",
+      "label": "Udemy course catalogue with technology filters"
+    },
+    {
+      "src": "/resources/screenshots/home-narrow.webp",
+      "sizes": "780x1688",
+      "type": "image/webp",
+      "form_factor": "narrow",
+      "label": "Home screen on mobile"
+    },
+    {
+      "src": "/resources/screenshots/blog-narrow.webp",
+      "sizes": "780x1688",
+      "type": "image/webp",
+      "form_factor": "narrow",
+      "label": "Learning path guide with PDF download and video"
+    }
+  ],
   "shortcuts": [
     {
       "name": "Courses",
-      "url": "/pages/courses.html",
-      "description": "Browse Udemy courses"
+      "short_name": "Courses",
+      "url": "/pages/courses.html?source=pwa",
+      "description": "Browse Udemy courses",
+      "icons": [
+        {
+          "src": "/resources/logo/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
-      "name": "Blogs",
-      "url": "/pages/blogs.html",
-      "description": "Latest learning guides"
+      "name": "30% OFF offers",
+      "short_name": "Offers",
+      "url": "/pages/offers30.html?source=pwa",
+      "description": "Current course coupons",
+      "icons": [
+        {
+          "src": "/resources/logo/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "Blog",
+      "short_name": "Blog",
+      "url": "/pages/blogs.html?source=pwa",
+      "description": "Learning paths & guides",
+      "icons": [
+        {
+          "src": "/resources/logo/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     },
     {
       "name": "Consulting",
-      "url": "/pages/consulting.html",
-      "description": "Get Oracle Cloud consulting help"
+      "short_name": "Consulting",
+      "url": "/pages/consulting.html?source=pwa",
+      "description": "Get Oracle Cloud consulting help",
+      "icons": [
+        {
+          "src": "/resources/logo/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
     }
   ]
 }

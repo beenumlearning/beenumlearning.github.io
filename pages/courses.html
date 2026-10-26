@@ -1,152 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Udemy Courses – AI, OIC, VBCS, PCS, ORDS, OPA, OCI &amp; Fusion | BEENUM LEARNING</title>
+  <meta name="description" content="Explore Udemy courses by BEENUM LEARNING. Learn OIC, VBCS, OPA, ORDS, Oracle APEX, ODA, OCI, and Oracle Fusion with practical beginner-friendly introductions.">
+  <link rel="canonical" href="https://beenumlearning.com/pages/courses.html">
+  <meta name="theme-color" content="#faf8f3">
+  <script src="/js/theme.js"></script>
+
+  <!-- Social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BEENUM LEARNING">
+  <meta property="og:url" content="https://beenumlearning.com/pages/courses.html">
+  <meta property="og:title" content="Udemy Courses – AI, OIC, VBCS, PCS, ORDS, OPA, OCI &amp; Fusion | BEENUM LEARNING">
+  <meta property="og:description" content="Explore Udemy courses by BEENUM LEARNING. Learn OIC, VBCS, OPA, ORDS, Oracle APEX, ODA, OCI, and Oracle Fusion with practical beginner-friendly introductions.">
+  <meta property="og:image" content="https://beenumlearning.com/og/default.jpg">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- App & icons -->
   <link rel="manifest" href="/manifest.json">
-  <meta name="theme-color" content="#1B5FCC">
+  <link rel="icon" type="image/png" sizes="32x32" href="/resources/logo/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/resources/logo/favicon-16.png">
   <link rel="apple-touch-icon" href="/resources/logo/apple-touch-icon.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="BEENUM">
-  <title>Udemy Courses – AI, OIC, VBCS, PCS, ORDS, OPA, OCI &amp; Fusion | BEENUM LEARNING</title>
-  <meta name="description"
-    content="Explore Udemy courses by BEENUM LEARNING. Learn OIC, VBCS, OPA, ORDS, Oracle APEX, ODA, OCI, and Oracle Fusion with practical beginner-friendly introductions.">
-  <meta property="og:url" content="https://beenumlearning.com/pages/courses.html">
-  <meta property="og:type" content="website"><meta property="og:title" content="Udemy Courses – AI, OIC, VBCS, PCS, ORDS, OPA, OCI &amp; Fusion | BEENUM LEARNING"><meta property="og:description" content="Explore Udemy courses by BEENUM LEARNING. Learn OIC, VBCS, OPA, ORDS, Oracle APEX, ODA, OCI, and Oracle Fusion with practical beginner-friendly introductions."><meta property="og:image" content="https://beenumlearning.com/resources/logo/favicon.png"><meta property="og:locale" content="en_US"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Udemy Courses – AI, OIC, VBCS, PCS, ORDS, OPA, OCI &amp; Fusion | BEENUM LEARNING"><meta name="twitter:description" content="Explore Udemy courses by BEENUM LEARNING. Learn OIC, VBCS, OPA, ORDS, Oracle APEX, ODA, OCI, and Oracle Fusion with practical beginner-friendly introductions.">
-  <link rel="canonical" href="https://beenumlearning.com/pages/courses.html">
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../css/about.css">
-  <script src="../js/darkmode.js"></script>
-  <script src="/js/pwa.js" defer></script>
-  <script src="../js/include.js" defer></script>
-  <script src="../js/courses-filter.js" defer></script>
+
+  <!-- Styles & scripts -->
+  <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/sora.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/site.js" defer></script>
+  <script src="/js/offers.js" defer></script>
 </head>
-
-<body class="has-sticky-cta">
-  <a href="#main-content" class="skip-link">Skip to content</a>
-  <div id="page-loader">
-    <div class="loader-spinner"></div>
-  </div>
+<body>
+  <!-- Loading spinner: hidden by js/site.js as soon as the page is ready -->
+  <div id="page-loader" aria-hidden="true"><div class="loader-coin"><img src="/resources/logo/logos.jpg" alt=""></div></div>
+  <a href="#main" class="skip-link">Skip to content</a>
   <div data-include="header"></div>
-  <section id="main-content" tabindex="-1">
-    <span class="section-eyebrow">Paid courses</span>
-    <h1>Our Udemy Courses</h1>
-    <p>Click any course below to view it directly on Udemy.</p>
-    <div class="filter-bar" id="course-filter-bar" role="group" aria-label="Filter courses by technology">
-      <button type="button" class="filter-pill is-active" data-filter="all" aria-pressed="true">All</button>
-      <button type="button" class="filter-pill" data-filter="VBCS" aria-pressed="false">VBCS</button>
-      <button type="button" class="filter-pill" data-filter="OIC" aria-pressed="false">OIC</button>
-      <button type="button" class="filter-pill" data-filter="OPA" aria-pressed="false">OPA</button>
-      <button type="button" class="filter-pill" data-filter="Fusion" aria-pressed="false">Fusion</button>
-      <button type="button" class="filter-pill" data-filter="ORDS" aria-pressed="false">ORDS</button>
-      <button type="button" class="filter-pill" data-filter="OCI" aria-pressed="false">OCI</button>
-      <button type="button" class="filter-pill" data-filter="ODA" aria-pressed="false">ODA</button>
-      <button type="button" class="filter-pill" data-filter="APEX" aria-pressed="false">APEX</button>
-      <button type="button" class="filter-pill" data-filter="AI" aria-pressed="false">AI</button>
-    </div>
-    <div class="playlist-grid">
-      <a class="playlist-tile" data-category="VBCS" href="https://bit.ly/4dAelg7" target="_blank" rel="noopener">
-        <img class="playlist-thumb-course" src="https://img-c.udemycdn.com/course/480x270/6107619_9a01_8.jpg"
-          alt="Oracle Visual Builder (VBCS)" loading="lazy">
-        <div class="playlist-title">Oracle Visual Builder (VBCS) Introduction</div>
-      </a>
-      <a class="playlist-tile" data-category="OIC" href="https://bit.ly/3pyKFvL" target="_blank" rel="noopener">
-        <img class="playlist-thumb-course" src="https://img-c.udemycdn.com/course/240x135/5257476_36ac_2.jpg"
-          alt="Oracle Integration 3 (OIC 3)" loading="lazy">
-        <div class="playlist-title">Oracle Integration Gen 3 (OIC 3) Introduction</div>
-      </a>
-      <a class="playlist-tile" data-category="OPA" href="https://bit.ly/40SUMfw" target="_blank" rel="noopener">
-        <img class="playlist-thumb-course" src="https://img-c.udemycdn.com/course/240x135/6243645_2c7d_4.jpg"
-          alt="Oracle Process Automation (OPA)" loading="lazy">
-        <div class="playlist-title">Oracle Process Automation (OPA) Introduction</div>
-      </a>
-      <a class="playlist-tile" data-category="AI" href="https://bit.ly/41I4von" target="_blank" rel="noopener">
-        <img class="playlist-thumb-course" src="https://img-c.udemycdn.com/course/240x135/6926377_c088_2.jpg"
-          alt="Oracle Fusion AI Agent Studio" loading="lazy">
-        <div class="playlist-title">Oracle Fusion AI Agent Studio</div>
-      </a>
-      <a class="playlist-tile" data-category="ORDS" href="https://bit.ly/4aa2zaU" target="_blank" rel="noopener">
-        <img class="playlist-thumb-course" src="https://img-c.udemycdn.com/course/240x135/5692878_dc9e_2.jpg"
-          alt="Oracle REST Data Services (ORDS)" loading="lazy">
-        <div class="playlist-title">Oracle REST Data Services (ORDS) Introduction</div>
-      </a>
-      <a class="playlist-tile" data-category="OCI" href="https://bit.ly/3DYWkIp" target="_blank" rel="noopener">
-        <img class="playlist-thumb-course" src="https://img-c.udemycdn.com/course/240x135/5508176_b63b_4.jpg"
-          alt="Oracle Cloud Functions (Python)" loading="lazy">
-        <div class="playlist-title">Oracle Cloud Functions (Python) Introduction</div>
-      </a>
-      <a class="playlist-tile" data-category="ODA" href="https://bit.ly/4l8MlmI" target="_blank" rel="noopener">
-        <img class="playlist-thumb-course" src="https://img-c.udemycdn.com/course/240x135/6753001_9801_2.jpg"
-          alt="Oracle Digital Assistant" loading="lazy">
-        <div class="playlist-title">Oracle Digital Assistant (ODA) Introduction</div>
-      </a>
-      <a class="playlist-tile" data-category="APEX" href="https://bit.ly/4dYfSxJ" target="_blank" rel="noopener">
-        <img class="playlist-thumb-course" src="https://img-c.udemycdn.com/course/240x135/6592599_ac36.jpg"
-          alt="Oracle APEX for developers" loading="lazy">
-        <div class="playlist-title">Oracle APEX for Developers: Introduction</div>
-      </a>
-      <a class="playlist-tile" data-category="VBCS" href="https://bit.ly/3WeJE6E" target="_blank" rel="noopener">
-        <img class="playlist-thumb-course" src="https://img-c.udemycdn.com/course/240x135/5058568_1068_2.jpg"
-          alt="Tips &amp; Tricks VBCS" loading="lazy">
-        <div class="playlist-title">Tips &amp; Tricks for Oracle Visual Builder (VBCS)</div>
-      </a>
-      <a class="playlist-tile" data-category="OIC" href="https://bit.ly/46bN2ox" target="_blank" rel="noopener">
-        <img class="playlist-thumb-course" src="https://img-c.udemycdn.com/course/240x135/5521066_fef5_2.jpg"
-          alt="Tips &amp; Tricks OIC 3" loading="lazy">
-        <div class="playlist-title">Tips &amp; Tricks for Oracle Integration 3</div>
-      </a>
-      <a class="playlist-tile" data-category="Fusion" href="https://bit.ly/3GuMzpB" target="_blank" rel="noopener">
-        <img class="playlist-thumb-course" src="https://img-c.udemycdn.com/course/240x135/6550731_e869_2.jpg"
-          alt="Oracle Fusion AppUI" loading="lazy">
-        <div class="playlist-title">Basics of Oracle Fusion AppUI and Extending Redwood Page</div>
-      </a>
-    </div>
-    <p class="filter-empty" id="course-filter-empty">No courses match this filter yet — try "All" to see everything.</p>
-  </section>
 
-  <br>
+  <main id="main" tabindex="-1">
 
-  <div class="support-section">
-    <div class="support-card">
-      <div class="support-left">
-        <div class="support-icon">☕</div>
+    <!-- ═══ PAGE HEADER ═══ -->
+    <section class="page-hero">
+      <div class="container">
+        <nav aria-label="Breadcrumb"><ol class="crumbs" role="list"><li><a href="/">Home</a></li><li><span aria-current="page">Courses</span></li></ol></nav>
+        <div class="ph-body has-aside">
+          <div>
+            <span class="eyebrow">Paid courses</span>
+            <h1>Our Udemy courses</h1>
+            <p class="lead">Project-driven Oracle Cloud courses with lifetime access. Click any course to view it directly on Udemy.</p>
+          </div>
+          <div class="card card-pad promo-card" data-offer>
+            <span class="chip chip-gold"><svg class="i i-xs" aria-hidden="true"><use href="#ticket"></use></svg> 30% OFF</span>
+            <h2>Save 30% with our coupon links</h2>
+            <div class="countdown compact" data-offer-countdown role="timer">
+              <div class="cd-units" aria-hidden="true">
+                <span><b data-u="d">--</b><small>days</small></span>
+                <span><b data-u="h">--</b><small>hrs</small></span>
+                <span><b data-u="m">--</b><small>min</small></span>
+                <span><b data-u="s">--</b><small>sec</small></span>
+              </div>
+              <p class="cd-note">Limited-time offer</p>
+            </div>
+            <a class="btn btn-gold" href="/pages/offers30.html">Get the coupons <svg class="i i-sm" aria-hidden="true"><use href="#arrow-right"></use></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ COURSE LIST ═══
+         To add a course: copy one <article class="... course"> block and change
+         data-category, the image file name, the link and the title. -->
+    <section class="container" data-filter-root aria-label="Course catalogue">
+      <div class="toolbar">
+        <div class="filters" role="group" aria-label="Filter courses by technology">
+          <button type="button" class="filter" data-filter="all" aria-pressed="true">All <span class="count">11</span></button>
+          <button type="button" class="filter" data-filter="VBCS" aria-pressed="false">VBCS <span class="count">2</span></button>
+          <button type="button" class="filter" data-filter="OIC" aria-pressed="false">OIC <span class="count">2</span></button>
+          <button type="button" class="filter" data-filter="OPA" aria-pressed="false">OPA <span class="count">1</span></button>
+          <button type="button" class="filter" data-filter="Fusion" aria-pressed="false">Fusion <span class="count">1</span></button>
+          <button type="button" class="filter" data-filter="ORDS" aria-pressed="false">ORDS <span class="count">1</span></button>
+          <button type="button" class="filter" data-filter="OCI" aria-pressed="false">OCI <span class="count">1</span></button>
+          <button type="button" class="filter" data-filter="ODA" aria-pressed="false">ODA <span class="count">1</span></button>
+          <button type="button" class="filter" data-filter="APEX" aria-pressed="false">APEX <span class="count">1</span></button>
+          <button type="button" class="filter" data-filter="AI" aria-pressed="false">AI <span class="count">1</span></button>
+        </div>
+        <p class="sr-only" data-filter-status aria-live="polite"></p>
+      </div>
+      <div class="grid grid-3" data-filter-items>
+        <article class="card card-link course" data-category="VBCS">
+          <div class="course-media cover h-VBCS">
+            <span class="cover-mono" aria-hidden="true">VBCS</span>
+            <img src="https://img-c.udemycdn.com/course/480x270/6107619_9a01_8.jpg"
+              width="480" height="270" alt="" loading="eager" decoding="async" onerror="this.remove()">
+          </div>
+          <div class="course-body">
+            <span class="chip chip-dot h-VBCS">VBCS</span>
+            <h3><a class="stretched" href="https://bit.ly/4dAelg7" target="_blank" rel="noopener">Oracle Visual Builder (VBCS) Introduction</a></h3>
+            <span class="arrow-link">View on Udemy <svg class="i i-sm" aria-hidden="true"><use href="#arrow-up-right"></use></svg></span>
+          </div>
+        </article>
+        <article class="card card-link course" data-category="OIC">
+          <div class="course-media cover h-OIC">
+            <span class="cover-mono" aria-hidden="true">OIC</span>
+            <img src="https://img-c.udemycdn.com/course/480x270/5257476_36ac_2.jpg"
+              width="480" height="270" alt="" loading="eager" decoding="async" onerror="this.remove()">
+          </div>
+          <div class="course-body">
+            <span class="chip chip-dot h-OIC">OIC</span>
+            <h3><a class="stretched" href="https://bit.ly/3pyKFvL" target="_blank" rel="noopener">Oracle Integration Gen 3 (OIC 3) Introduction</a></h3>
+            <span class="arrow-link">View on Udemy <svg class="i i-sm" aria-hidden="true"><use href="#arrow-up-right"></use></svg></span>
+          </div>
+        </article>
+        <article class="card card-link course" data-category="OPA">
+          <div class="course-media cover h-OPA">
+            <span class="cover-mono" aria-hidden="true">OPA</span>
+            <img src="https://img-c.udemycdn.com/course/480x270/6243645_2c7d_4.jpg"
+              width="480" height="270" alt="" loading="eager" decoding="async" onerror="this.remove()">
+          </div>
+          <div class="course-body">
+            <span class="chip chip-dot h-OPA">OPA</span>
+            <h3><a class="stretched" href="https://bit.ly/40SUMfw" target="_blank" rel="noopener">Oracle Process Automation (OPA) Introduction</a></h3>
+            <span class="arrow-link">View on Udemy <svg class="i i-sm" aria-hidden="true"><use href="#arrow-up-right"></use></svg></span>
+          </div>
+        </article>
+        <article class="card card-link course" data-category="AI">
+          <div class="course-media cover h-AI">
+            <span class="cover-mono" aria-hidden="true">AI</span>
+            <img src="https://img-c.udemycdn.com/course/480x270/6926377_c088_2.jpg"
+              width="480" height="270" alt="" loading="lazy" decoding="async" onerror="this.remove()">
+            <span class="course-badge">New</span>
+          </div>
+          <div class="course-body">
+            <span class="chip chip-dot h-AI">AI</span>
+            <h3><a class="stretched" href="https://bit.ly/41I4von" target="_blank" rel="noopener">Oracle Fusion AI Agent Studio</a></h3>
+            <span class="arrow-link">View on Udemy <svg class="i i-sm" aria-hidden="true"><use href="#arrow-up-right"></use></svg></span>
+          </div>
+        </article>
+        <article class="card card-link course" data-category="ORDS">
+          <div class="course-media cover h-ORDS">
+            <span class="cover-mono" aria-hidden="true">ORDS</span>
+            <img src="https://img-c.udemycdn.com/course/480x270/5692878_dc9e_2.jpg"
+              width="480" height="270" alt="" loading="lazy" decoding="async" onerror="this.remove()">
+          </div>
+          <div class="course-body">
+            <span class="chip chip-dot h-ORDS">ORDS</span>
+            <h3><a class="stretched" href="https://bit.ly/4aa2zaU" target="_blank" rel="noopener">Oracle REST Data Services (ORDS) Introduction</a></h3>
+            <span class="arrow-link">View on Udemy <svg class="i i-sm" aria-hidden="true"><use href="#arrow-up-right"></use></svg></span>
+          </div>
+        </article>
+        <article class="card card-link course" data-category="OCI">
+          <div class="course-media cover h-OCI">
+            <span class="cover-mono" aria-hidden="true">OCI</span>
+            <img src="https://img-c.udemycdn.com/course/480x270/5508176_b63b_4.jpg"
+              width="480" height="270" alt="" loading="lazy" decoding="async" onerror="this.remove()">
+          </div>
+          <div class="course-body">
+            <span class="chip chip-dot h-OCI">OCI</span>
+            <h3><a class="stretched" href="https://bit.ly/3DYWkIp" target="_blank" rel="noopener">Oracle Cloud Functions (Python) Introduction</a></h3>
+            <span class="arrow-link">View on Udemy <svg class="i i-sm" aria-hidden="true"><use href="#arrow-up-right"></use></svg></span>
+          </div>
+        </article>
+        <article class="card card-link course" data-category="ODA">
+          <div class="course-media cover h-ODA">
+            <span class="cover-mono" aria-hidden="true">ODA</span>
+            <img src="https://img-c.udemycdn.com/course/480x270/6753001_9801_2.jpg"
+              width="480" height="270" alt="" loading="lazy" decoding="async" onerror="this.remove()">
+          </div>
+          <div class="course-body">
+            <span class="chip chip-dot h-ODA">ODA</span>
+            <h3><a class="stretched" href="https://bit.ly/4l8MlmI" target="_blank" rel="noopener">Oracle Digital Assistant (ODA) Introduction</a></h3>
+            <span class="arrow-link">View on Udemy <svg class="i i-sm" aria-hidden="true"><use href="#arrow-up-right"></use></svg></span>
+          </div>
+        </article>
+        <article class="card card-link course" data-category="APEX">
+          <div class="course-media cover h-APEX">
+            <span class="cover-mono" aria-hidden="true">APEX</span>
+            <img src="https://img-c.udemycdn.com/course/480x270/6592599_ac36.jpg"
+              width="480" height="270" alt="" loading="lazy" decoding="async" onerror="this.remove()">
+          </div>
+          <div class="course-body">
+            <span class="chip chip-dot h-APEX">APEX</span>
+            <h3><a class="stretched" href="https://bit.ly/4dYfSxJ" target="_blank" rel="noopener">Oracle APEX for Developers: Introduction</a></h3>
+            <span class="arrow-link">View on Udemy <svg class="i i-sm" aria-hidden="true"><use href="#arrow-up-right"></use></svg></span>
+          </div>
+        </article>
+        <article class="card card-link course" data-category="VBCS">
+          <div class="course-media cover h-VBCS">
+            <span class="cover-mono" aria-hidden="true">VBCS</span>
+            <img src="https://img-c.udemycdn.com/course/480x270/5058568_1068_2.jpg"
+              width="480" height="270" alt="" loading="lazy" decoding="async" onerror="this.remove()">
+          </div>
+          <div class="course-body">
+            <span class="chip chip-dot h-VBCS">VBCS</span>
+            <h3><a class="stretched" href="https://bit.ly/3WeJE6E" target="_blank" rel="noopener">Tips &amp; Tricks for Oracle Visual Builder (VBCS)</a></h3>
+            <span class="arrow-link">View on Udemy <svg class="i i-sm" aria-hidden="true"><use href="#arrow-up-right"></use></svg></span>
+          </div>
+        </article>
+        <article class="card card-link course" data-category="OIC">
+          <div class="course-media cover h-OIC">
+            <span class="cover-mono" aria-hidden="true">OIC</span>
+            <img src="https://img-c.udemycdn.com/course/480x270/5521066_fef5_2.jpg"
+              width="480" height="270" alt="" loading="lazy" decoding="async" onerror="this.remove()">
+          </div>
+          <div class="course-body">
+            <span class="chip chip-dot h-OIC">OIC</span>
+            <h3><a class="stretched" href="https://bit.ly/46bN2ox" target="_blank" rel="noopener">Tips &amp; Tricks for Oracle Integration 3</a></h3>
+            <span class="arrow-link">View on Udemy <svg class="i i-sm" aria-hidden="true"><use href="#arrow-up-right"></use></svg></span>
+          </div>
+        </article>
+        <article class="card card-link course" data-category="Fusion">
+          <div class="course-media cover h-Fusion">
+            <span class="cover-mono" aria-hidden="true">Fusion</span>
+            <img src="https://img-c.udemycdn.com/course/480x270/6550731_e869_2.jpg"
+              width="480" height="270" alt="" loading="lazy" decoding="async" onerror="this.remove()">
+          </div>
+          <div class="course-body">
+            <span class="chip chip-dot h-Fusion">Fusion</span>
+            <h3><a class="stretched" href="https://bit.ly/3GuMzpB" target="_blank" rel="noopener">Basics of Oracle Fusion AppUI and Extending Redwood Page</a></h3>
+            <span class="arrow-link">View on Udemy <svg class="i i-sm" aria-hidden="true"><use href="#arrow-up-right"></use></svg></span>
+          </div>
+        </article>
+      </div>
+      <p class="empty-state" data-filter-empty hidden>No courses match this filter yet — try “All” to see everything.</p>
+    </section>
+
+    <section class="container-narrow about-block reveal">
+      <h2>About our Udemy courses</h2>
+      <p>BEENUM LEARNING offers high-quality Udemy courses designed to help learners build strong foundational skills in Oracle Integration (OIC), Visual Builder (VBCS), Process Automation (OPA / PCS), Oracle REST Data Services (ORDS), Oracle APEX, Oracle Digital Assistant (ODA), Oracle Cloud Functions, and Oracle Fusion Applications. Each course is structured with clear explanations, practical demonstrations, and real-world project insights.</p>
+      <p>Prefer to start free? Our <a href="/pages/videos.html">YouTube courses and playlists</a> cover the same technologies, and <a href="https://www.youtube.com/@BEENUMLEARNING/join" target="_blank" rel="noopener">channel members</a> get extra members-only videos.</p>
+    </section>
+
+    <!-- ═══ SUPPORT (Buy me a coffee) ═══ -->
+    <section class="container support reveal" aria-labelledby="support-title">
+      <div class="support-card card">
+        <div class="support-icon"><svg class="i i-lg" aria-hidden="true"><use href="#coffee"></use></svg></div>
         <div class="support-text">
-          <h2>Enjoying the Free Content?</h2>
+          <h2 id="support-title">Enjoying the free content?</h2>
           <p>If our YouTube videos, courses, or blogs have saved you time, you can help fuel the next one.</p>
         </div>
+        <a class="btn btn-gold" href="https://www.buymeacoffee.com/beenumlearning" target="_blank" rel="noopener"><svg class="i" aria-hidden="true"><use href="#coffee"></use></svg> Buy me a coffee</a>
       </div>
-      <div class="support-grid">
-        <div class="support-btn-wrap">
-          <script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js"
-            data-name="bmc-button" data-slug="beenumlearning" data-color="#FFDD00" data-emoji="☕" data-font="Cookie"
-            data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000"
-            data-coffee-color="#ffffff"></script>
-        </div>
-      </div>
-    </div>
-  </div>
+    </section>
+  </main>
 
-
-  <section class="seo-section">
-    <h2>About Our Udemy Courses</h2>
-    <p>BEENUM LEARNING offers high-quality Udemy courses designed to help learners build strong foundational skills in
-      Oracle Integration (OIC), Visual Builder (VBCS), Process Automation (OPA / PCS), Oracle REST Data Services (ORDS),
-      Oracle APEX, Oracle Digital Assistant (ODA), Oracle Cloud Functions, and Oracle Fusion Applications. Each course
-      is structured with clear explanations, practical demonstrations, and real-world project insights.</p>
-    <p>Enroll in our Udemy courses to start learning and growing with BEENUM LEARNING.</p>
-  </section>
-  <div id="cookie-banner-container"></div>
   <div data-include="footer"></div>
-  <div class="sticky-cta-bar">
-    <a href="/pages/offers30.html" class="sticky-cta-btn">🎁 Get 30% OFF Courses →</a>
-  </div>
-  <script src="../js/constants.js"></script>
-  <script src="../js/email.js"></script>
-  <script src="../js/cookie-consent.js"></script>
+  <!-- Mobile-only floating button -->
+  <div class="sticky-cta"><a class="btn btn-gold btn-lg" href="/pages/offers30.html"><svg class="i" aria-hidden="true"><use href="#ticket"></use></svg> Get 30% OFF courses</a></div>
 </body>
-
 </html>

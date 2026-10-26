@@ -1,55 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <meta name="theme-color" content="#1B5FCC">
-  <link rel="apple-touch-icon" href="/resources/logo/apple-touch-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Page Not Found | BEENUM LEARNING</title>
-  <meta name="description" content="This page doesn't exist. Find courses, blogs, and consulting from BEENUM LEARNING from the homepage.">
-  <meta name="robots" content="noindex">
+  <meta name="description" content="This page doesn&#x27;t exist. Find courses, blogs, and consulting from BEENUM LEARNING from the homepage.">
+  <link rel="canonical" href="https://beenumlearning.com/404.html">
+  <meta name="theme-color" content="#faf8f3">
+  <script src="/js/theme.js"></script>
+
+  <!-- Social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BEENUM LEARNING">
+  <meta property="og:url" content="https://beenumlearning.com/404.html">
+  <meta property="og:title" content="Page Not Found | BEENUM LEARNING">
+  <meta property="og:description" content="This page doesn&#x27;t exist. Find courses, blogs, and consulting from BEENUM LEARNING from the homepage.">
+  <meta property="og:image" content="https://beenumlearning.com/og/default.jpg">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- App & icons -->
+  <link rel="manifest" href="/manifest.json">
   <link rel="icon" type="image/png" sizes="32x32" href="/resources/logo/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/resources/logo/favicon-16.png">
-  <link rel="stylesheet" href="/css/style.css">
-  <script src="/js/darkmode.js"></script>
-  <script src="/js/pwa.js" defer></script>
-  <script src="/js/include.js" defer></script>
-  <style>
-    .not-found{max-width:640px;margin:60px auto;padding:0 28px;text-align:center}
-    .not-found .code{font-size:15px;font-weight:700;letter-spacing:1.4px;color:var(--blue);text-transform:uppercase;margin-bottom:14px}
-    .not-found h1{font-size:34px;font-weight:700;color:var(--ink);letter-spacing:-.6px;margin-bottom:14px}
-    .not-found p{font-size:16px;color:var(--ink-3);line-height:1.7;margin-bottom:28px}
-    .not-found .links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-    @media(max-width:480px){.not-found h1{font-size:26px}}
-  </style>
-</head>
+  <link rel="apple-touch-icon" href="/resources/logo/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="BEENUM">
 
+  <!-- Styles & scripts -->
+  <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/sora.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/site.js" defer></script>
+  <meta name="robots" content="noindex">
+</head>
 <body>
-  <a href="#main-content" class="skip-link">Skip to content</a>
-  <div id="page-loader">
-    <div class="loader-spinner"></div>
-  </div>
+  <!-- Loading spinner: hidden by js/site.js as soon as the page is ready -->
+  <div id="page-loader" aria-hidden="true"><div class="loader-coin"><img src="/resources/logo/logos.jpg" alt=""></div></div>
+  <a href="#main" class="skip-link">Skip to content</a>
   <div data-include="header"></div>
 
-  <section id="main-content" tabindex="-1" class="not-found">
-    <div class="code">404 — Page not found</div>
-    <h1>That page took a wrong turn somewhere</h1>
-    <p>The link might be old, mistyped, or the page may have moved. Here's how to get back on track.</p>
-    <div class="links">
-      <a href="/index.html" class="btn btn-primary">← Back to homepage</a>
-      <a href="/pages/courses.html" class="btn btn-outline">Browse courses</a>
-      <a href="/pages/blogs.html" class="btn btn-outline">Read the blog</a>
-    </div>
-  </section>
+  <main id="main" tabindex="-1">
 
-  <div id="cookie-banner-container"></div>
+    <section class="container nf">
+      <div class="nf-code" aria-hidden="true"><span class="gold-text">4</span><img src="/resources/logo/logos.jpg" width="120" height="120" alt=""><span class="gold-text">4</span></div>
+      <span class="eyebrow">404 — Page not found</span>
+      <h1>That page took a wrong turn somewhere</h1>
+      <p class="lead">The link might be old, mistyped, or the page may have moved. Here's how to get back on track.</p>
+      <div class="cluster">
+        <a href="/" class="btn btn-gold"><svg class="i" aria-hidden="true"><use href="#home"></use></svg> Back to homepage</a>
+        <a href="/pages/courses.html" class="btn btn-outline">Browse courses</a>
+        <a href="/pages/blogs.html" class="btn btn-outline">Read the blog</a>
+      </div>
+    </section>
+  </main>
+
   <div data-include="footer"></div>
-  <script src="/js/constants.js"></script>
-  <script src="/js/cookie-consent.js"></script>
-  <script src="/js/email.js"></script>
 </body>
-
 </html>

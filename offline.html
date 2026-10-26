@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>You&#x27;re offline | BEENUM LEARNING</title>
+  <meta name="description" content="You&#x27;re offline. Pages you&#x27;ve visited before are still available.">
+  <link rel="canonical" href="https://beenumlearning.com/offline.html">
+  <meta name="theme-color" content="#faf8f3">
+  <script src="/js/theme.js"></script>
+
+  <!-- Social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BEENUM LEARNING">
+  <meta property="og:url" content="https://beenumlearning.com/offline.html">
+  <meta property="og:title" content="You&#x27;re offline | BEENUM LEARNING">
+  <meta property="og:description" content="You&#x27;re offline. Pages you&#x27;ve visited before are still available.">
+  <meta property="og:image" content="https://beenumlearning.com/og/default.jpg">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- App & icons -->
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/png" sizes="32x32" href="/resources/logo/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/resources/logo/favicon-16.png">
+  <link rel="apple-touch-icon" href="/resources/logo/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="BEENUM">
+
+  <!-- Styles & scripts -->
+  <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/sora.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/site.js" defer></script>
+  <meta name="robots" content="noindex">
+</head>
+<body>
+  <!-- Loading spinner: hidden by js/site.js as soon as the page is ready -->
+  <div id="page-loader" aria-hidden="true"><div class="loader-coin"><img src="/resources/logo/logos.jpg" alt=""></div></div>
+  <a href="#main" class="skip-link">Skip to content</a>
+  <div data-include="header"></div>
+
+  <main id="main" tabindex="-1">
+
+    <section class="container off">
+      <span class="off-icon"><svg class="i i-xl" aria-hidden="true"><use href="#wifi-off"></use></svg></span>
+      <span class="eyebrow">Offline mode</span>
+      <h1>You're offline right now</h1>
+      <p class="lead">No connection — but the BEENUM app still works. Pages you've opened before and guides you saved with <strong>“Save offline”</strong> are available. We'll reconnect automatically.</p>
+      <div class="cluster">
+        <button type="button" class="btn btn-gold" onclick="location.reload()"><svg class="i" aria-hidden="true"><use href="#arrow-right"></use></svg> Try again</button>
+        <a href="/" class="btn btn-outline">Go to homepage</a>
+      </div>
+      <div class="saved" hidden>
+        <h2>Saved for offline</h2>
+        <ul role="list" data-saved-list></ul>
+      </div>
+    </section>
+    <script>
+      // Lists the blog guides the reader saved with "Save offline"
+      (async () => {
+        if (!('caches' in window)) return;
+        const cache = await caches.open('beenum-saved');
+        const pages = (await cache.keys()).map((r) => new URL(r.url)).filter((u) => u.pathname === '/pages/blog-view.html');
+        if (!pages.length) return;
+        let titles = {};
+        try { const data = await (await cache.match('/resources/data/blogs.json')).json(); data.blogs.forEach((b) => (titles[b.id] = b.title)); } catch (e) {}
+        const list = document.querySelector('[data-saved-list]');
+        pages.forEach((u) => {
+          const id = u.searchParams.get('id');
+          const a = document.createElement('a');
+          a.href = u.pathname + u.search;
+          a.textContent = titles[id] || 'Blog guide #' + id;
+          const li = document.createElement('li');
+          li.appendChild(a);
+          list.appendChild(li);
+        });
+        list.parentElement.hidden = false;
+      })();
+      window.addEventListener('online', () => location.reload());
+    </script>
+  </main>
+
+  <div data-include="footer"></div>
+</body>
+</html>
