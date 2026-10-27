@@ -25,6 +25,8 @@ const SITE = {
     linkedin: 'https://www.linkedin.com/company/beenum-learning',
     whatsapp: 'https://whatsapp.com/channel/0029VbCvoOb1XquSVCQdGc3n',
     buyMeACoffee: 'https://www.buymeacoffee.com/beenumlearning',
+    // Learner portal (Oracle APEX app, Google sign-in). Also used by every [data-portal] link.
+    portal: 'https://g5e5bc90877eab3-mudatp.adb.us-ashburn-1.oraclecloudapps.com/ords/r/learningapex1001/xxbl-portal-beenumlearning-app',
   },
   // Blog comments (Giscus). Fill these in from https://giscus.app to switch comments on.
   giscus: { repo: '', repoId: '', category: 'General', categoryId: '' },
@@ -48,6 +50,7 @@ const FOOTER_COLUMNS = [
     ['/pages/videos.html', 'YouTube playlists'],
     ['/pages/blogs.html', 'Blogs & learning paths'],
     ['/pages/offers30.html', '30% OFF offers'],
+    [SITE.links.portal, 'Login to Portal'],
   ] },
   { title: 'Services', links: [
     ['/pages/onlinetraining.html', 'Training programs'],
@@ -92,6 +95,7 @@ function headerHTML() {
       <ul role="list">${NAV.map((l) => `<li><a href="${l.href}"${current(l.href)}>${l.label}</a></li>`).join('')}</ul>
     </nav>
     <div class="header-actions">
+      <a class="btn btn-gold btn-sm header-portal" data-portal href="${SITE.links.portal}" target="_blank" rel="noopener" title="Sign in to the BEENUM LEARNING Portal with Google">${icon('lock', 'i-sm')} Portal</a>
       <button type="button" class="icon-btn" data-pwa-install hidden aria-label="Install the BEENUM app" title="Install app">${icon('install')}</button>
       <button type="button" class="icon-btn theme-toggle" data-theme-toggle aria-label="Toggle theme" title="Toggle light / dark">${icon('moon', 'i-moon')}${icon('sun', 'i-sun')}</button>
       <button type="button" class="icon-btn menu-btn" popovertarget="mobile-nav" aria-label="Open menu">${icon('menu')}</button>
@@ -105,6 +109,7 @@ function headerHTML() {
   </div>
   <nav aria-label="Mobile">
     <ul role="list" class="mobile-links">
+      <li><a class="ml-portal" data-portal href="${SITE.links.portal}" target="_blank" rel="noopener"><span class="ml-icon">${icon('lock')}</span><span><strong>Portal</strong><small>Sign in with Google</small></span></a></li>
       ${[{ href: '/', label: 'Home', icon: 'home', hint: 'Start here' }, ...NAV]
         .map((l) => `<li><a href="${l.href}"${current(l.href)}><span class="ml-icon">${icon(l.icon)}</span><span><strong>${l.label}</strong><small>${l.hint}</small></span></a></li>`)
         .join('')}
@@ -558,6 +563,7 @@ document.querySelectorAll('[data-filter-root]:not([data-filter-manual])').forEac
 document.querySelectorAll('[data-carousel]').forEach(initCarousel);
 document.querySelectorAll('[data-countdown]').forEach(startCountdown);
 document.querySelectorAll('[data-mailto]').forEach((a) => (a.href = mailto(a.dataset.mailto)));
+document.querySelectorAll('[data-portal]').forEach((a) => (a.href = SITE.links.portal));
 initLiteYouTube();
 addSpeculationRules();
 hideLoader();

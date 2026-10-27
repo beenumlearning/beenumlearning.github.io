@@ -1796,3 +1796,50 @@ html.theme-vt::view-transition-new(root) { animation: none; mix-blend-mode: norm
   body::before { display: none; }
   body { background: #fff; color: #000; }
 }
+
+
+/* ════════════════════ LEARNER PORTAL (header button, mobile menu, home strip) ════════════════════ */
+.header-portal { white-space: nowrap; }
+@media (max-width: 720px) { .header-portal { display: none; } }   /* phones: the menu has it */
+
+.mobile-links a.ml-portal { background: var(--accent-soft); }
+.mobile-links a.ml-portal .ml-icon { background: var(--gold-gradient); color: #1a1406; border-color: transparent; }
+
+/* The portal has its own section, so tighten the gap to the offers block below it */
+.portal-section { padding-block: clamp(2rem, 1.5rem + 2vw, 3.5rem) 0; }
+.portal-strip {
+  display: grid;
+  gap: 1.75rem;
+  padding: clamp(1.5rem, 1rem + 2.5vw, 2.5rem);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-md);
+}
+@media (min-width: 1000px) {
+  .portal-strip { grid-template-columns: 1.1fr 1.25fr auto; align-items: center; gap: 2.5rem; }
+}
+.portal-copy { display: grid; gap: 0.6rem; justify-items: start; }
+.portal-copy h2 { font-size: var(--fs-lg); }
+.portal-copy p { color: var(--text-3); max-width: 46ch; }
+.portal-icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: var(--gold-gradient); color: #1a1406; margin-bottom: 0.25rem; }
+.portal-points { display: grid; gap: 0.9rem; }
+.portal-points li { display: flex; gap: 0.85rem; align-items: flex-start; }
+.portal-points .i { flex-shrink: 0; margin-top: 0.15rem; color: var(--accent-text); }
+.portal-points strong { display: block; font-weight: 600; }
+.portal-points small { display: block; color: var(--text-3); font-size: 0.85rem; }
+.portal-cta { display: grid; gap: 0.5rem; justify-items: start; }
+.portal-cta small { color: var(--text-3); font-size: 0.82rem; }
+@media (min-width: 1000px) { .portal-cta { justify-items: center; text-align: center; } }
+@media (max-width: 560px) { .portal-cta, .portal-cta .btn { width: 100%; } .portal-cta small { justify-self: center; } }
+@media (min-width: 700px) and (max-width: 999px) {
+  .portal-strip { grid-template-columns: 1fr 1fr; align-items: start; }
+  .portal-cta { grid-column: 1 / -1; grid-auto-flow: column; justify-content: start; align-items: center; gap: 1rem; }
+}
+
+/* Hero: "Login to Portal" sits under the two main buttons and is exactly as wide as the pair */
+.hero-cta-group { display: grid; gap: 0.75rem; width: fit-content; max-width: 100%; margin-top: 0.4rem; }
+.hero-cta-group .hero-ctas { margin-top: 0; }
+.hero-portal { justify-content: center; width: 100%; }
+.hero-portal .i { color: var(--accent-text); }
+@media (max-width: 560px) { .hero-cta-group { width: 100%; } }
