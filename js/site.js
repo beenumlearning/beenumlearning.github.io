@@ -95,7 +95,6 @@ function headerHTML() {
       <ul role="list">${NAV.map((l) => `<li><a href="${l.href}"${current(l.href)}>${l.label}</a></li>`).join('')}</ul>
     </nav>
     <div class="header-actions">
-      <a class="btn btn-gold btn-sm header-portal" data-portal href="${SITE.links.portal}" target="_blank" rel="noopener" title="Sign in to the BEENUM LEARNING Portal with Google">${icon('lock', 'i-sm')} Portal</a>
       <button type="button" class="icon-btn" data-pwa-install hidden aria-label="Install the BEENUM app" title="Install app">${icon('install')}</button>
       <button type="button" class="icon-btn theme-toggle" data-theme-toggle aria-label="Toggle theme" title="Toggle light / dark">${icon('moon', 'i-moon')}${icon('sun', 'i-sun')}</button>
       <button type="button" class="icon-btn menu-btn" popovertarget="mobile-nav" aria-label="Open menu">${icon('menu')}</button>

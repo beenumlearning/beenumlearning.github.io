@@ -1798,10 +1798,7 @@ html.theme-vt::view-transition-new(root) { animation: none; mix-blend-mode: norm
 }
 
 
-/* ════════════════════ LEARNER PORTAL (header button, mobile menu, home strip) ════════════════════ */
-.header-portal { white-space: nowrap; }
-@media (max-width: 720px) { .header-portal { display: none; } }   /* phones: the menu has it */
-
+/* ════════════════════ LEARNER PORTAL (mobile menu, hero button, home strip) ════════════════════ */
 .mobile-links a.ml-portal { background: var(--accent-soft); }
 .mobile-links a.ml-portal .ml-icon { background: var(--gold-gradient); color: #1a1406; border-color: transparent; }
 
