@@ -1798,9 +1798,7 @@ html.theme-vt::view-transition-new(root) { animation: none; mix-blend-mode: norm
 }
 
 
-/* ════════════════════ LEARNER PORTAL (mobile menu, hero button, home strip) ════════════════════ */
-.mobile-links a.ml-portal { background: var(--accent-soft); }
-.mobile-links a.ml-portal .ml-icon { background: var(--gold-gradient); color: #1a1406; border-color: transparent; }
+/* ════════════════════ LEARNER PORTAL (hero button, home strip) ════════════════════ */
 
 /* The portal has its own section, so tighten the gap to the offers block below it */
 .portal-section { padding-block: clamp(2rem, 1.5rem + 2vw, 3.5rem) 0; }

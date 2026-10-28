@@ -27,7 +27,7 @@ sw.js, manifest.json    Installable app (PWA) + offline support
 | **Start a new coupon offer** | Edit `resources/data/offers30.json`. Change `validUntil` (the text shown), `expiresAt` (the exact end time for the countdown, e.g. `2026-12-31T23:59:00+05:30`) and the course links. When the time passes, the countdown switches to "offer has ended" by itself. |
 | **Add a Udemy course** | In `pages/courses.html`, copy one `<article class="… course">` block. Change `data-category`, the image file name (from the Udemy image URL), the link and the title. If it's a new category, also add a filter button for it. |
 | **Add a YouTube playlist** | In `pages/videos.html`, copy one `<article class="… pl">` block and change the link, the title and the `h-XXX` color class. |
-| **Change the Portal link** | Edit `portal:` in the **SITE SETTINGS** block of `js/site.js`. The mobile menu entry, footer link and the home-page buttons all follow it. (The home page also has the address written in `index.html` as a fallback — update it there too if the address ever changes.) |
+| **Change the Portal link** | Edit `portal:` in the **SITE SETTINGS** block of `js/site.js`. That is the only place the address is written; the footer link and every Portal button on the home page follow it. |
 | **Change the menu, footer, email or social links** | Edit the **SITE SETTINGS** block at the top of `js/site.js`. Every page updates. |
 | **Change colors** | Edit the variables at the top of `css/style.css`: section 2 for light mode, then the `[data-theme='dark']` block for dark mode. |
 | **Add a technology color** | Add one line such as `.h-SOA { --h: 210; }` in the "TECHNOLOGY COLORS" section of `css/style.css`. |

@@ -108,7 +108,6 @@ function headerHTML() {
   </div>
   <nav aria-label="Mobile">
     <ul role="list" class="mobile-links">
-      <li><a class="ml-portal" data-portal href="${SITE.links.portal}" target="_blank" rel="noopener"><span class="ml-icon">${icon('lock')}</span><span><strong>Portal</strong><small>Sign in with Google</small></span></a></li>
       ${[{ href: '/', label: 'Home', icon: 'home', hint: 'Start here' }, ...NAV]
         .map((l) => `<li><a href="${l.href}"${current(l.href)}><span class="ml-icon">${icon(l.icon)}</span><span><strong>${l.label}</strong><small>${l.hint}</small></span></a></li>`)
         .join('')}
