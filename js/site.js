@@ -142,7 +142,7 @@ function footerHTML() {
     ${FOOTER_COLUMNS.map((col) => `
     <nav class="f-col" aria-label="${col.title}">
       <h2>${col.title}</h2>
-      <ul role="list">${col.links.map(([href, label]) => `<li><a href="${href}"${ext(href)}>${escapeHtml(label)}</a></li>`).join('')}</ul>
+      <ul role="list">${col.links.map(([href, label]) => `<li><a href="${href}"${href === SITE.links.portal ? '' : ext(href)}>${escapeHtml(label)}</a></li>`).join('')}</ul>
     </nav>`).join('')}
   </div>
   <div class="container footer-bar">
