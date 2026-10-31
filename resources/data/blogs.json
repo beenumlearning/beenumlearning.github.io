@@ -3,6 +3,7 @@
         {
             "id": 1,
             "title": "OCI Developer Learning Path",
+            "pdfUrl": "",
             "file": "OCI_Learning_Path.pdf",
             "date": "2025-12-28",
             "video": "https://youtu.be/f1Ip6h63sGs",
@@ -13,6 +14,7 @@
         {
             "id": 2,
             "title": "Oracle Integration Developer Learning Path",
+            "pdfUrl": "",
             "file": "OIC_Learning_Path.pdf",
             "date": "2025-12-29",
             "video": "https://youtu.be/klLUfRkJ8Zk",
@@ -23,6 +25,7 @@
         {
             "id": 3,
             "title": "Oracle Visual Builder Developer Learning Path",
+            "pdfUrl": "",
             "file": "VBCS_Learning_Path.pdf",
             "date": "2025-12-30",
             "video": "https://youtu.be/nKFECPAikVY",
@@ -33,6 +36,7 @@
         {
             "id": 4,
             "title": "Oracle APEX Developer Learning Path",
+            "pdfUrl": "",
             "file": "APEX_Learning_Path.pdf",
             "date": "2025-12-31",
             "video": "https://youtu.be/qjDOW0wqvFY",
@@ -43,6 +47,7 @@
         {
             "id": 5,
             "title": "Oracle Fusion AI Agent Studio Learning Path",
+            "pdfUrl": "",
             "file": "Oracle_AI_Agent_Studio_Learning_Path.pdf",
             "date": "2026-04-28",
             "video": "https://youtu.be/oj27GGdm2FE",

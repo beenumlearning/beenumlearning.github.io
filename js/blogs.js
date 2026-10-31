@@ -1,6 +1,6 @@
 /* ============================================================
    blogs.js — everything blog-related, driven by
-   /resources/data/blogs.json  (add a post there + its PDF in /blogs/)
+   /resources/data/blogs.json  (add a post there + its PDF in /blogs/, or a "pdfUrl" link instead)
 
    • Home page ........ <div id="latest-blogs">   → newest 3 posts
    • Blogs page ....... <div id="blog-list">      → all posts + search/filter
@@ -43,7 +43,7 @@
         <span class="node last" style="left:88%;top:22%"><i>${icon('check', 'i-xs')}</i><b>Production</b></span>
       </div>
       <ul class="inside" role="list" aria-label="Includes">
-        <li>${icon('file', 'i-xs')} PDF guide</li>${b.video ? `<li>${icon('play', 'i-xs')} Video</li>` : ''}
+        ${pdfSource(b) ? `<li>${icon('file', 'i-xs')} PDF guide</li>` : ''}${b.video ? `<li>${icon('play', 'i-xs')} Video</li>` : ''}
       </ul>` : '';
     return `
     <article class="card card-link post${featured ? ' featured' : ''}" data-category="${escapeHtml(b.category)}"
@@ -110,6 +110,40 @@
     el.setAttribute(attr, value);
   }
 
+  // Where a post's PDF lives. Two ways to give it in blogs.json:
+  //   "file":   "X.pdf"      a PDF kept in /blogs/ on this site
+  //   "pdfUrl": "https://…"  a PDF hosted elsewhere: a Google Drive share link or any direct https link
+  // "pdfUrl" is used when both are present. Returns null when the post has no usable PDF.
+  function pdfSource(b) {
+    const link = String(b.pdfUrl || '').trim();
+    let u = null;
+    try { u = link ? new URL(link) : null; } catch (e) { u = null; }
+    if (u && u.protocol === 'https:') {
+      if (u.hostname === 'drive.google.com') {
+        const id = (u.pathname.match(/\/file\/d\/([\w-]+)/) || [])[1] || u.searchParams.get('id');
+        if (id && /^[\w-]+$/.test(id)) {
+          return {
+            local: false, label: 'Google Drive',
+            open: `https://drive.google.com/file/d/${id}/view`,
+            embed: `https://drive.google.com/file/d/${id}/preview`,
+            download: `https://drive.google.com/uc?export=download&id=${id}`,
+          };
+        }
+      }
+      let name = '';
+      try { name = decodeURIComponent(u.pathname.split('/').pop() || ''); } catch (e) { name = ''; }
+      return {
+        local: false, label: /\.pdf$/i.test(name) ? name : u.hostname,
+        open: u.href, embed: `${u.href.split('#')[0]}#view=FitH`, download: u.href,
+      };
+    }
+    if (b.file) {
+      const path = `/blogs/${b.file}`;
+      return { local: true, label: b.file, open: path, embed: `${path}#view=FitH`, download: path };
+    }
+    return null;
+  }
+
   async function renderArticle(main) {
     const id = parseInt(new URLSearchParams(location.search).get('id'), 10);
     let blogs;
@@ -122,7 +156,9 @@
     }
 
     const url = `https://beenumlearning.com${postUrl(b)}`;
-    const pdf = `/blogs/${b.file}`;
+    const src = pdfSource(b);
+    // a file on this site downloads in place; a file on another site opens in a new tab
+    const fileAttrs = src && (src.local ? 'download' : 'target="_blank" rel="noopener noreferrer"');
     const vid = youTubeId(b.video);
     const related = [...blogs.filter((x) => x.id !== b.id && x.category === b.category), ...blogs.filter((x) => x.id !== b.id && x.category !== b.category)].slice(0, 3);
 
@@ -161,7 +197,7 @@
             <span><strong>${SITE.name}</strong><small><time datetime="${escapeHtml(b.date)}">Published ${formatDate(b.date, 'long')}</time> · ${readingMinutes(b)} min read</small></span>
           </div>
           <div class="cluster article-actions">
-            <a class="btn btn-gold" href="${pdf}" download>${icon('file')} Download PDF</a>
+            ${src ? `<a class="btn btn-gold" href="${escapeHtml(src.download)}" ${fileAttrs}>${icon('file')} Download PDF</a>` : ''}
             <button type="button" class="btn btn-outline" data-share>${icon('share')} Share</button>
             <button type="button" class="btn btn-ghost" data-save-offline hidden>${icon('cloud-down')} Save offline</button>
           </div>
@@ -171,17 +207,19 @@
       <div class="container-narrow article-body">
         <section class="prose" aria-labelledby="overview"><h2 id="overview">Overview</h2><p>${escapeHtml(b.summary)}</p></section>
 
+        ${src ? `
         <section class="card pdf-card" aria-labelledby="pdf-title">
           <div class="pdf-head">
             <span class="pdf-icon">${icon('file')}</span>
-            <div><h2 id="pdf-title">The full learning path</h2><p>${escapeHtml(b.file)} · PDF</p></div>
+            <div><h2 id="pdf-title">The full learning path</h2><p>${escapeHtml(src.label)} · PDF</p></div>
             <div class="cluster pdf-actions">
-              <a class="btn btn-outline btn-sm" href="${pdf}" target="_blank" rel="noopener">Open ${icon('arrow-up-right', 'i-sm')}</a>
-              <a class="btn btn-gold btn-sm" href="${pdf}" download>Download</a>
+              <a class="btn btn-outline btn-sm" href="${escapeHtml(src.open)}" target="_blank" rel="noopener">Open ${icon('arrow-up-right', 'i-sm')}</a>
+              <a class="btn btn-gold btn-sm" href="${escapeHtml(src.download)}" ${fileAttrs}>Download</a>
             </div>
           </div>
-          <div class="pdf-frame" data-pdf="${pdf}#view=FitH"></div>
-        </section>
+          <div class="pdf-frame" data-pdf="${escapeHtml(src.embed)}"></div>
+          ${src.local ? '' : '<p class="pdf-note">Can\u2019t see the preview? Use <strong>Open</strong> \u2014 some websites don\u2019t allow their files to be shown inside other pages.</p>'}
+        </section>` : ''}
 
         ${vid ? `
         <section class="article-video" aria-labelledby="video-title">
@@ -217,7 +255,8 @@
     window.BL.initLiteYouTube(main);
     mountPdfPreview(main.querySelector('[data-pdf]'), b.title);
     initShare(main.querySelector('[data-share]'), b.title, url);
-    initSaveOffline(main.querySelector('[data-save-offline]'), [location.pathname + location.search, pdf, DATA_URL]);
+    initSaveOffline(main.querySelector('[data-save-offline]'), [location.pathname + location.search, ...(src && src.local ? [src.open] : []), DATA_URL],
+      src && !src.local);
     initGiscus();
   }
 
@@ -251,7 +290,8 @@
   }
 
   // "Save offline": stores the page, its PDF and the blog data in a cache the service worker keeps
-  function initSaveOffline(btn, urls) {
+  // (a PDF on another website can't be stored by the site, so only the page and blog data are saved for it)
+  function initSaveOffline(btn, urls, pdfIsExternal) {
     if (!btn || !('caches' in window) || !('serviceWorker' in navigator)) return;
     btn.hidden = false;
     btn.addEventListener('click', async () => {
@@ -259,7 +299,7 @@
         const cache = await caches.open('beenum-saved');
         await cache.addAll(urls);
         btn.lastChild.textContent = ' Saved for offline';
-        toast('Saved — this guide and its PDF now work offline.');
+        toast(pdfIsExternal ? 'Saved — this page now works offline. The PDF needs an internet connection.' : 'Saved — this guide and its PDF now work offline.');
       } catch (e) {
         toast('Could not save right now — please try again.');
       }

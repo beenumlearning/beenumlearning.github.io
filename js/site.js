@@ -193,6 +193,41 @@ function hideLoader() {
   setTimeout(() => loader.remove(), 400);
 }
 
+/* Portal links: show the same spinner again while the browser opens the portal.
+   The portal (Oracle APEX) can take a few seconds to wake up, and the spinner stays until the new page replaces this one.
+   It only appears for a normal click that opens the portal in this tab; a new-tab click leaves this page as it is. */
+const PORTAL_LOADER_MAX_MS = 20000; // safety net: never leave a spinner stuck on screen if the visit is cancelled
+function initPortalLoader() {
+  let timer;
+  const show = () => {
+    let loader = document.getElementById('page-loader');
+    if (!loader) {
+      loader = document.createElement('div');
+      loader.id = 'page-loader';
+      loader.setAttribute('aria-hidden', 'true');
+      loader.innerHTML = '<div class="loader-coin"><img src="/resources/logo/logos.jpg" alt=""></div>';
+      document.body.appendChild(loader);
+    }
+    loader.classList.remove('is-done');
+    loader.classList.add('is-leaving');
+    clearTimeout(timer);
+    timer = setTimeout(hideLoader, PORTAL_LOADER_MAX_MS);
+  };
+  const portal = new URL(SITE.links.portal, location.href).href;
+
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest && e.target.closest('a[href]');
+    if (!a || a.href !== portal) return;
+    if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    if ((a.target && a.target !== '_self') || a.hasAttribute('download')) return;
+    show();
+  });
+  // coming back with the Back button can restore this page with the spinner still on it
+  window.addEventListener('pageshow', (e) => { if (e.persisted) { clearTimeout(timer); hideLoader(); } });
+  // Esc stops the visit in the browser, so take the spinner away too
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { clearTimeout(timer); hideLoader(); } });
+}
+
 /* ═══════════════ 3. THEME TOGGLE ═══════════════ */
 const THEME_KEY = 'bl-theme';
 const THEME_COLORS = { light: '#faf8f3', dark: '#0d0f12' };
@@ -564,4 +599,5 @@ document.querySelectorAll('[data-mailto]').forEach((a) => (a.href = mailto(a.dat
 document.querySelectorAll('[data-portal]').forEach((a) => (a.href = SITE.links.portal));
 initLiteYouTube();
 addSpeculationRules();
+initPortalLoader();
 hideLoader();

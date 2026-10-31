@@ -697,6 +697,9 @@ html { scrollbar-color: var(--border-strong) transparent; }
 }
 #page-loader.is-done { opacity: 0; visibility: hidden; }
 @keyframes loader-failsafe { to { opacity: 0; visibility: hidden; } }
+/* shown again when a Portal link is clicked: fades in and, unlike page load, has no 3-second fail-safe */
+#page-loader.is-leaving { animation: loader-in 0.2s ease; }
+@keyframes loader-in { from { opacity: 0; } }
 .loader-coin { position: relative; width: 76px; height: 76px; }
 .loader-coin img { position: absolute; inset: 12px; width: 52px; height: 52px; border-radius: 14px; }
 .loader-coin::before {
@@ -1615,18 +1618,19 @@ main:focus { outline: none; }
   .progress { animation: grow linear both; animation-timeline: scroll(root); }
   @keyframes grow { to { scale: 1 1; } }
 }
-.post-hero { padding-block: clamp(2.5rem, 2rem + 3vw, 4.5rem) clamp(2rem, 1.5rem + 2vw, 3rem); border-bottom: 1px solid var(--border); }
-.post-hero .crumbs { margin-bottom: 1.5rem; }
+.post-hero { padding-block: clamp(1.25rem, 1rem + 1.5vw, 2.25rem) clamp(1.1rem, 0.9rem + 1vw, 1.75rem); border-bottom: 1px solid var(--border); }
+.post-hero .crumbs { margin-bottom: 0.75rem; }
 .post-hero .crumbs, .post-hero .crumbs a { color: var(--text-2); }
 .ph-meta { display: flex; align-items: center; gap: 0.75rem; }
 .ph-meta .mono { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-2); }
-.post-hero h1 { font-size: var(--fs-3xl); margin-block: 1rem; }
-.post-hero .lead { color: var(--text-2); }
-.byline { display: flex; align-items: center; gap: 0.75rem; margin-top: 1.5rem; }
-.byline img { border-radius: 11px; box-shadow: var(--shadow-gold); }
-.byline strong { display: block; font-size: 0.95rem; }
-.byline small { color: var(--text-2); font-size: 0.82rem; }
-.article-actions { margin-top: 1.75rem; }
+.post-hero h1 { font-size: var(--fs-2xl); margin-block: 0.6rem 0.5rem; }
+.post-hero .lead { font-size: var(--fs-md); line-height: 1.55; max-width: 62ch; color: var(--text-2); }
+.byline { display: flex; align-items: center; gap: 0.65rem; margin-top: 1rem; }
+.byline img { width: 32px; height: 32px; border-radius: 9px; box-shadow: var(--shadow-gold); }
+.byline strong { display: block; font-size: 0.9rem; }
+.byline small { color: var(--text-2); font-size: 0.78rem; }
+.article-actions { margin-top: 1.1rem; }
+.article-actions .btn { --btn-h: 40px; padding: 0 1.1rem; font-size: 0.9rem; }
 .kb { font-family: var(--font-mono); font-size: 0.72rem; opacity: 0.75; margin-left: 0.15rem; }
 .article-body { display: grid; gap: clamp(2rem, 1.5rem + 2vw, 3rem); padding-top: clamp(2rem, 1.5rem + 2vw, 3rem); }
 .prose h2:first-child { margin-top: 0; }
@@ -1637,12 +1641,15 @@ main:focus { outline: none; }
 .pdf-icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: var(--accent-soft); color: var(--accent-text); }
 .pdf-actions { margin-left: auto; --cluster-gap: 0.5rem; }
 .pdf-frame { display: none; }
+.pdf-note { display: none; }
 @media (min-width: 860px) {
   .pdf-frame { display: block; height: 78vh; min-height: 560px; border-top: 1px solid var(--border); background: var(--surface-2); }
   .pdf-frame iframe { width: 100%; height: 100%; border: 0; }
+  .pdf-note { display: block; padding: 0.7rem 1.25rem; border-top: 1px solid var(--border); font-size: 0.82rem; color: var(--text-3); }
 }
 .article-video { display: grid; gap: 1rem; }
 .article-video h2, .article-comments h2 { font-size: var(--fs-xl); }
+.article-video .lite-yt { width: min(100%, 640px); justify-self: start; }   /* smaller preview than the full article width */
 .keep-going { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.25rem; background: radial-gradient(80% 140% at 100% 0%, var(--accent-soft), transparent 70%), var(--surface); }
 .keep-going h2 { font-size: var(--fs-lg); margin-bottom: 0.3rem; }
 .keep-going p { font-size: 0.93rem; color: var(--text-3); }
