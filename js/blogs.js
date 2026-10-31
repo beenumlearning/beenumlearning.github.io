@@ -184,7 +184,7 @@
     <div class="progress" aria-hidden="true"></div>
     <article>
       <header class="post-hero cover ${hueClass(b.category)}">
-        <div class="container-narrow">
+        <div class="container">
           <nav aria-label="Breadcrumb"><ol class="crumbs" role="list">
             <li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li>
             <li><a href="/blog/?category=${encodeURIComponent(b.category)}">${escapeHtml(b.category)}</a></li>
@@ -204,7 +204,7 @@
         </div>
       </header>
 
-      <div class="container-narrow article-body">
+      <div class="container article-body">
         <section class="prose" aria-labelledby="overview"><h2 id="overview">Overview</h2><p>${escapeHtml(b.summary)}</p></section>
 
         ${src ? `
