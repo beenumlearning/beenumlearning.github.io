@@ -26,7 +26,8 @@ const SITE = {
     whatsapp: 'https://whatsapp.com/channel/0029VbCvoOb1XquSVCQdGc3n',
     buyMeACoffee: 'https://www.buymeacoffee.com/beenumlearning',
     // Learner portal (Oracle APEX app, Google sign-in). Also used by every [data-portal] link.
-    portal: 'https://g5e5bc90877eab3-mudatp.adb.us-ashburn-1.oraclecloudapps.com/ords/r/learningapex1001/xxbl-portal-beenumlearning-app',
+    portal: 'https://portal.beenumlearning.com/',
+    //portal: 'https://g5e5bc90877eab3-mudatp.adb.us-ashburn-1.oraclecloudapps.com/ords/r/learningapex1001/xxbl-portal-beenumlearning-app',
   },
   // Blog comments (Giscus). Fill these in from https://giscus.app to switch comments on.
   giscus: { repo: '', repoId: '', category: 'General', categoryId: '' },
@@ -34,35 +35,35 @@ const SITE = {
 
 // Main menu (desktop bar + mobile menu). icon = a name from the ICONS list at the bottom of this file
 const NAV = [
-  { href: '/pages/courses.html', label: 'Courses', icon: 'cap', hint: 'Udemy courses' },
-  { href: '/pages/videos.html', label: 'YouTube', icon: 'youtube', hint: 'Free playlists & members' },
-  { href: '/pages/onlinetraining.html', label: 'Training', icon: 'users', hint: 'Live & self-paced programs' },
-  { href: '/pages/consulting.html', label: 'Consulting', icon: 'briefcase', hint: 'Project support' },
-  { href: '/pages/blogs.html', label: 'Blog', icon: 'book', hint: 'Learning paths & guides' },
-  { href: '/pages/about.html', label: 'About', icon: 'globe', hint: 'Our story' },
-  { href: '/pages/contact.html', label: 'Contact', icon: 'mail', hint: 'Talk to us' },
+  { href: '/courses/', label: 'Courses', icon: 'cap', hint: 'Udemy courses' },
+  { href: '/videos/', label: 'YouTube', icon: 'youtube', hint: 'Free playlists & members' },
+  { href: '/online-training/', label: 'Training', icon: 'users', hint: 'Live & self-paced programs' },
+  { href: '/consulting/', label: 'Consulting', icon: 'briefcase', hint: 'Project support' },
+  { href: '/blog/', label: 'Blog', icon: 'book', hint: 'Learning paths & guides' },
+  { href: '/about/', label: 'About', icon: 'globe', hint: 'Our story' },
+  { href: '/contact/', label: 'Contact', icon: 'mail', hint: 'Talk to us' },
 ];
 
 // Footer link columns
 const FOOTER_COLUMNS = [
   { title: 'Learn', links: [
-    ['/pages/courses.html', 'Udemy courses'],
-    ['/pages/videos.html', 'YouTube playlists'],
-    ['/pages/blogs.html', 'Blogs & learning paths'],
-    ['/pages/offers30.html', '30% OFF offers'],
+    ['/courses/', 'Udemy courses'],
+    ['/videos/', 'YouTube playlists'],
+    ['/blog/', 'Blogs & learning paths'],
+    ['/offers/', '30% OFF offers'],
     [SITE.links.portal, 'Login to Portal'],
   ] },
   { title: 'Services', links: [
-    ['/pages/onlinetraining.html', 'Training programs'],
-    ['/pages/consulting.html', 'Consulting & support'],
-    ['/pages/service-request.html', 'Service request'],
+    ['/online-training/', 'Training programs'],
+    ['/consulting/', 'Consulting & support'],
+    ['/service-request/', 'Service request'],
     [SITE.links.youtubeJoin, 'YouTube membership'],
   ] },
   { title: 'Company', links: [
-    ['/pages/about.html', 'About'],
-    ['/pages/contact.html', 'Contact'],
-    ['/pages/privacy.html', 'Privacy policy'],
-    ['/pages/terms.html', 'Terms & conditions'],
+    ['/about/', 'About'],
+    ['/contact/', 'Contact'],
+    ['/privacy/', 'Privacy policy'],
+    ['/terms/', 'Terms & conditions'],
   ] },
 ];
 
@@ -78,7 +79,7 @@ const escapeHtml = (s) =>
 // Which menu item is "current"? (blog-view counts as Blog)
 const currentPath = (() => {
   const p = location.pathname.replace(/\/index\.html$/, '/');
-  return p === '/pages/blog-view.html' ? '/pages/blogs.html' : p;
+  return p === '/blog/post/' ? '/blog/' : p;
 })();
 const current = (href) => (href === currentPath ? ' aria-current="page"' : '');
 
@@ -160,7 +161,7 @@ function extrasHTML() {
   return `
 <div id="cookie-banner" class="cookie" role="dialog" aria-live="polite" aria-label="Cookie consent" hidden>
   <div class="cookie-icon">${icon('cookie')}</div>
-  <p>We use analytics cookies to understand what helps learners most. <a href="/pages/privacy.html#cookies">Read our cookie policy</a></p>
+  <p>We use analytics cookies to understand what helps learners most. <a href="/privacy/#cookies">Read our cookie policy</a></p>
   <div class="cookie-actions">
     <button type="button" class="btn btn-outline btn-sm" data-consent="reject">Reject</button>
     <button type="button" class="btn btn-gold btn-sm" data-consent="accept">Accept</button>

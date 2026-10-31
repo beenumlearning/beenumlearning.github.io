@@ -20,7 +20,7 @@
     return isNaN(d) ? '' : d.toLocaleDateString('en-US', { year: 'numeric', month, day: 'numeric', timeZone: 'UTC' });
   };
   const readingMinutes = (b) => Math.max(3, Math.round(String(b.summary || '').split(/\s+/).length / 220) + 3);
-  const postUrl = (b) => `/pages/blog-view.html?id=${encodeURIComponent(b.id)}`;
+  const postUrl = (b) => `/blog/post/?id=${encodeURIComponent(b.id)}`;
   const youTubeId = (url) => (String(url || '').match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/) || [])[1] || null;
 
   async function loadBlogs() {
@@ -151,7 +151,7 @@
     const b = blogs.find((x) => x.id === id);
     if (!b) {
       main.innerHTML = `<section class="container not-found-msg"><h1>Blog not found</h1><p class="lead">This post may have moved.</p>
-        <a class="btn btn-gold" href="/pages/blogs.html">See all blogs ${icon('arrow-right')}</a></section>`;
+        <a class="btn btn-gold" href="/blog/">See all blogs ${icon('arrow-right')}</a></section>`;
       return;
     }
 
@@ -186,8 +186,8 @@
       <header class="post-hero cover ${hueClass(b.category)}">
         <div class="container-narrow">
           <nav aria-label="Breadcrumb"><ol class="crumbs" role="list">
-            <li><a href="/">Home</a></li><li><a href="/pages/blogs.html">Blog</a></li>
-            <li><a href="/pages/blogs.html?category=${encodeURIComponent(b.category)}">${escapeHtml(b.category)}</a></li>
+            <li><a href="/">Home</a></li><li><a href="/blog/">Blog</a></li>
+            <li><a href="/blog/?category=${encodeURIComponent(b.category)}">${escapeHtml(b.category)}</a></li>
           </ol></nav>
           <div class="ph-meta"><span class="chip chip-dot ${hueClass(b.category)}">${escapeHtml(b.category)}</span><span class="mono">Learning path</span></div>
           <h1>${escapeHtml(b.title)}</h1>
@@ -237,8 +237,8 @@
             <p>Questions about this guide? Write to us at <a href="${mailto(`Question about: ${b.title}`)}">${SITE.email}</a>.</p>
           </div>
           <div class="cluster">
-            <a class="btn btn-gold" href="/pages/courses.html?tech=${encodeURIComponent(b.category)}">${icon('cap')} ${escapeHtml(b.category)} courses</a>
-            <a class="btn btn-outline" href="/pages/consulting.html">${icon('briefcase')} Get project help</a>
+            <a class="btn btn-gold" href="/courses/?tech=${encodeURIComponent(b.category)}">${icon('cap')} ${escapeHtml(b.category)} courses</a>
+            <a class="btn btn-outline" href="/consulting/">${icon('briefcase')} Get project help</a>
           </div>
         </aside>
 

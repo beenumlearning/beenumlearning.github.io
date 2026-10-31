@@ -61,7 +61,7 @@
       (async () => {
         if (!('caches' in window)) return;
         const cache = await caches.open('beenum-saved');
-        const pages = (await cache.keys()).map((r) => new URL(r.url)).filter((u) => u.pathname === '/pages/blog-view.html');
+        const pages = (await cache.keys()).map((r) => new URL(r.url)).filter((u) => (u.pathname === '/blog/post/' || u.pathname === '/blog/post/index.html' || u.pathname === '/pages/blog-view.html'));
         if (!pages.length) return;
         let titles = {};
         try { const data = await (await cache.match('/resources/data/blogs.json')).json(); data.blogs.forEach((b) => (titles[b.id] = b.title)); } catch (e) {}

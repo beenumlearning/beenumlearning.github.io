@@ -80,7 +80,7 @@
     {
       "name": "Courses",
       "short_name": "Courses",
-      "url": "/pages/courses.html?source=pwa",
+      "url": "/courses/?source=pwa",
       "description": "Browse Udemy courses",
       "icons": [
         {
@@ -92,7 +92,7 @@
     {
       "name": "30% OFF offers",
       "short_name": "Offers",
-      "url": "/pages/offers30.html?source=pwa",
+      "url": "/offers/?source=pwa",
       "description": "Current course coupons",
       "icons": [
         {
@@ -104,7 +104,7 @@
     {
       "name": "Blog",
       "short_name": "Blog",
-      "url": "/pages/blogs.html?source=pwa",
+      "url": "/blog/?source=pwa",
       "description": "Learning paths & guides",
       "icons": [
         {
@@ -116,7 +116,7 @@
     {
       "name": "Consulting",
       "short_name": "Consulting",
-      "url": "/pages/consulting.html?source=pwa",
+      "url": "/consulting/?source=pwa",
       "description": "Get Oracle Cloud consulting help",
       "icons": [
         {
