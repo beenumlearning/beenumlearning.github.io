@@ -1,59 +1,73 @@
 {
-    "blogs": [
-        {
-            "id": 1,
-            "title": "OCI Developer Learning Path",
-            "pdfUrl": "https://drive.google.com/file/d/1kQAgHi_hap80pbgsLMOpLg6iVH3I-90s/view?usp=sharing",
-            "file": "OCI_Learning_Path.pdf",
-            "date": "2025-12-28",
-            "video": "https://youtu.be/f1Ip6h63sGs",
-            "category": "OCI",
-            "excerpt": "A structured, stage-by-stage roadmap for becoming a job-ready Oracle Cloud Infrastructure developer — from core compute and networking to automation and monitoring.",
-            "summary": "Oracle Cloud Infrastructure (OCI) is one of the fastest-growing enterprise cloud platforms, and demand for developers who can design, deploy, and secure workloads on it keeps rising. This learning path breaks the journey into clear stages: starting with core OCI fundamentals (compute, storage, virtual cloud networks, and identity & access management), moving into hands-on skills like provisioning instances, configuring load balancers, and working with OCI's CLI and SDKs, and finishing with production-level topics such as monitoring, cost governance, and automation using Terraform and Resource Manager. Instead of jumping between scattered documentation, this guide sequences topics the way they're actually used on real projects, so each concept builds on the last. Whether you're an infrastructure engineer moving into the cloud or a developer adding OCI to your skill set, this path highlights exactly what to learn first, what to practice, and how the pieces fit together before you touch a production environment."
-        },
-        {
-            "id": 2,
-            "title": "Oracle Integration Developer Learning Path",
-            "pdfUrl": "https://drive.google.com/file/d/16faeSczRPUj_kKJkVwQHdthibk7YWfvU/view?usp=sharing",
-            "file": "OIC_Learning_Path.pdf",
-            "date": "2025-12-29",
-            "video": "https://youtu.be/klLUfRkJ8Zk",
-            "category": "OIC",
-            "excerpt": "Everything an aspiring Oracle Integration Cloud developer needs, mapped from adapters and orchestrations to error handling and monitoring in production.",
-            "summary": "Oracle Integration Cloud (OIC) sits at the center of most Oracle Fusion and hybrid-cloud implementations, connecting ERP, HCM, CRM, and custom applications through REST, SOAP, and FTP adapters. This learning path is designed for developers who want to move beyond tutorials and actually build production-grade integrations. It starts with integration fundamentals — connections, mappings, and lookups — before progressing into orchestration patterns, scheduled and app-driven integrations, and the error-handling and fault-management techniques that separate a demo integration from one that survives real traffic. Later stages cover performance tuning, monitoring dashboards, and best practices for versioning and deployment across environments. The path also flags common pitfalls seen in enterprise projects, such as payload size limits, retry strategies, and adapter-specific quirks, so learners can avoid mistakes that typically only surface after go-live. It's written from the perspective of someone who has delivered OIC projects end-to-end, not just documented the platform's features."
-        },
-        {
-            "id": 3,
-            "title": "Oracle Visual Builder Developer Learning Path",
-            "pdfUrl": "https://drive.google.com/file/d/1Npy5kDwSA_Lh9f-XRjaSYu3Yy7GyJL8b/view?usp=sharing",
-            "file": "VBCS_Learning_Path.pdf",
-            "date": "2025-12-30",
-            "video": "https://youtu.be/nKFECPAikVY",
-            "category": "VBCS",
-            "excerpt": "A practical roadmap for building responsive, data-driven web and mobile apps in Oracle Visual Builder (VBCS), from first page to production deployment.",
-            "summary": "Oracle Visual Builder Cloud Service (VBCS) lets developers build responsive web and mobile front ends that plug directly into Oracle Fusion, OIC, and custom REST APIs — but getting from a blank canvas to a maintainable, production-ready application takes more than dragging components onto a page. This learning path walks through VBCS fundamentals first: pages, layouts, and variables, then business objects and REST service connections, and finally the patterns experienced developers rely on, including reusable components, action chains, event handling, and role-based visibility. It also covers deployment to Oracle Cloud, versioning strategies, and integrating VBCS apps with OIC-based back-end processes. Real project examples are used throughout so the concepts map to actual client requirements — building approval screens, dashboards, and self-service portals — rather than isolated sample apps. By the end of the path, developers should be comfortable taking a VBCS application from initial design through to a stable, deployed release."
-        },
-        {
-            "id": 4,
-            "title": "Oracle APEX Developer Learning Path",
-            "pdfUrl": "https://drive.google.com/file/d/115yBxDwKNYsx-ZuE77vamtvpjPOpyCui/view?usp=sharing",
-            "file": "APEX_Learning_Path.pdf",
-            "date": "2025-12-31",
-            "video": "https://youtu.be/qjDOW0wqvFY",
-            "category": "APEX",
-            "excerpt": "A step-by-step guide to Oracle APEX — from data modeling and page design to scripting and securing low-code applications for real business use.",
-            "summary": "Oracle APEX remains one of the fastest ways to turn a database schema into a fully functional business application, but many learners stall out after building their first interactive report. This learning path is structured to take that next step: starting with data modeling and workspace setup, moving through page design, forms, and interactive grids, and then into the areas that make APEX apps genuinely production-ready — PL/SQL processes, dynamic actions, JavaScript customization, and authentication/authorization schemes. Later sections cover performance considerations for larger data sets, RESTful data sources, and packaging applications for deployment across environments. Throughout, the focus stays on practical outcomes: building approval workflows, dashboards, and admin tools that a business team would actually use day to day, rather than isolated feature demos. It's aimed at developers who already know some SQL and PL/SQL and want a clear sequence for becoming proficient in APEX application development."
-        },
-        {
-            "id": 5,
-            "title": "Oracle Fusion AI Agent Studio Learning Path",
-            "pdfUrl": "https://drive.google.com/file/d/1GF7TWpiUX8c1Px2-pkTJxjzzQCiGinYx/view?usp=sharing",
-            "file": "Oracle_AI_Agent_Studio_Learning_Path.pdf",
-            "date": "2026-04-28",
-            "video": "https://youtu.be/oj27GGdm2FE",
-            "category": "Fusion",
-            "excerpt": "An introduction to Oracle's AI Agent Studio within Fusion Applications — how generative AI agents are configured, extended, and applied to real business processes.",
-            "summary": "Generative AI is being embedded directly into Oracle Fusion Applications through AI Agent Studio, and this learning path is aimed at developers and consultants who want a working understanding of how it fits into existing Fusion implementations. It starts with the underlying concepts — what an AI agent is in this context, how it differs from a traditional automation flow, and where Oracle's pre-built agents sit within HCM, SCM, and ERP processes. From there, the path covers configuring and extending agents, connecting them to Fusion data and business rules, and the guardrails available for controlling what an agent can and cannot do in a production environment. It closes with practical use-case walkthroughs — things like automating routine approvals or surfacing insights from Fusion data — so the concepts are grounded in scenarios consultants are likely to encounter on live projects rather than treated as an abstract AI feature tour."
-        }
-    ]
+  "discount": "30% OFF",
+  "validUntil": "December 1, 2026 9:20 AM PST",
+  "expiresAt": "2026-12-01T09:20:00-07:00",
+  "note": "Coupon codes are applied automatically when you follow the links below. If a code shows as expired on Udemy, it means the offer window has closed — check back on our offers page for the latest one.",
+  "courses": [
+    {
+      "title": "Introduction to Integration in Oracle Integration 3 (OIC 3)",
+      "url": "https://www.udemy.com/course/learn-integration-in-oracleintegration3/?couponCode=382E10522675966E378F",
+      "tag": "OIC"
+    },
+    {
+      "title": "Introduction to Oracle Visual Builder for Developers: Gen 3",
+      "url": "https://www.udemy.com/course/oracle-vbcs-2024/?couponCode=BF2DB0C4E315207E3B83",
+      "tag": "VBCS"
+    },
+    {
+      "title": "Oracle Visual Builder Studio (VB Studio) for VBCS, CI/CD",
+      "url": "https://www.udemy.com/course/oraclevisualbuilderstudio/?couponCode=1A4034FC0F9773DDD410",
+      "tag": "VBCS"
+    },
+    {
+      "title": "Introduction to Oracle Process Automation (Gen 3) OPA basics",
+      "url": "https://www.udemy.com/course/intro-to-opa-gen-3/?couponCode=DBB796E85981539F1EDB",
+      "tag": "OPA"
+    },
+    {
+      "title": "Oracle Cloud Functions (Python) - Hands-On Learning, OCI",
+      "url": "https://www.udemy.com/course/oci-functions-python/?couponCode=9BB5DE227857C6FA7606",
+      "tag": "OCI"
+    },
+    {
+      "title": "Basics of Oracle Fusion AppUI and extending Fusion Redwood page",
+      "url": "https://www.udemy.com/course/appui-extend-redwood/?couponCode=3B5AF4448055D8FD3323",
+      "tag": "Fusion"
+    },
+    {
+      "title": "Basics of Oracle Digital Assistant: Get started",
+      "url": "https://www.udemy.com/course/oda-getting-started/?couponCode=06A214C342F0C4B372B7",
+      "tag": "ODA"
+    },
+    {
+      "title": "Tips & Tricks for Oracle Integration 3 (OIC 3)",
+      "url": "https://www.udemy.com/course/tipstricks-oracleintegration3/?couponCode=AE9E31D4479AD6EE51A5",
+      "tag": "OIC"
+    },
+    {
+      "title": "Tips & Tricks for Oracle Visual Builder (VBCS) application",
+      "url": "https://www.udemy.com/course/tips-tricks-for-oracle-visual-builder-vbcs/?couponCode=7F3A3F7BA169E683796F",
+      "tag": "VBCS"
+    },
+    {
+      "title": "Basics of ORDS (Oracle REST Data Services) for VBCS",
+      "url": "https://www.udemy.com/course/learn-ords-for-paas/?couponCode=DDD146CCBF914CE94905",
+      "tag": "ORDS"
+    },
+    {
+      "title": "Introduction to Oracle Fusion (SaaS) for PaaS Developers",
+      "url": "https://www.udemy.com/course/introduction-to-oracle-saas-for-paas/?couponCode=9773FFF80D4F52EE4B09",
+      "tag": "Fusion"
+    },
+    {
+      "title": "Basics of Oracle APEX for developers",
+      "url": "https://www.udemy.com/course/oracle-apex-intro/?couponCode=968E6A6272B829A8DCD1",
+      "tag": "APEX"
+    },
+    {
+      "title": "Introduction to Oracle Fusion AI Agent Studio for Developers",
+      "url": "https://www.udemy.com/course/fusion-ai-agent-studio/?couponCode=A983E606447C5F0AFA31",
+      "tag": "AI"
+    }
+  ]
 }
