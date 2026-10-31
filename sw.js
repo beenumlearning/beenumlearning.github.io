@@ -13,7 +13,7 @@
    • Images, fonts, PDFs .... cache first, refreshed in the background
    • Other websites (YouTube, Udemy, Google…) are never touched
    ============================================================ */
-const CACHE_VERSION = 'v8';
+const CACHE_VERSION = 'v10';
 const CORE = `beenum-core-${CACHE_VERSION}`;
 const RUNTIME = `beenum-runtime-${CACHE_VERSION}`;
 const SAVED = 'beenum-saved'; // guides saved with "Save offline" — kept across updates
