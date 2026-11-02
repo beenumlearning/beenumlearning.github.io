@@ -27,7 +27,7 @@ const SITE = {
     buyMeACoffee: 'https://www.buymeacoffee.com/beenumlearning',
     // Learner portal (Oracle APEX app, Google sign-in). Also used by every [data-portal] link.
     portal: 'https://portal.beenumlearning.com/',
-    portal: 'https://geebat.beenumlearning.com/',
+    geebat: 'https://geebat.beenumlearning.com/',
     //portal: 'https://g5e5bc90877eab3-mudatp.adb.us-ashburn-1.oraclecloudapps.com/ords/r/learningapex1001/xxbl-portal-beenumlearning-app',
   },
   // Blog comments (Giscus). Fill these in from https://giscus.app to switch comments on.
