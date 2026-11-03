@@ -53,7 +53,7 @@ const FOOTER_COLUMNS = [
     ['/blog/', 'Blogs & learning paths'],
     ['/offers/', '30% OFF offers'],
     [SITE.links.portal, 'Login to Portal'],
-    [SITE.links.geebat, 'Chat with us on Geebat'],
+    [SITE.links.geebat, 'Login to Geebat'],
   ] },
   { title: 'Services', links: [
     ['/online-training/', 'Training programs'],
