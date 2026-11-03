@@ -53,7 +53,7 @@ const FOOTER_COLUMNS = [
     ['/blog/', 'Blogs & learning paths'],
     ['/offers/', '30% OFF offers'],
     [SITE.links.portal, 'Login to Portal'],
-    [SITE.links.geebat, 'Login to Geebat'],
+   // [SITE.links.geebat, 'Login to Geebat'],
   ] },
   { title: 'Services', links: [
     ['/online-training/', 'Training programs'],
@@ -139,6 +139,7 @@ function footerHTML() {
         <a href="${SITE.links.youtube}" target="_blank" rel="noopener" aria-label="YouTube">${icon('youtube')}</a>
         <a href="${SITE.links.linkedin}" target="_blank" rel="noopener" aria-label="LinkedIn">${icon('linkedin')}</a>
         <a href="${SITE.links.whatsapp}" target="_blank" rel="noopener" aria-label="WhatsApp channel">${icon('whatsapp')}</a>
+        <a href="${SITE.links.geebat}" target="_blank" rel="noopener" aria-label="Geebat chat app" title="Geebat chat app">${icon('chat')}</a>
         <a href="mailto:${SITE.email}" aria-label="Email ${SITE.email}">${icon('mail')}</a>
       </div>
     </div>
@@ -545,6 +546,7 @@ const ICONS = {
   'youtube': '<path d="M2.5 17a24 24 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.6 49.6 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24 24 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.6 49.6 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/>',
   'linkedin': '<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/>',
   'whatsapp': '<path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.6-2-1-1 .8a4 4 0 0 1-2.2-2.2l.8-1-1-2Z"/>',
+  'chat': '<path d="M21 12a8 8 0 0 1-8 8H5l-2 2V12a8 8 0 0 1 8-8h2a8 8 0 0 1 8 8Z"/><path d="M8.5 12h.01M12 12h.01M15.5 12h.01" stroke-width="2.6"/>',
   'mail': '<rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/><path d="m3 7 9 6 9-6"/>',
   'map-pin': '<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>',
   'clock': '<circle cx="12" cy="12" r="9.5"/><path d="M12 7v5l3 2"/>',
